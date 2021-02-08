@@ -1,0 +1,88 @@
+  <div class="toolbar">
+  <div class="logo"></div>
+  <div class="links">
+      <p>events  &nbsp;</p> <p>workshops &nbsp;</p> <p>dashboard  &nbsp;</p> <p>sponsors  &nbsp; </p> 
+  </div> 
+
+<div class="main" *ngIf="fs">
+	<mat-toolbar color="primary"> Log in </mat-toolbar>
+		<div class="fields">
+				<form [formGroup]="loginForm">	
+					<div class="forms">
+
+
+	<mat-form-field appearance="fill">
+  <mat-label>Email</mat-label>
+  <input matInput  formControlName="email" placeholder="Email" >
+</mat-form-field>
+
+
+	<mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'"  formControlName="password" placeholder="password" >
+    <button mat-icon-button matSuffix (click)="hide = !hide;" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" class="btn">
+    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+
+
+</div>
+	</form>
+	
+		</div>
+
+		<a class="fp">Forgot password?</a>
+
+<button mat-raised-button color="primary" class="sbtn" (click)="login()">Log in</button>
+<a class="fp2" (click)="fs = !fs">Dont have an account?</a>
+<cool-google-button color="dark" id="google" (click)="signInWithGoogle()">
+  Login with Google
+</cool-google-button>
+</div>
+
+<div class="main2" *ngIf="!fs">
+	<mat-toolbar color="primary"> Sign up </mat-toolbar>
+		<div class="fields2">
+				<form [formGroup]="signUpForm">	
+					<div class="forms">
+						
+						<mat-form-field appearance="fill">
+  <mat-label>Name</mat-label>
+  <input matInput  formControlName="name">
+</mat-form-field>
+
+
+	<mat-form-field appearance="fill">
+  <mat-label>Email</mat-label>
+  <input matInput  formControlName="email">
+</mat-form-field>
+
+
+	<mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'"  formControlName="password">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" class="btn">
+    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+<mat-form-field appearance="fill">
+    <mat-label>Confirm Password</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'"  formControlName="cpassword">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" class="btn">
+    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+
+</div>
+	</form>
+	
+		</div>
+
+		<a class="fp" (click)="fs = !fs">already have an account?</a>
+
+<button mat-raised-button color="primary" class="sbtn" (click)="signUp()">Sign up</button>
+
+</div>
