@@ -35,7 +35,7 @@ this.s = !this.s;
 
 
   checkout(){
-  	this.http.post("http://localhost:4242/create-checkout-session",{}).subscribe((res:any)=>{
+  	this.http.post("https://fmcw.herokuapp.com/create-checkout-session",{}).subscribe((res:any)=>{
   		let  a :any = new Razorpay({
     "key": "rzp_test_BZmqKg2c3vGbFd", // Enter the Key ID generated from the Dashboard
     "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise

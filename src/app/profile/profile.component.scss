@@ -12,6 +12,11 @@ p{
 	font-weight:700;
 }
 
+
+p:focus{
+    outline:0;
+}
+
 .links{
 	display:flex;
 	align-items:center;

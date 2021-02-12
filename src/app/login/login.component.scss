@@ -1,6 +1,6 @@
 .main {
   position: fixed;
- top: 50%;
+ top: 55%;
  left: 50%;
  transform: translate(-50%, -50%);
   height:450px;
@@ -133,6 +133,10 @@ mat-label{
 p{
   word-spacing: 30px;
   font-weight:700;
+}
+
+p:focus{
+    outline:0;
 }
 
 .links{

@@ -11,6 +11,9 @@ p{
 	word-spacing: 30px;
 	font-weight:700;
 }
+p:focus{
+    outline:0;
+}
 .main{
   width:100%;
   height: -webkit-fill-available;
