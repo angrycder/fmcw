@@ -4,6 +4,9 @@ import { SocialUser } from "angularx-social-login";
 import {LocalStorageService} from 'ngx-webstorage';
 import {HttpClient} from "@angular/common/http";
 import { StripeService } from 'ngx-stripe';
+
+declare var Razorpay : any;
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -33,7 +36,22 @@ this.s = !this.s;
 
   checkout(){
   	this.http.post("http://localhost:4242/create-checkout-session",{}).subscribe((res:any)=>{
-  		this.stripeService.redirectToCheckout({ sessionId:res.id}).subscribe((session)=>{return session});
+  		let  a :any = new Razorpay({
+    "key": "rzp_test_BZmqKg2c3vGbFd", // Enter the Key ID generated from the Dashboard
+    "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    "name": "Acme Corp",
+    "description": "Test Transaction",
+    "image": "https://example.com/your_logo",
+    "order_id": res.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "handler": function (response){
+       console.log(response);
+    },    
+    "theme": {
+        "color": "#3399cc"
+    }
+});
+  		a.open();
   	});
   }
 
