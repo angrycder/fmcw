@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "postinstall": "ngcc --properties es5 browser module main --first-only",
     "dev:ssr": "ng run fmcw:serve-ssr",
     "serve:ssr": "node dist/fmcw/server/main.js",
     "build:ssr": "ng build --prod && ng run fmcw:server:production",
