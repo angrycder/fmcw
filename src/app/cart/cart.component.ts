@@ -3,7 +3,6 @@ import { SocialAuthService } from "angularx-social-login";
 import { SocialUser } from "angularx-social-login";
 import {LocalStorageService} from 'ngx-webstorage';
 import {HttpClient} from "@angular/common/http";
-import { StripeService } from 'ngx-stripe';
 
 declare var Razorpay : any;
 
@@ -13,11 +12,37 @@ declare var Razorpay : any;
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
+  cart: any[] = [
+  {name:"cassandra",
+  date:"20 april 2021",
+  price:"50000",
+  description:"cassandra is a digital art competeions inspired by yaday a dadasd asdadadadkajnjndaadd dadnadnakdnjdndwunnjsfwfsnsfb",
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGU4OC1X6GKK1T_I5bb1VMyRd_Y45wqexFbw&usqp=CAU"
+},
+  {name:"cassandra",
+  date:"20 april 2021",
+  price:"50000",
+  description:"cassandra is a digital art competeions inspired by yaday a dadasd asdadadadkajnjndaadd dadnadnakdnjdndwunnjsfwfsnsfb",
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGU4OC1X6GKK1T_I5bb1VMyRd_Y45wqexFbw&usqp=CAU"
+},
+  {name:"cassandra",
+  date:"20 april 2021",
+  price:"50000",
+  description:"cassandra is a digital art competeions inspired by yaday a dadasd asdadadadkajnjndaadd dadnadnakdnjdndwunnjsfwfsnsfb",
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGU4OC1X6GKK1T_I5bb1VMyRd_Y45wqexFbw&usqp=CAU"
+},
+  {name:"cassandra",
+  date:"20 april 2021",
+  price:"50000",
+  description:"cassandra is a digital art competeions inspired by yaday a dadasd asdadadadkajnjndaadd dadnadnakdnjdndwunnjsfwfsnsfb",
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGU4OC1X6GKK1T_I5bb1VMyRd_Y45wqexFbw&usqp=CAU"
+}
+];
 
  user: SocialUser;
   @ViewChild('drop1', {static: false}) drop: ElementRef;
   s:boolean =false;
-  constructor(private http:HttpClient,private stripeService: StripeService,private authService: SocialAuthService,private storage:LocalStorageService,private renderer: Renderer2) {console.log(this.drop) }
+  constructor(private http:HttpClient,private authService: SocialAuthService,private storage:LocalStorageService,private renderer: Renderer2) {console.log(this.drop) }
 
  ngOnInit(): void {
   	this.user = this.storage.retrieve('user') as SocialUser;
@@ -34,21 +59,25 @@ this.s = !this.s;
   }
 
 
-  checkout(){
+  checkout(item:any){
   	this.http.post("https://fmcw.herokuapp.com/create-checkout-session",{}).subscribe((res:any)=>{
   		let  a :any = new Razorpay({
     "key": "rzp_test_BZmqKg2c3vGbFd", // Enter the Key ID generated from the Dashboard
-    "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "amount": item.price, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
     "currency": "INR",
-    "name": "Acme Corp",
-    "description": "Test Transaction",
-    "image": "https://example.com/your_logo",
+    "name": item.name,
+    "description": item.description,
+    "image": item.img,
     "order_id": res.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
     "handler": function (response){
        console.log(response);
+    },
+        "prefill": {
+        "name": this.user.name,
+        "email": this.user.email,
     },    
     "theme": {
-        "color": "#3399cc"
+        "color": "#7b1fa2"
     }
 });
   		a.open();

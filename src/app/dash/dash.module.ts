@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http';
+import {MatCardModule} from '@angular/material/card';
 
 const routes: Routes =  [
 {
@@ -48,7 +49,8 @@ const routes: Routes =  [
     ReactiveFormsModule ,
     MatIconModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
     providers: [{
       provide: 'SocialAuthServiceConfig',
@@ -58,7 +60,7 @@ const routes: Routes =  [
         {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              '214944693451-44fee8em9ahdseehh4m0imeinqsn90o8.apps.googleusercontent.com'
+              '214944693451-2sue5kgd5p6b0sufrbfvabkesvc11esc.apps.googleusercontent.com'
             )
           }
         ]

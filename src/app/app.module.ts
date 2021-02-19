@@ -9,20 +9,41 @@ import { EventsComponent } from './events/events.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgxWebstorageModule} from 'ngx-webstorage';
 import { NgxStripeModule } from 'ngx-stripe';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatInputModule} from '@angular/material/input';
+import { ClubComponent } from './club/club.component';
+import { NgImageSliderModule } from 'ng-image-slider';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
+import { CountdownModule } from 'ngx-countdown';
+import {MatButtonModule} from '@angular/material/button'
+import {MatCardModule} from '@angular/material/card';;
 
 @NgModule({
   declarations: [
     AppComponent,
     LandComponent,
     WorkshopsComponent,
-    EventsComponent
+    EventsComponent,
+    ClubComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
+    MatCardModule,
     BrowserAnimationsModule,
+    CountdownModule,
+    MatFormFieldModule,
+    MatToolbarModule,
+    NgImageSliderModule,
+    MatInputModule,
     NgxWebstorageModule.forRoot(),
-    NgxStripeModule.forRoot('pk_test_51IBHqIENC9m5T7TUjKaeFklATjo7wxsLTmhUih7qtgbVb0SeIWQkQYAhcGRMfLKRpiYn7ixeWSYwP3DocUiNJKvM00uTiuGz69')
+    MatSidenavModule,
+    ReactiveFormsModule,
+MatIconModule,
+MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

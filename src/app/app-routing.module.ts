@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LandComponent } from './land/land.component';
 import { EventsComponent} from './events/events.component';
 import { WorkshopsComponent } from './workshops/workshops.component';
+import { ClubComponent } from './club/club.component';
 
 const routes: Routes = [
 {
@@ -21,6 +22,10 @@ const routes: Routes = [
 	path:"dash",
 	loadChildren:() => import('./dash/dash.module')
       .then(mod => mod.DashModule)
+},
+{
+	path:"club",
+	component: ClubComponent
 }
 ];
 

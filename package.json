@@ -34,6 +34,8 @@
     "bufferutil": "^4.0.3",
     "domino": "^2.1.6",
     "express": "^4.15.2",
+    "ng-image-slider": "^2.6.4",
+    "ngx-countdown": "^11.0.2",
     "ngx-stripe": "^10.1.2",
     "ngx-webstorage": "^7.0.1",
     "require-from-url": "^3.1.3",

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class WorkshopsComponent implements OnInit {
 
   constructor() { }
+   showFiller = false;
 
   ngOnInit(): void {
   }

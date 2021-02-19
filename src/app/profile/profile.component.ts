@@ -1,7 +1,10 @@
 import { Component,ElementRef, OnInit, ViewChild,Renderer2 } from '@angular/core';
 import { SocialAuthService } from "angularx-social-login";
-import { SocialUser } from "angularx-social-login";
+import { GoogleLoginProvider } from "angularx-social-login";
+import { FormGroup, FormControl } from '@angular/forms';
 import {LocalStorageService} from 'ngx-webstorage';
+import { SocialUser } from "angularx-social-login";
+
 
 @Component({
   selector: 'app-profile',

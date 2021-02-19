@@ -1,1 +1,31 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container class="container"  (backdropClick)="close()">
+  <mat-sidenav #sidenav class="sidenav" mode="side" (keydown.escape)="close()" disableClose>
+    <div class="logo"></div>
+    <button mat-raised-button class="menu-buttons" #about (click)="goto('',about)">
+     about
+    </button>
+    <button mat-raised-button class="menu-buttons" #events (click)="goto('events',events)">
+     events
+    </button>
+    <button mat-raised-button class="menu-buttons" #workshops (click)="goto('workshops',workshops)">
+     workshops
+    </button>
+    <button mat-raised-button class="menu-buttons" #profile (click)="goto('dash/login',profile)">
+     profile
+    </button>
+    <button mat-raised-button class="menu-buttons" #cart (click)="goto('dash/cart',cart)">
+     cart
+    </button>
+    <button mat-raised-button class="menu-buttons" #dashboard (click)="goto('dash',dashboard)">
+     dashboard
+    </button>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="sidenav-content">
+  	<button mat-fab color="primary" aria-label="Example icon button with a bookmark icon" class="toggle" (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+
+ <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
