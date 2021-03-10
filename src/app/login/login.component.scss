@@ -7,6 +7,7 @@
   width:400px;
   border-radius:25px;
   box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
+  background-color:#303030;
 }
 
 .main2 {
@@ -16,12 +17,14 @@
  transform: translate(-50%, -50%);
   height:500px;
   width:400px;
+   background-color:#303030;
   border-radius:25px;
   box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
 }
 mat-toolbar{
 border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+
 }
 
 
@@ -150,13 +153,4 @@ p:focus{
   line-height: 70px; 
   font-family: 'Roboto', sans-serif;
     font-size: 30px;
-}
-.logo{
-  float:left;
-  background: url("./../../assets/logo.png");
-width: 190px;
-    height: 106.875px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }

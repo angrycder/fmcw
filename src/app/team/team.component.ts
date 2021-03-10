@@ -1,0 +1,63 @@
+import { Component,ElementRef,AfterViewInit, OnInit, ViewChild,Renderer2,HostListener } from '@angular/core';
+import {Router} from '@angular/router';
+
+@Component({
+  selector: 'app-team',
+  templateUrl: './team.component.html',
+  styleUrls: ['./team.component.scss']
+})
+export class TeamComponent implements OnInit,AfterViewInit {
+
+  @ViewChild('pub', {static: false}) publicity: ElementRef;
+  @ViewChild('marketing', {static: false}) marketing: ElementRef;
+  @ViewChild('relations', {static: false}) relations: ElementRef;
+  @ViewChild('design', {static: false}) design: ElementRef;
+
+  pub:number;
+  mar:number;
+  rel:number;
+  des:number;
+
+  p:boolean = true;
+  m:boolean = false;
+  r:boolean = false;
+  d:boolean = false;
+
+  constructor( private router : Router) {
+   }
+
+  ngOnInit(): void {
+  }
+
+  ngAfterViewInit():void{
+    this.pub = this.publicity.nativeElement.offsetTop;
+    this.mar = this.marketing.nativeElement.offsetTop;
+    this.rel = this.relations.nativeElement.offsetTop;
+    this.des = this.design.nativeElement.offsetTop;
+  }
+
+  goto(x:string){
+     this.router.navigateByUrl("/team#"+x);
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  checkOffsetTop() {
+    if (window.pageYOffset >= this.pub && window.pageYOffset < this.des) {
+      this.p = true
+      this.d = false
+    } else if (window.pageYOffset >= this.des && window.pageYOffset < this.rel) {
+      this.p = false
+      this.d = true
+      this.r = false
+    } else if (window.pageYOffset >= this.rel && window.pageYOffset < this.mar) {
+      this.d = false
+      this.r = true
+      this.p = false
+      this.m = false
+    } else if (window.pageYOffset >= this.mar) {
+      this.r = false
+      this.m = true
+    } else {
+    }
+  }
+}

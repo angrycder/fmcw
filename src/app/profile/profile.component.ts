@@ -18,7 +18,6 @@ export class ProfileComponent implements OnInit {
   constructor(private authService: SocialAuthService,private storage:LocalStorageService,private renderer: Renderer2) {console.log(this.drop) }
 
   ngOnInit(): void {
-  	this.user = this.storage.retrieve('user') as SocialUser;
   }
   k(){
   	if(this.s){

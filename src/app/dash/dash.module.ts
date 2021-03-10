@@ -5,8 +5,6 @@ import { ProfileComponent } from '../profile/profile.component';
 import { CartComponent } from '../cart/cart.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from '../guard/auth.guard';
-import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
-import { GoogleLoginProvider } from 'angularx-social-login';
 import { CoolSocialLoginButtonsModule } from '@angular-cool/social-login-buttons';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -24,10 +22,6 @@ const routes: Routes =  [
 	canActivate:[AuthGuard]
 },
 {
-	path:"login",
-	component:LoginComponent
-},
-{
 	path:"cart",
 	component:CartComponent,
 	canActivate:[AuthGuard]
@@ -40,7 +34,6 @@ const routes: Routes =  [
   declarations: [LoginComponent, ProfileComponent, CartComponent],
   imports: [
     RouterModule.forChild(routes),
-  SocialLoginModule,
   CoolSocialLoginButtonsModule,
     CommonModule,
         MatToolbarModule,
@@ -52,20 +45,7 @@ const routes: Routes =  [
     HttpClientModule,
     MatCardModule
   ],
-    providers: [{
-      provide: 'SocialAuthServiceConfig',
-      useValue: {
-      autoLogin: false,
-      providers: [
-        {
-            id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider(
-              '214944693451-2sue5kgd5p6b0sufrbfvabkesvc11esc.apps.googleusercontent.com'
-            )
-          }
-        ]
-    } as SocialAuthServiceConfig,
-  }]
+    providers: []
 
 })
 export class DashModule { }

@@ -1,90 +1,82 @@
-.toolbar{
-	width: 100%;
-	height: 106.875px;
-	position:relative;
-	  background-color:#7b1fa2;
-	    display: flex;
-    align-content: center;
+.circle {
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+      margin: 0;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-.body{
-  width: 100%;
-  height: 100%;
+.tick {
+    position: absolute;
+    left: calc(250px - 110px);
+    top: calc(250px - 110px);
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
 }
 
-p{
-	word-spacing: 30px;
-	font-weight:700;
-}
-p:focus{
-    outline:0;
-}
-.main{
+img{
   width:100%;
-  height: -webkit-fill-available;
-  background: url("./../../assets/bg.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  height:100%;
+}
+
+.circle .tick:nth-child(1) {
+  transform: rotate(0deg) translate(250px) rotateZ(0deg);
+  background-color:red;
+  padding:30px;
+}
+.circle .tick:nth-child(2) {
+  transform: rotate(60deg) translate(250px) rotateZ(-60deg);
+    background-color:orange;
+  padding:30px;
+}
+.circle .tick:nth-child(3) {
+  transform: rotate(120deg) translate(250px) rotateZ(-120deg);
+    background-color:pink;
+  padding:30px;
+}
+.circle .tick:nth-child(4) {
+  transform: rotate(180deg) translate(250px) rotateZ(-180deg);
+    background-color:brown;
+  padding:30px;
+}
+.circle .tick:nth-child(5) {
+  transform: rotate(240deg) translate(250px) rotateZ(-240deg);
+    background-color:blue;
+  padding:30px;
+}
+.circle .tick:nth-child(6) {
+  transform: rotate(300deg) translate(250px) rotateZ(-300deg);
+    background-color:green;
+  padding:30px;
+}
+
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
-}
-.links{
-	display:flex;
-	align-items:center;
-	justify-content:center;
-	float:right;
-	width:80%;
-	text-align: center;
-	vertical-align: middle;
-	line-height: 70px; 
-	font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-}
-.logo{
-	float:left;
-	background: url("./../../assets/logo.png");
-width: 190px;
-    height: 106.875px;
-	background-position: center;
-	background-size: cover;
-  background-repeat: no-repeat;
-}
-
-
-.can{
-position: relative;
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.img1{
-    height: auto;
-    vertical-align: middle;
-    width: 90%;
-}
-
-.img1:hover{
-	width: 100%;
-}
-
-.title{
-	height:70px;
-	width:100%;
-	font-size:20px;
-	justify-content:center;
-    font-size:25px;
-    text-transform: uppercase;
-        font-weight: 900;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content:center;
 }
 
 .pad{
-  padding:20px;
+  padding:30px;
   width:auto;
   height:auto;
+} 
+
+.pos {
+        margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width:500px;
 }
+

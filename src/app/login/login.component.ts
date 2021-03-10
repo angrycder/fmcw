@@ -4,6 +4,7 @@ import { GoogleLoginProvider } from "angularx-social-login";
 import { FormGroup, FormControl } from '@angular/forms';
 import {LocalStorageService} from 'ngx-webstorage';
 import { SocialUser } from "angularx-social-login";
+import {DialogService} from './../service/dialog.service';
 
 @Component({
   selector: 'app-login',
@@ -26,7 +27,7 @@ export class LoginComponent implements OnInit {
     password: new FormControl(''),
   });
 
-  constructor(private authService: SocialAuthService,private storage:LocalStorageService) { }
+  constructor(private authService: SocialAuthService,private storage:LocalStorageService,public dia: DialogService) { }
 
   ngOnInit(): void {
   }
@@ -42,6 +43,7 @@ export class LoginComponent implements OnInit {
 
     signInWithGoogle(): void {
      this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
+     this.dia.dialog.closeAll()
      this.authService.authState.subscribe((user) => { this.storage.store('user',user);});
   }
 

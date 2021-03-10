@@ -7,15 +7,7 @@
 	box-shadow: 5px 0px 54px 0px rgba(0,0,0,0.75);
 }
 
-.logo{
-	float:left;
-	background: url("../assets/logo.png");
-width: 190px;
-    height: 106.875px;
-	background-position: center;
-	background-size: cover;
-  background-repeat: no-repeat;
-}
+
 
 .but{
 	width:80%;
@@ -44,7 +36,14 @@ width: 190px;
 .toggle{
   position:fixed;
   top: 20px;
-  right: 20px;
+  left: 20px;
+  z-index:10000;
+}
+
+.theme{
+  position:fixed;
+  top: 100px;
+  left: 20px;
   z-index:10000;
 }
 
@@ -52,7 +51,15 @@ width: 190px;
   height: 100%;
   align-items: center;
   justify-content: center;
+   scroll-behavior:smooth;
 }
+.sidenav-content::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+}
+
 
 ::ng-deep .mat-drawer-inner-container {
     width: 100%;
@@ -63,4 +70,52 @@ width: 190px;
     flex-direction: column;
     align-items: center;
     justify-content:space-evenly;
+}
+.sign{
+  position:fixed;
+  top: 20px;
+  float:right;
+  right: 20px;
+  z-index:10000;
+}
+
+.profile{
+  width:56px;
+  border-radius:50%;
+  position:fixed;
+  top: 20px;
+  float:right;
+  right: 20px;
+  z-index:10000;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+.card{
+  height: 100%;
+}
+
+.pick{
+  top: 100px;
+  float:right;
+  right: 20px;
+  z-index:10000;
+ position:fixed;
+
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mobi{
+  width: 360px;height: 640px;overflow:scroll;
+
+}
+.mobi::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
 }

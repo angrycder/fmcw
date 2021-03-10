@@ -4,6 +4,9 @@ import { LandComponent } from './land/land.component';
 import { EventsComponent} from './events/events.component';
 import { WorkshopsComponent } from './workshops/workshops.component';
 import { ClubComponent } from './club/club.component';
+import { LeaderComponent } from './leader/leader.component';
+import { TeamComponent } from './team/team.component';
+
 
 const routes: Routes = [
 {
@@ -26,12 +29,25 @@ const routes: Routes = [
 {
 	path:"club",
 	component: ClubComponent
+},
+{
+	path:"team",
+	component: TeamComponent
+}
+,{
+	path:"team",
+	component: LeaderComponent 
 }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabled'
+    initialNavigation: 'enabled',
+    onSameUrlNavigation: 'reload',
+      scrollPositionRestoration: 'enabled',
+      useHash:true,
+      anchorScrolling: 'enabled',
+      scrollOffset: [0, 64]
 })],
   exports: [RouterModule]
 })
