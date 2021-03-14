@@ -3,9 +3,6 @@ import {ViewportScroller} from '@angular/common';
 import {Router} from '@angular/router';
 import { Location } from '@angular/common';
 
-import * as $ from 'jquery'
-declare var fullpage: any;
-
 @Component({
   selector: 'app-land',
   templateUrl: './land.component.html',
@@ -47,9 +44,7 @@ export class LandComponent implements OnInit,AfterViewInit {
     }
 
   ngAfterViewInit():void{
-    $(document).ready(function() {
-    $('#fullpage').fullpage();
-});
+
   }
 
  }

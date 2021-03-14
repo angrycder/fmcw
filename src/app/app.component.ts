@@ -3,6 +3,7 @@ import {MatSidenav} from '@angular/material/sidenav';
 import { MatButton } from '@angular/material/button';
 import { Router} from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { CartComponent } from './cart/cart.component';
 import {MatDialog} from '@angular/material/dialog';
 import {DialogService} from './service/dialog.service';
 import {LocalStorageService} from 'ngx-webstorage';
@@ -34,7 +35,7 @@ export class AppComponent implements OnInit,OnDestroy {
       this.user = user;
       this.loggedIn=(user != null);
     })
-      }
+   }
 
 
   ngOnInit() {
@@ -50,6 +51,12 @@ export class AppComponent implements OnInit,OnDestroy {
 
   }
 
+  pop_up_payment():void{
+    const dialogRef = this.dia.dialog.open(CartComponent);
+
+    dialogRef.afterClosed().subscribe(result => {    });
+  }
+
  logout():void {
    this.authService.signOut();
    this.storage.clear('user');
@@ -63,9 +70,11 @@ export class AppComponent implements OnInit,OnDestroy {
   signInWithGoogle(): void {
      this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
      this.dia.dialog.closeAll()
-     this.authService.authState.subscribe((user) => { this.storage.store('user',user);});
+     this.authService.authState.subscribe((user) => { this.storage.store('user',user);this.pop_up_login();});
+     
   }
   
+
   @HostListener('window:resize', ['$event'])
   getScreenSize(event?) {
           this.screenHeight = window.innerHeight;

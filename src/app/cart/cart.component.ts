@@ -1,9 +1,9 @@
-import { Component,ElementRef, OnInit, ViewChild,Renderer2 } from '@angular/core';
+import { Component,ElementRef, OnInit, ViewChild,Renderer2, NgZone } from '@angular/core';
 import { SocialAuthService } from "angularx-social-login";
 import { SocialUser } from "angularx-social-login";
 import {LocalStorageService} from 'ngx-webstorage';
 import {HttpClient} from "@angular/common/http";
-
+import { Router } from "@angular/router";
 declare var Razorpay : any;
 
 @Component({
@@ -42,7 +42,7 @@ export class CartComponent implements OnInit {
  user: SocialUser;
   @ViewChild('drop1', {static: false}) drop: ElementRef;
   s:boolean =false;
-  constructor(private http:HttpClient,private authService: SocialAuthService,private storage:LocalStorageService,private renderer: Renderer2) {console.log(this.drop) }
+  constructor(private zone: NgZone,private router:Router,private http:HttpClient,private authService: SocialAuthService,private storage:LocalStorageService,private renderer: Renderer2) {console.log(this.drop) }
 
  ngOnInit(): void {
   	this.user = this.storage.retrieve('user') as SocialUser;
@@ -59,19 +59,18 @@ this.s = !this.s;
   }
 
 
-  checkout(item:any){
+  allPass(){
   	this.http.post("https://fmcw.herokuapp.com/create-checkout-session",{}).subscribe((res:any)=>{
   		let  a :any = new Razorpay({
     "key": "rzp_test_BZmqKg2c3vGbFd", // Enter the Key ID generated from the Dashboard
-    "amount": item.price, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "amount": 45000, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
     "currency": "INR",
-    "name": item.name,
-    "description": item.description,
-    "image": item.img,
+    "name": "All event pass",
+    "description": "all event pass",
     "order_id": res.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-    "handler": function (response){
-       console.log(response);
-    },
+    "handler": (response)=>{
+      this.zone.run(()=>{  this.router.navigateByUrl("/dash");})  
+        },
         "prefill": {
         "name": this.user.name,
         "email": this.user.email,

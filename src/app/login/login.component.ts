@@ -5,6 +5,8 @@ import { FormGroup, FormControl } from '@angular/forms';
 import {LocalStorageService} from 'ngx-webstorage';
 import { SocialUser } from "angularx-social-login";
 import {DialogService} from './../service/dialog.service';
+import { Router } from "@angular/router";
+import { CartComponent } from './../cart/cart.component';
 
 @Component({
   selector: 'app-login',
@@ -27,7 +29,7 @@ export class LoginComponent implements OnInit {
     password: new FormControl(''),
   });
 
-  constructor(private authService: SocialAuthService,private storage:LocalStorageService,public dia: DialogService) { }
+  constructor(private router:Router,private authService: SocialAuthService,private storage:LocalStorageService,public dia: DialogService) { }
 
   ngOnInit(): void {
   }
@@ -39,16 +41,15 @@ export class LoginComponent implements OnInit {
 
   signUp(): void {
      console.warn('Your order has been submitted', this.signUpForm.value);
+     this.dia.dialog.closeAll();
+     this.router.navigateByUrl("/dash/cart");
   }
 
-    signInWithGoogle(): void {
-     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
-     this.dia.dialog.closeAll()
-     this.authService.authState.subscribe((user) => { this.storage.store('user',user);});
+    pop_up_cart():void{
+    const dialogRef = this.dia.dialog.open(CartComponent,{width:"100%",height:"100%"});
+
+    dialogRef.afterClosed().subscribe(result => {    });
+
   }
 
-
-  signOut(): void {
-    this.authService.signOut();
-  }
 }
