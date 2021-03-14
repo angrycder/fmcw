@@ -1,0 +1,20 @@
+<div class="main">
+    <div class="pad" *ngFor="let items of work;">
+      <mat-card class="example-card">
+  <mat-card-header>
+
+    <mat-card-title [innerHTML]="items.name"></mat-card-title>
+    <mat-card-subtitle>{{ items.name }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{items.img}}">
+  <mat-card-content>
+    <p>
+     {{items.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="checkout(items)">know more</button>
+  </mat-card-actions>
+</mat-card>
+  </div>
+</div>

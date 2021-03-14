@@ -19,7 +19,7 @@ import { HostListener } from "@angular/core";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit,OnDestroy {
-  title = 'fmcw';
+  title = 'fmc weekend';
   user: SocialUser;
   loggedIn :boolean;
   sub:any;
@@ -73,6 +73,11 @@ export class AppComponent implements OnInit,OnDestroy {
      this.authService.authState.subscribe((user) => { this.storage.store('user',user);this.pop_up_login();});
      
   }
+
+  signOut():void{
+    this.storage.clear('user');
+    this.authService.signOut();
+  }
   
 
   @HostListener('window:resize', ['$event'])
@@ -80,6 +85,5 @@ export class AppComponent implements OnInit,OnDestroy {
           this.screenHeight = window.innerHeight;
           this.screenWidth = window.innerWidth;
           this.wide = this.screenWidth < 500;
-          console.log(this.wide)
     }
 }

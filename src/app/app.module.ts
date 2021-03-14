@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {MatTreeModule} from '@angular/material/tree';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandComponent } from './land/land.component';
@@ -20,6 +21,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { CountdownModule } from 'ngx-countdown';
 import {MatButtonModule} from '@angular/material/button'
 import {MatCardModule} from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
 import {HttpClientModule} from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
@@ -50,6 +52,7 @@ import { TeamComponent } from './team/team.component';
     CountdownModule,
     MatFormFieldModule,
     MatToolbarModule,
+    MatTableModule,
     NgImageSliderModule,
      SocialLoginModule,
     MatInputModule,
@@ -63,7 +66,8 @@ import { TeamComponent } from './team/team.component';
     MatMenuModule,
     MatTabsModule,
     HttpClientModule,
-    ThemeModule
+    ThemeModule,
+    MatTreeModule
   ],
   providers: [{
       provide: 'SocialAuthServiceConfig',

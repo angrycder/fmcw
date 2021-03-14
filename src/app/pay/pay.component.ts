@@ -7,9 +7,9 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./pay.component.scss']
 })
 export class PayComponent implements OnInit {
-	extdata: any;
+	title: any;
    cinema: any[] = [
-   {name:" Short-film making Competition",
+   {name:" Short-film Competition",
   date:"20 april 2021",
   description:"Cassandra is a wildlife photography competition based on dogs especially on the breeds such as hukies and shibas",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
@@ -22,7 +22,7 @@ export class PayComponent implements OnInit {
   price:5000
 }];
    outreach: any[] = [
-     {name:" Vlogoholic",
+     {name:" Vlogoholic\n",
   date:"20 april 2021",
   description:"Cassandra is a wildlife photography competition based on dogs especially on the breeds such as hukies and shibas",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
@@ -105,8 +105,10 @@ change:any[]= [this.animation,this.media,this.design,this.outreach,this.cinema,t
 cart: any[] = [
 ];
 pin:any;
+names:string[]=["animation","media","design","outreach","cinema","photography"]
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) { 
-    this.pin = this.data.number-1
+    this.pin = this.data.number-1;
+    this.title = this.names[this.pin];
     this.cart = this.change[this.pin];
   }
 
@@ -120,10 +122,12 @@ pin:any;
   left():void{
     this.pin = (this.pin+5)%6
     this.cart = this.change[this.pin];
+    this.title = this.names[this.pin];
   }
   right():void{
     this.pin = (this.pin+1)%6
     this.cart = this.change[this.pin];
+    this.title = this.names[this.pin];
   }
 
 }

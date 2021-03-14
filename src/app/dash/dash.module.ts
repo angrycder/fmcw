@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from '../login/login.component';
+import {MatTreeModule} from '@angular/material/tree';
 import { ProfileComponent } from '../profile/profile.component';
 import { CartComponent } from '../cart/cart.component';
 import { Routes, RouterModule } from '@angular/router';
@@ -43,7 +44,8 @@ const routes: Routes =  [
     MatIconModule,
     MatButtonModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+     MatTreeModule
   ],
     providers: []
 

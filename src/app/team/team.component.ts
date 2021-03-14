@@ -23,6 +23,10 @@ export class TeamComponent implements OnInit,AfterViewInit {
   r:boolean = false;
   d:boolean = false;
 
+  screenHeight: number = window.innerHeight;
+  screenWidth: number  = window.innerWidth;
+  wide:boolean = this.screenWidth > 500;
+
   constructor( private router : Router) {
    }
 
@@ -60,4 +64,11 @@ export class TeamComponent implements OnInit,AfterViewInit {
     } else {
     }
   }
+
+    @HostListener('window:resize', ['$event'])
+  getScreenSize(event?) {
+          this.screenHeight = window.innerHeight;
+          this.screenWidth = window.innerWidth;
+          this.wide = this.screenWidth > 500;
+    }
 }

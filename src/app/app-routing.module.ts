@@ -35,7 +35,7 @@ const routes: Routes = [
 	component: TeamComponent
 }
 ,{
-	path:"team",
+	path:"leader",
 	component: LeaderComponent 
 }
 ];
