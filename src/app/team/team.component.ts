@@ -1,12 +1,13 @@
-import { Component,ElementRef,AfterViewInit, OnInit, ViewChild,Renderer2,HostListener } from '@angular/core';
+import { Component,ElementRef,OnDestroy, OnInit, ViewChild,Renderer2,AfterViewInit,HostListener,Inject } from '@angular/core';
 import {Router} from '@angular/router';
+import {DOCUMENT} from '@angular/common';
 
 @Component({
   selector: 'app-team',
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.scss']
 })
-export class TeamComponent implements OnInit,AfterViewInit {
+export class TeamComponent implements OnInit,OnDestroy,AfterViewInit {
 
   @ViewChild('pub', {static: false}) publicity: ElementRef;
   @ViewChild('marketing', {static: false}) marketing: ElementRef;
@@ -27,17 +28,22 @@ export class TeamComponent implements OnInit,AfterViewInit {
   screenWidth: number  = window.innerWidth;
   wide:boolean = this.screenWidth > 500;
 
-  constructor( private router : Router) {
+  constructor( @Inject(DOCUMENT) private document: Document,private router : Router) {
    }
 
   ngOnInit(): void {
+    this.document.body.className = "bgy";
   }
-
   ngAfterViewInit():void{
     this.pub = this.publicity.nativeElement.offsetTop;
     this.mar = this.marketing.nativeElement.offsetTop;
     this.rel = this.relations.nativeElement.offsetTop;
     this.des = this.design.nativeElement.offsetTop;
+
+  }
+
+  ngOnDestroy():void{
+    this.document.body.className = "";
   }
 
   goto(x:string){

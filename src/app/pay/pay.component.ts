@@ -1,5 +1,6 @@
 import { Component, OnInit, Optional, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import {DialogService} from './../service/dialog.service';
 
 @Component({
   selector: 'app-pay',
@@ -106,7 +107,7 @@ cart: any[] = [
 ];
 pin:any;
 names:string[]=["animation","media","design","outreach","cinema","photography"]
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { 
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any,public dia: DialogService) { 
     this.pin = this.data.number-1;
     this.title = this.names[this.pin];
     this.cart = this.change[this.pin];
@@ -128,6 +129,10 @@ names:string[]=["animation","media","design","outreach","cinema","photography"]
     this.pin = (this.pin+1)%6
     this.cart = this.change[this.pin];
     this.title = this.names[this.pin];
+  }
+
+  close():void{
+    this.dia.dialog.closeAll();
   }
 
 }

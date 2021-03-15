@@ -9,6 +9,7 @@ export class WorkshopsComponent implements OnInit {
 
   constructor() { }
    showFiller = false;
+   n:number;
   work: any[] = [
    {name:" Short-film Competition",
   date:"20 april 2021",
