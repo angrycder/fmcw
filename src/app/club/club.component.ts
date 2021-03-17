@@ -16,35 +16,7 @@ declare var Razorpay : any;
 export class ClubComponent implements OnInit {
    user: SocialUser;
   loggedIn :boolean; 
-  club :any;
-
-   cart: any[] = [
-  {name:"cassandra",
-  date:"20 april 2021",
-  description:"cassandra is a digital art competeions inspired by yaday a dadasd asdadadadkajnjndaadd dadnadnakdnjdndwunnjsfwfsnsfb",
-  img:"https://material.angular.io/assets/img/examples/shiba2.jpg"
-},
-  {name:"cassandra",
-  date:"20 april 2021",
-  description:"cassandra is a digital art competeions inspired by yaday a dadasd asdadadadkajnjndaadd dadnadnakdnjdndwunnjsfwfsnsfb",
-  img:"https://material.angular.io/assets/img/examples/shiba2.jpg"
-},
-  {name:"cassandra",
-  date:"20 april 2021",
-  description:"cassandra is a digital art competeions inspired by yaday a dadasd asdadadadkajnjndaadd dadnadnakdnjdndwunnjsfwfsnsfb",
-  img:"https://material.angular.io/assets/img/examples/shiba2.jpg"
-},
-  {name:"cassandra",
-  date:"20 april 2021",
-  description:"cassandra is a digital art competeions inspired by yaday a dadasd asdadadadkajnjndaadd dadnadnakdnjdndwunnjsfwfsnsfb",
-  img:"https://material.angular.io/assets/img/examples/shiba2.jpg"
-},
-  {name:"cassandra",
-  date:"20 april 2021",
-  description:"cassandra is a digital art competeions inspired by yaday a dadasd asdadadadkajnjndaadd dadnadnakdnjdndwunnjsfwfsnsfb",
-  img:"https://material.angular.io/assets/img/examples/shiba2.jpg"
-}
-];
+  shirt:string;
 
   constructor(private http:HttpClient ,private storage:LocalStorageService,public dia: DialogService,private router:ActivatedRoute) { }
 
@@ -53,10 +25,7 @@ export class ClubComponent implements OnInit {
         this.user =usr
         this.loggedIn = (usr != null);
     });
-          this.router.queryParams.subscribe(params => {
-      this.club=params.club;
-    }); 
-     }
+      }
 
     checkout(item:any){
       if(this.loggedIn){
