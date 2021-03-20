@@ -12,41 +12,41 @@ export class PayComponent implements OnInit {
    cinema: any[] = [
    {name:" Short-film Competition",
   date:"20 april 2021",
-  description:"Cassandra is a wildlife photography competition based on dogs especially on the breeds such as hukies and shibas",
+  description:"Imagine yourself to be in the shoes of a movie director, and create a short film of 3-10 minutes based on a given theme. Feel free to come up with the unique & original ideas and weave an impactful story through seamless cinematography and editing. All languages are accepted",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   price:5000
 },
   {name:"That's how B-Roll",
   date:"20 april 2021",
-  description:"Cassandra is a wildlife photography competition based on dogs especially on the breeds such as hukies and shibas",
+  description:"Who needs dialogues in a film when you can use perfectly set up scenes, creative camera angles and surreal editing and transitions to make a masterpiece that keeps the viewers captivated. That’s exactly what you’re required to do in “That’s how B-roll” wherein you can submit a B-roll wherein you portray mundane daily life activities in an exciting short clip.",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   price:5000
 }];
    outreach: any[] = [
      {name:" Vlogoholic\n",
   date:"20 april 2021",
-  description:"Cassandra is a wildlife photography competition based on dogs especially on the breeds such as hukies and shibas",
+  description:"Who doesn’t love a good vlog??? It’s time for you to explore the vlogger inside of you and create the perfect vlog that grabs everyone’s attention. Record and describe any experience of your own in a captivating fashion with the liberty to choose any genre of your liking - travelog, prank, food review - anything and everything that you find interesting.",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   club:"outreach",
   price:5000
 },
   {name:"Documentary making",
   date:"20 april 2021",
-  description:"Cassandra is a wildlife photography competition based on dogs especially on the breeds such as hukies and shibas",
+  description:"A good documentary is a reflection of our reality. Be it our heritage, our culture, our festivities or even our flaws, a well-structured documentary can portray it all. That’s exactly what you’ll get a chance to do in the “Documentary Making” event, where the goal is to make a 1-10 minute documentary pertaining to any particular genre.",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   club:"outreach",
   price:5000
 }];
     design:any[] = [  {name:"Monogram",
   date:"20 april 2021",
-  description:"Cassandra is a wildlife photography competition based on dogs especially on the breeds such as hukies and shibas",
+  description:"Sometimes, all it takes is two letters and an artistic mind to tell a story which words can’t. If you agree, “Monogram” is just the right place for you !!! Create a visually impactful and aesthetically pleasing design with none other than the initials of your name",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   club:'design',
   price:5000
 },
   {name:"Comic Strip",
   date:"20 april 2021",
-  description:"Cassandra is a wildlife photography competition based on dogs especially on the breeds such as hukies and shibas",
+  description:"Awaken the artist inside of you and let the creativity flow through your sketches, as “Comic Strip” provides you with a wonderful opportunity to put together a story through the little panels of comics. Pick any one of the provided prompts to base your comic upon, and don’t forget to make it stand out",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   club:'design',
   price:5000
@@ -54,14 +54,14 @@ export class PayComponent implements OnInit {
 
 media:any[]=[{name:"Nation wants to know",
   date:"20 april 2021",
-  description:"Cassandra is a wildlife photography competition based on dogs especially on the breeds such as hukies and shibas",
+  description:"Do you have what it takes to be a successful journalist?? If your answer is yes, then “Nation wants to know” provides you the platform to prove your mettle in the field of journalism. You’ll be provided with 3 images, based on which you’ll have to create the perfect piece of news, with a catchy headline and a well-constructed series of events.",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   club:"media",
   price:5000
 },
 {name:"Netflix & Chill",
   date:"20 april 2021",
-  description:"Cassandra is a wildlife photography competition based on dogs especially on the breeds such as hukies and shibas",
+  description:"Have you binged on dozens of shows this lockdown? Consider yourself a web series geek? Then “Netflix and Chill” is tailor-made for you. Use a stipulated budget to assemble together a cast consisting of characters ranging from the fan-favorite heroes to the most terrifying of villains from top TV shows around the world, and weave a gripping plot of your own",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   club:"media",
   price:5000
@@ -70,14 +70,14 @@ media:any[]=[{name:"Nation wants to know",
 animation:any[]=[
 {name:"UnReal",
   date:"20 april 2021",
-  description:"Cassandra is a wildlife photography competition based on dogs especially on the breeds such as hukies and shibas",
+  description:"Put your animation skills to test as participants will be required to recreate, to the best of their abilities, the 3D render of a real image which would be provided to them. The closest resembling entry takes it all!!!",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   club:"media",
   price:5000
 },
 {name:"Capture the Imagination",
   date:"20 april 2021",
-  description:"Cassandra is a wildlife photography competition based on dogs especially on the breeds such as hukies and shibas",
+  description:"Set free the wings of your creativity, as “Capture the imagination” enables you to showcase an imaginative creation of the world in the form of 3D models using your animation skills",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   club:"media",
   price:5000
@@ -86,14 +86,14 @@ animation:any[]=[
 photog:any[] = [
 {name:"Theme Photography",
   date:"20 april 2021",
-  description:"Cassandra is a wildlife photography competition based on dogs especially on the breeds such as hukies and shibas",
+  description:"Be prepared to put your editing and manipulation skills to the ultimate test, as the “Photoart” provides you with a platform where you get to compete with other highly skilled photographers. Given a set of 15 photographs, the participants will be required to create an entirely new image using a combination of any number of the provided photographs, using manipulation.",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   club:"media",
   price:5000
 },
 {name:"Photoart",
   date:"20 april 2021",
-  description:"Cassandra is a wildlife photography competition based on dogs especially on the breeds such as hukies and shibas",
+  description:"Uphold the saying “A picture is worth a thousand words” by clicking captivating and surreal theme-based images. Of the themes provided, participants can choose any one or more themes of their choice and click a photograph which best represents it. Showcase the zenith of your photography skills to win exciting prizes!!!",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   club:"media",
   price:5000

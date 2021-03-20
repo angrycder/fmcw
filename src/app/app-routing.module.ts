@@ -6,6 +6,8 @@ import { WorkshopsComponent } from './workshops/workshops.component';
 import { ClubComponent } from './club/club.component';
 import { LeaderComponent } from './leader/leader.component';
 import { TeamComponent } from './team/team.component';
+import { MemoryComponent } from './memory/memory.component';
+import { CaComponent } from './ca/ca.component';
 
 
 const routes: Routes = [
@@ -37,6 +39,14 @@ const routes: Routes = [
 ,{
 	path:"leader",
 	component: LeaderComponent 
+},
+{
+	path:"memories",
+	component: MemoryComponent 
+},
+{
+	path:"ambassador",
+	component: CaComponent 
 }
 ];
 

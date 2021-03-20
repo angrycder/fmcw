@@ -32,6 +32,8 @@ import { PayComponent } from './pay/pay.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { LeaderComponent } from './leader/leader.component';
 import { TeamComponent } from './team/team.component';
+import { MemoryComponent } from './memory/memory.component';
+import { CaComponent } from './ca/ca.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { TeamComponent } from './team/team.component';
     PayComponent,
     LeaderComponent,
     TeamComponent,
+    MemoryComponent,
+    CaComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

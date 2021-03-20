@@ -1,20 +1,55 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+// Material Form Controls
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+// Material Navigation
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+// Material Layout
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatListModule } from '@angular/material/list';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatTreeModule } from '@angular/material/tree';
+// Material Buttons & Indicators
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatRippleModule } from '@angular/material/core';
+// Material Popups & Modals
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
+// Material Data tables
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+
 import { LoginComponent } from '../login/login.component';
-import {MatTreeModule} from '@angular/material/tree';
 import { ProfileComponent } from '../profile/profile.component';
 import { CartComponent } from '../cart/cart.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from '../guard/auth.guard';
 import { CoolSocialLoginButtonsModule } from '@angular-cool/social-login-buttons';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatInputModule} from '@angular/material/input';
-import { ReactiveFormsModule } from '@angular/forms';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http';
-import {MatCardModule} from '@angular/material/card';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes =  [
 {
@@ -37,17 +72,84 @@ const routes: Routes =  [
     RouterModule.forChild(routes),
   CoolSocialLoginButtonsModule,
     CommonModule,
-        MatToolbarModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule ,
-    MatIconModule,
-    MatButtonModule,
-    HttpClientModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatToolbarModule,
     MatCardModule,
-     MatTreeModule
+    MatDividerModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatListModule,
+    MatStepperModule,
+    MatTabsModule,
+    MatTreeModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatBadgeModule,
+    MatChipsModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatRippleModule,
+    MatBottomSheetModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    MatTooltipModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatTableModule
+
   ],
-    providers: []
+    providers: [],
+
+      exports: [
+    MatAutocompleteModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatListModule,
+    MatStepperModule,
+    MatTabsModule,
+    MatTreeModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatBadgeModule,
+    MatChipsModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatRippleModule,
+    MatBottomSheetModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    MatTooltipModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatTableModule
+  ]
 
 })
 export class DashModule { }
