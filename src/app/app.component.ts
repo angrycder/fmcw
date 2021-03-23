@@ -43,7 +43,9 @@ export class AppComponent implements OnInit,OnDestroy {
   ngOnDestroy(){
       }
 
+  pop_up(s:string):void{
 
+  }
   pop_up_login():void{
     const dialogRef = this.dia.dialog.open(LoginComponent);
 

@@ -24,9 +24,8 @@ export class LoginComponent implements OnInit {
 
   signUpForm : any = new FormGroup({
     name: new FormControl(''),
-    email: new FormControl(''),
-    cpassword: new FormControl(''),
-    password: new FormControl(''),
+    phone: new FormControl(''),
+    org:new FormControl(''),
   });
 
   constructor(private router:Router,private authService: SocialAuthService,private storage:LocalStorageService,public dia: DialogService) { }
