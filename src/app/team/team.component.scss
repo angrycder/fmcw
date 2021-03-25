@@ -3,11 +3,13 @@
 	height:100%;
 	position:fixed;
 	float:left;
+	top: 90px;
 }
 
 .cards{
 	width:calc(100% - 400px);
 	height:100%;
+	    padding-top: 90px;
 	float:right;
 }
 
