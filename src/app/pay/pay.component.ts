@@ -12,7 +12,7 @@ export class PayComponent implements OnInit {
    cinema: any[] = [
    {name:" Short-film Competition",
   date:"20 april 2021",
-  description:"Imagine yourself to be in the shoes of a movie director, and create a short film of 3-10 minutes based on a given theme. Feel free to come up with the unique & original ideas and weave an impactful story through seamless cinematography and editing. All languages are accepted.",
+  description:"Imagine yourself to be in the shoes of a movie director, and create a short film of 3-10 minutes based on a given theme. Feel free to come up with the unique & original ideas and weave an impactful story through seamless cinematography and editing.",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   price:5000
 },
@@ -52,16 +52,16 @@ export class PayComponent implements OnInit {
   price:5000
 }];
 
-media:any[]=[{name:"Nation wants to know",
+media:any[]=[{name:"Netflix & Chill",
   date:"20 april 2021",
   description:"Consider yourself a web series geek? “Netflix and Chill” is here for you. Use a stipulated budget to assemble a cast consisting of fan-favorite heroes to the most terrifying of villains from shows around the world, and weave a gripping plot of your own.",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   club:"media",
   price:5000
 },
-{name:"Netflix & Chill",
+{name:"Nation wants to know",
   date:"20 april 2021",
-  description:"Nation wants to know” provides you the platform to prove your mettle in the field of journalism. You’ll be provided with 3 images, based on which you’ll have to create the perfect piece of news, with a catchy headline and a well-constructed series of events.",
+  description:"“Nation wants to know” provides you the platform to prove your mettle in the field of journalism. You’ll be provided with 3 images, based on which you’ll have to create the perfect piece of news, with a catchy headline and a well-constructed series of events.",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   club:"media",
   price:5000
@@ -93,7 +93,7 @@ photog:any[] = [
 },
 {name:"Photoart",
   date:"20 april 2021",
-  description:"Put your editing and manipulation skills to the test, as “Photoart” provides you with a platform to compete with highly skilled photographers. Given a set of 15 photographs, you will be creating an image using any number of the provided photographs, using manipulation.",
+  description:"“Photoart” provides you with a platform to compete with highly skilled photographers. Given a set of 15 photographs, you will be creating an image using any number of the provided photographs, using manipulation.",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   club:"media",
   price:5000

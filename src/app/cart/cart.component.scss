@@ -6,3 +6,15 @@
 section{
 	background:transparent !important;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.elementor-row {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
