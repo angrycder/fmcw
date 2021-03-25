@@ -70,14 +70,14 @@ media:any[]=[{name:"Netflix & Chill",
 animation:any[]=[
 {name:"UnReal",
   date:"20 april 2021",
-  description:"Put your animation skills to test as participants will be required to recreate, to the best of their abilities, the 3D render of a real image which would be provided to them. The closest resembling entry takes it all!!!",
+  description:"Put your animation skills to test as participants will be required to recreate, to the best of their abilities, the 3D render of a real image which would be provided to them. The closest resembling entry takes it all!!!<br><br>",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   club:"media",
   price:5000
 },
 {name:"Capture the Imagination",
   date:"20 april 2021",
-  description:"Set free the wings of your creativity, as “Capture the imagination” enables you to showcase an imaginative creation of the world in the form of 3D models using your animation skills.",
+  description:"Set free the wings of your creativity, as “Capture the imagination” enables you to showcase an imaginative creation of the world in the form of 3D models using your animation skills.<br><br>",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   club:"media",
   price:5000
@@ -86,14 +86,14 @@ animation:any[]=[
 photog:any[] = [
 {name:"InFocus",
   date:"20 april 2021",
-  description:"Uphold the saying “A picture is worth a thousand words” by clicking captivating and surreal theme-based images. Of the themes provided, choose one or more themes and click a photograph best representing them.",
+  description:"Uphold the saying “A picture is worth a thousand words” by clicking captivating and surreal theme-based images. Of the themes provided, choose one or more themes and click a photograph best representing them.<br><br>",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   club:"media",
   price:5000
 },
 {name:"Photoart",
   date:"20 april 2021",
-  description:"“Photoart” provides you with a platform to compete with highly skilled photographers. Given a set of 15 photographs, you will be creating an image using any number of the provided photographs, using manipulation.",
+  description:"“Photoart” provides you with a platform to compete with highly skilled photographers. Given a set of 15 photographs, you will be creating an image using any number of the provided photographs, using manipulation.<br><br>",
   img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
   club:"media",
   price:5000

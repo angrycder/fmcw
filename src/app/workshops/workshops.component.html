@@ -1,14 +1,11 @@
-<div class="main">
+<div style="padding-top: 90px;"><div class="main" >
     <div class="pad" *ngFor="let items of work;let indexOfelement=index;">
-<div class="pic" style="background: url('{{ items.img }}');background-position: center;background-repeat: no-repeat;background-size: cover;">
-  <div class="txt1" *ngIf="!!indexOfelement%2">
-    <h1>{{ items.name }}</h1>
-    <h3>{{items.description}}</h3>
+      <div class="card">
+          <img src="{{items.img}}"  class="image">
+          <div class="text">
+            <div class="title">{{items.name}}</div>
+            <div class="content">{{items.description}}</div>
+          </div>
+      </div>
   </div>
-  <div class="txt2" *ngIf="!indexOfelement%2">
-    <h1>{{ items.name }}</h1>
-    <h3>{{items.description}}</h3>
-  </div>
-</div>
-  </div>
-</div>
+</div></div>
