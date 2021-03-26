@@ -13,27 +13,27 @@ export class PayComponent implements OnInit {
    {name:" Short-film Competition",
   date:"20 april 2021",
   description:"Imagine yourself to be in the shoes of a movie director, and create a short film of 3-10 minutes based on a given theme. Feel free to come up with the unique & original ideas and weave an impactful story through seamless cinematography and editing.",
-  img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
+  img:"./../../assets/events/cine2.png",
   price:5000
 },
   {name:"That's how B-Roll",
   date:"20 april 2021",
   description:"Perfectly set up scenes, camera angles and surreal editing and transitions make a masterpiece that captivates viewers. “That’s how B-roll” requires you to make a B-roll portraying mundane daily activities in an exciting short clip.",
-  img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
+  img:"./../../assets/events/cine1.png",
   price:5000
 }];
    outreach: any[] = [
      {name:" Vlogoholic",
   date:"20 april 2021",
   description:" It’s time for you to explore the vlogger inside you and create the perfect attention grabbing vlog describing any experience of your own, captivatingly, choosing any genre of your liking - travelog, prank, food review - anything that you find interesting.",
-  img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
+  img:"./../../assets/events/outreach2.png",
   club:"outreach",
   price:5000
 },
   {name:"Documentary making",
   date:"20 april 2021",
   description:"Be it our heritage, our culture, or even our flaws, a well-structured documentary can portray it all. That’s what you’ll do in the “Documentary Making” event, where the goal is to make a 1-10 minute documentary pertaining to any particular genre",
-  img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
+  img:"./../../assets/events/outreach1.png",
   club:"outreach",
   price:5000
 }];
