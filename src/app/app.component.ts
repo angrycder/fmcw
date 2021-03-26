@@ -12,6 +12,7 @@ import { SocialAuthService } from "angularx-social-login";
 import { GoogleLoginProvider } from "angularx-social-login";
 import {OverlayContainer} from '@angular/cdk/overlay';
 import { HostListener } from "@angular/core";
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,13 @@ export class AppComponent implements OnInit,OnDestroy {
   screenWidth: number  = window.innerWidth;
   wide:boolean = this.screenWidth < 500;
 
-  constructor(private overlayContainer: OverlayContainer,private authService: SocialAuthService,private router : Router,private render:Renderer2,public dia: DialogService,private storage:LocalStorageService){
+  constructor(private overlayContainer: OverlayContainer,
+    private authService: SocialAuthService,
+    private router : Router,
+    private render:Renderer2,
+    public dia: DialogService,
+    private storage:LocalStorageService,
+    private http:HttpClient){
       this.user = this.storage.retrieve('user');
       this.loggedIn=(this.user != null);
 
@@ -72,7 +79,13 @@ export class AppComponent implements OnInit,OnDestroy {
   signInWithGoogle(): void {
      this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
      this.dia.dialog.closeAll()
-     this.authService.authState.subscribe((user) => { this.storage.store('user',user);this.pop_up_login();});
+     this.authService.authState.subscribe((user:SocialUser) => { 
+       this.storage.store('user',user);
+       this.http
+       .post("https://fmcweek-liart.vercel.app/google/login",{"token":user.idToken},{withCredentials:true,responseType:"json"})
+       .subscribe((res:any)=>{console.log(res)})
+
+   });
      
   }
 
