@@ -308,3 +308,22 @@ background-size: cover;
     flex-direction: column;
     font-family: "BigNoodleTitling";
 }
+
+.img2{
+    display: block;
+    max-width:230px;
+    max-height:250px;
+    width: auto;
+    height: fit-content;
+    padding:20px;
+}
+
+
+.sponsors{
+    width:100%;
+    height : auto;
+    display :flex;
+    flex-wrap:wrap;
+        align-items: center;
+    justify-content: center;
+}
