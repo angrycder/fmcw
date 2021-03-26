@@ -7,6 +7,7 @@ import { SocialUser } from "angularx-social-login";
 import {DialogService} from './../service/dialog.service';
 import { Router } from "@angular/router";
 import { CartComponent } from './../cart/cart.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -28,7 +29,11 @@ export class LoginComponent implements OnInit {
     org:new FormControl(''),
   });
 
-  constructor(private router:Router,private authService: SocialAuthService,private storage:LocalStorageService,public dia: DialogService) { }
+  constructor(private router:Router,
+    private authService: SocialAuthService,
+    private storage:LocalStorageService,
+    public dia: DialogService,
+    private http:HttpClient) { }
 
   ngOnInit(): void {
   }
@@ -51,4 +56,17 @@ export class LoginComponent implements OnInit {
 
   }
 
+  ca():void{
+    this.http.post("https://fmcweek-liart.vercel.app/registerca",{"name":this.signUpForm.name,"mobile":this.signUpForm.phone,"institute":this.signUpForm.org,"year":1},{withCredentials:true})
+    .subscribe((res:any)=>{console.log(res);
+           this.dia.dialog.closeAll();
+     this.router.navigateByUrl("/dash/cart");
+    });
+  }
+  pa():void{
+    this.http.post("https://fmcweek-liart.vercel.app/registerpa",{"name":this.signUpForm.name,"mobile":this.signUpForm.phone,"institute":this.signUpForm.org,"year":1,"redeem":"asdasdsa"},{withCredentials:true})
+    .subscribe((res:any)=>{console.log(res);     
+      this.dia.dialog.closeAll();
+     this.router.navigateByUrl("/dash/cart");});
+  }
 }

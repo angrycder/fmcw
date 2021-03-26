@@ -83,7 +83,10 @@ export class AppComponent implements OnInit,OnDestroy {
        this.storage.store('user',user);
        this.http
        .post("https://fmcweek-liart.vercel.app/google/login",{"token":user.idToken},{withCredentials:true,responseType:"json"})
-       .subscribe((res:any)=>{console.log(res)})
+       .subscribe((res:any)=>{console.log(res)
+         if(res == "success"){
+           this.pop_up_login();
+         }})
 
    });
      
@@ -92,6 +95,10 @@ export class AppComponent implements OnInit,OnDestroy {
   signOut():void{
     this.storage.clear('user');
     this.authService.signOut();
+    this.http
+    .get("https://fmcweek-liart.vercel.app/google/logout",{withCredentials:true,responseType:"json"})
+     .subscribe((res:any)=>{console.log(res)})
+
   }
   
 
