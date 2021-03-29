@@ -22,4 +22,40 @@
 		<div class="q">What are the perks of this program?</div>
 		<div class="a">As soon as someone registers using your referral code, it would reflect in our database. Once there have been 5 registrations using your code, you’d enter the Referral program leaderboard which is visible on our website. By the end of the fest, the leaders, i.e. participants with the maximum number of registrations to their name, would be the recipients of prizes worth a total of ₹3000</div>
 	</div>
+	<div class="content">
+		<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="code">
+    <th mat-header-cell *matHeaderCellDef> code </th>
+    <td mat-cell *matCellDef="let element"> {{element.code}} </td>
+  </ng-container>
+
+    <ng-container matColumnDef="referals">
+    <th mat-header-cell *matHeaderCellDef> referals </th>
+    <td mat-cell *matCellDef="let element"> {{element.referals}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+	</div>
 </div>

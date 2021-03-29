@@ -32,9 +32,6 @@ export function app(): express.Express {
   const server = express();
   const distFolder = join(process.cwd(), 'dist/fmcw/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
-  server.get('/api/j', (req, res) => {
- res.json({ username: 'Flavio' });
-});
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
   server.engine('html', ngExpressEngine({
     bootstrap: AppServerModule,

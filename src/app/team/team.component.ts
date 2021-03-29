@@ -35,10 +35,10 @@ export class TeamComponent implements OnInit,OnDestroy,AfterViewInit {
    // this.document.body.className = "bgy";
   }
   ngAfterViewInit():void{
-    this.pub = this.publicity.nativeElement.offsetTop;
-    this.mar = this.marketing.nativeElement.offsetTop;
-    this.rel = this.relations.nativeElement.offsetTop;
-    this.des = this.design.nativeElement.offsetTop;
+    this.pub = this.publicity.nativeElement.offsetTop - 100;
+    this.mar = this.marketing.nativeElement.offsetTop - 100;
+    this.rel = this.relations.nativeElement.offsetTop - 100;
+    this.des = this.design.nativeElement.offsetTop - 100;
 
   }
 
@@ -55,16 +55,21 @@ export class TeamComponent implements OnInit,OnDestroy,AfterViewInit {
     if (window.pageYOffset >= this.pub && window.pageYOffset < this.des) {
       this.p = true
       this.d = false
+       this.r = false
+      this.m = false
     } else if (window.pageYOffset >= this.des && window.pageYOffset < this.rel) {
       this.p = false
       this.d = true
       this.r = false
+      this.m = false
     } else if (window.pageYOffset >= this.rel && window.pageYOffset < this.mar) {
       this.d = false
       this.r = true
       this.p = false
       this.m = false
     } else if (window.pageYOffset >= this.mar) {
+      this.d = false
+      this.p = false
       this.r = false
       this.m = true
     } else {

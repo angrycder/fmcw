@@ -13,55 +13,50 @@
   flex-wrap:wrap;
 }
 
-.image{
-    border-radius: 25px;
-    width: 300px;
-    height: 300px;
-    position: relative;
-    float: left;
+.wing{
+  width:100%;
+  height: 100vh;
+    display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
 }
-.text{
-    height: 100%;
-    width: calc(100% - 300px);
-    float: right;
+.menu{
+  width:400px;
+  height:100%;
+  position:fixed;
+  float:left;
+  top: 90px;
+}
+
+.cards{
+  width:calc(100% - 400px);
+  height:100%;
+      padding-top: 90px;
+  float:right;
+}
+
+
+.cards2{
+  width:100%;
+  height:100%;
+}
+
+.im{
+  width:200px;
+}
+
+.team{
+  width:100%;
+  height:auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
 
 }
 
-.main{
-width:100vw;
-height:auto;
-display: flex;
-align-items:center;
-justify-content:center;
-flex-direction:column;
-}
 
-.pic{
-  width:-webkit-fill-available;
-  height:calc(100vw - 20px);
-  max-width: 800px;
-  max-height:800px;
-  border-radius:25px;
-}
-.txt1{
-width: calc(100% - 70px);
-    height: calc(100% - 70px);
-    text-align: left;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 40px
-}
-
-.txt2{
-width: calc(100% - 70px);
-    height: calc(100% - 70px);
-    text-align: right;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 40px
-}
 .pad{
   padding:20px;
   width:auto;

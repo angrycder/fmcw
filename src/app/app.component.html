@@ -6,25 +6,23 @@
   <span class="example-spacer"></span>
    <button mat-button *ngIf="!wide && !loggedIn" (click)="signInWithGoogle()">Register</button>
    <button mat-button *ngIf="!wide && loggedIn " routerLink="dash">Dashboard</button>
-    <button mat-button *ngIf="!wide && loggedIn" (click)="signOut()">logout</button>
   <button mat-button *ngIf="!wide" routerLink="events">Events</button>
 <button mat-button *ngIf="!wide" routerLink="workshops">Workshops</button>
-<button mat-button *ngIf="!wide" routerLink="memories">Memories</button>
+<button mat-button *ngIf="!wide"   routerLink="ambassador">Referals</button>
+<button mat-button *ngIf="!wide && loggedIn" routerLink="dash/cart">Passes</button>
 <button mat-button *ngIf="!wide" routerLink="team">Team</button>
-<button mat-button *ngIf="!wide"   routerLink="leader">Leaderboard</button>
 <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" *ngIf="wide">
   <mat-icon>menu</mat-icon>
 </button>
 <mat-menu #menu="matMenu">
   <button mat-menu-item *ngIf="!loggedIn"(click)="signInWithGoogle()">Register</button>
   <button mat-menu-item *ngIf="loggedIn" routerLink="dash">Dashboard</button>
-  <button mat-menu-item *ngIf="loggedIn" (click)="signOut()">logout</button>
   <button mat-menu-item routerLink="events">Events</button>
 <button mat-menu-item routerLink="workshops">Workshops</button>
-<button mat-menu-item routerLink="memories">Memories</button>
+<button mat-menu-item *ngIf="loggedIn" routerLink="dash/cart">Passes</button>
 <button mat-menu-item routerLink="team">Team</button>
-<button mat-menu-item   routerLink="leader">Leaderboard</button>
 </mat-menu>
+   <button mat-button *ngIf="loggedIn" (click)="signOut()"><mat-icon>exit_to_app</mat-icon></button>
 </mat-toolbar> 
 
 
@@ -67,3 +65,4 @@
     <div class="title3">FAQ</div>
   </div>
 </div>
+ 

@@ -1,11 +1,9 @@
-<div style="padding-top: 90px;"><div class="main" >
-    <div class="pad" *ngFor="let items of work;let indexOfelement=index;">
-      <div class="card">
-          <img src="{{items.img}}"  class="image">
-          <div class="text">
-            <div class="title">{{items.name}}</div>
-            <div class="content">{{items.description}}</div>
-          </div>
-      </div>
-  </div>
-</div></div>
+<div class="menu" *ngIf="wide" ngFor="let item of work; let i = index">
+	<div class="title" *ngIf="p" >{{item.name}}</div>
+	<div class="title2" *ngIf="!p" (click)="goto('pub')">{{item.name}}</div>
+</div>
+<div class="team">
+	<div class="wing" *ngFor="let iter of rok; let i = index">
+		<div class="title">{{iter.name}}</div>
+	</div>
+</div>
