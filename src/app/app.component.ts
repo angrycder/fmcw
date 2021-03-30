@@ -5,7 +5,6 @@ import { Router} from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { CartComponent } from './cart/cart.component';
 import {MatDialog} from '@angular/material/dialog';
-import {DialogService} from './service/dialog.service';
 import {LocalStorageService} from 'ngx-webstorage';
 import { SocialUser } from "angularx-social-login";
 import { SocialAuthService } from "angularx-social-login";
@@ -32,7 +31,7 @@ export class AppComponent implements OnInit,OnDestroy {
     private authService: SocialAuthService,
     private router : Router,
     private render:Renderer2,
-    public dia: DialogService,
+    public dia: MatDialog,
     private storage:LocalStorageService,
     private http:HttpClient){
       this.user = this.storage.retrieve('user');
@@ -54,16 +53,10 @@ export class AppComponent implements OnInit,OnDestroy {
 
   }
   pop_up_login():void{
-    const dialogRef = this.dia.dialog.open(LoginComponent);
+    const dialogRef = this.dia.open(LoginComponent,{width:"100vw",height:"100vh"});
 
     dialogRef.afterClosed().subscribe(result => {    });
 
-  }
-
-  pop_up_payment():void{
-    const dialogRef = this.dia.dialog.open(CartComponent);
-
-    dialogRef.afterClosed().subscribe(result => {    });
   }
 
  logout():void {
@@ -78,13 +71,13 @@ export class AppComponent implements OnInit,OnDestroy {
 
   signInWithGoogle(): void {
      this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
-     this.dia.dialog.closeAll()
+     this.dia.closeAll()
      this.authService.authState.subscribe((user:SocialUser) => { 
        this.storage.store('user',user);
        this.http
        .post("https://fmcweek-liart.vercel.app/google/login",{"token":user.idToken},{withCredentials:true,responseType:"json"})
        .subscribe((res:any)=>{console.log(res)
-         if(res == "success"){
+         if(res["message"] == "nodetail"){
            this.pop_up_login();
          }})
 

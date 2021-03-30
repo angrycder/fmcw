@@ -1,6 +1,6 @@
 import { Component, OnInit, Optional, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import {DialogService} from './../service/dialog.service';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-pay',
@@ -8,6 +8,8 @@ import {DialogService} from './../service/dialog.service';
   styleUrls: ['./pay.component.scss']
 })
 export class PayComponent implements OnInit {
+
+  pdf : boolean = false;
 	title: any;
    cinema: any[] = [
    {name:" Short-film Competition",
@@ -107,7 +109,7 @@ cart: any[] = [
 ];
 pin:any;
 names:string[]=["animation","media","design","outreach","cinema","photography"]
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any,public dia: DialogService) { 
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any,public dia: MatDialog) { 
     this.pin = this.data.number-1;
     this.title = this.names[this.pin];
     this.cart = this.change[this.pin];
@@ -118,7 +120,8 @@ names:string[]=["animation","media","design","outreach","cinema","photography"]
   }
 
   checkout(l:any):void{
-  	console.log(l)
+  	console.log(l);
+    this.pdf = true
   }
   left():void{
     this.pin = (this.pin+5)%6
@@ -129,10 +132,6 @@ names:string[]=["animation","media","design","outreach","cinema","photography"]
     this.pin = (this.pin+1)%6
     this.cart = this.change[this.pin];
     this.title = this.names[this.pin];
-  }
-
-  close():void{
-    this.dia.dialog.closeAll();
   }
 
 }

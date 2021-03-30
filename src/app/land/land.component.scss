@@ -1,15 +1,4 @@
-@import url(//db.onlinewebfonts.com/c/ff78c5e2b6c3846035dae28cdaa65583?family=BigNoodleTitling); 
-   
 
-@font-face {font-family: "BigNoodleTitling"; src: url("//db.onlinewebfonts.com/t/ff78c5e2b6c3846035dae28cdaa65583.eot"); src: url("//db.onlinewebfonts.com/t/ff78c5e2b6c3846035dae28cdaa65583.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ff78c5e2b6c3846035dae28cdaa65583.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ff78c5e2b6c3846035dae28cdaa65583.woff") format("woff"), url("//db.onlinewebfonts.com/t/ff78c5e2b6c3846035dae28cdaa65583.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ff78c5e2b6c3846035dae28cdaa65583.svg#BigNoodleTitling") format("svg"); }
-
-p{
-	word-spacing: 30px;
-	font-weight:700;
-}
-p:focus{
-    outline:0;
-}
 .main3{
   width:100%;
   height: auto;
@@ -20,134 +9,25 @@ p:focus{
 .body::-webkit-scrollbar {
   display: none;
 }
-.links{
-	display:flex;
-	align-items:center;
-	justify-content:center;
-	float:right;
-	width:80%;
-	text-align: center;
-	vertical-align: middle;
-	line-height: 70px; 
-	font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-}
-
-.quote{
-	width: 500px;
-	height: 350px;
-	    position: relative;
-    top: 175px;
-    left: 100px;
-}
-
-h1{
-	font-weight:600;
-	font-size:100px;
-	line-height:1;
-	font-family: "BigNoodleTitling";
-}
-
-h2{
-		font-weight:600;
-	font-size:4rem;
-	line-height:1;
-	font-family: "BigNoodleTitling";
-}
-
-h3{
-		font-weight:600;
-	font-size:50px;
-	line-height:1.5;
-	font-family: "BigNoodleTitling";
-}
-.base{
-    width: 100%;
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap:wrap;
-    color:white;
-    background:black;
-    height:auto;
-}
-
-.image{
-	width: 40%;
-	background: black;
-	height: 400px;
-}
-
-.text{
-	width: 40%;
-	background: black;
-	height: 400px;
-}
-
-.center {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform:translate(-50%, -50%);
-  height:75%;
-  border-radius:20px;
-    }
-
-.about{
-	font-family:arial,sans-serif;
-	font-size: 30px;
-	text-align: center;
-	line-height:1.8;
-}
-
-.quote2{
-	    width: 500px;
-    height: 350;
-    position: relative;
-    top: 175px;
-    float: right;
-    right: 100px;
-}
-
-
-.new{
-      display: flex;
-    flex-flow: column;
-    height : 100vh;
-    scroll-behavior:smooth;
-}
-
-.sub{
-	width : 100%;
-	height:100vh;
-}
-.new::-webkit-scrollbar {
-  display: none;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  }
 
 .new2{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height:auto;
-	width: 100%;
-	flex-direction:column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:auto;
+    width: 100%;
+    flex-direction:column;
 }
-
 .sub1{
-		width : 100%;
-	height:100vh;
-	    display: flex;
+        width : 100%;
+    height:100vh;
+        display: flex;
     justify-content: center;
     align-items: center;
     flex-direction:column;
 }
 .quote3{
-	width: 100%;
+    width: 100%;
     height: 350px;
     position: relative;
     display: flex;
@@ -158,71 +38,11 @@ h3{
     text-align: center;
 }
 
-.h{
-	font-weight:600;
-	font-size:60px;
-	line-height:1;
-	font-family: "BigNoodleTitling";
-}
-
-.hh{
-		font-weight:600;
-	font-size:60px;
-	line-height:1;
-	font-family: "BigNoodleTitling";
-}
-
-.hhh{
-		font-weight:600;
-	font-size:20px;
-	line-height:1.5;
-	font-family: "BigNoodleTitling";
-}
-
-.inn::-webkit-scrollbar {
-  display: none;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.am {
-	background:url('./../../assets/main.png');
-	background-position: bottom;
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.a1 {
-	background:url('./../../assets/bg2.png');
-	background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.a2 {
-	background:url('./../../assets/d1.jpg');
-	background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.a3 {
-	background:url('./../../assets/d2.jpg');
-	background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-.car{
-	width:30vw;
-	height:180px;
-	min-width:300px;
-	  overflow: hidden;
-}
 .title{
-	height:70px;
-	width:100%;
-	font-size:20px;
-	justify-content:center;
+    height:70px;
+    width:100%;
+    font-size:20px;
+    justify-content:center;
     font-size:25px;
     text-transform: uppercase;
         font-weight: 900;
@@ -230,83 +50,43 @@ background-size: cover;
     align-items: center;
     flex-direction: column;
 }
-
-.title2{
-	height:70px;
-	width:100%;
-	justify-content:center;
-    font-size:25px;
-    text-transform: uppercase;
-    font-weight: 900;
-    display: flex;
-    flex-wrap:wrap;
-    align-items: center;
+.am {
+    background:url('./../../assets/main.png');
+    background-position: bottom;
+background-repeat: no-repeat;
+background-size: cover;
 }
 
-.fa{
-	font-size:25px;
-	padding:20px;
+.a1 {
+    background:url('./../../assets/bg2.png');
+    background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.a2 {
+    background:url('./../../assets/d1.jpg');
+    background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.a3 {
+    background:url('./../../assets/d2.jpg');
+    background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.h{
+    font-weight:600;
+    font-size:60px;
+    line-height:1;
+    font-family: "Lato";
 }
 .landimg{
     width: 90%;
     max-width: 700px;
-}
-
-.m{
-	    display: flex;
-    position: relative;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.base2{
-    width: 100%;
-    height:auto;
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap:wrap;
-    background:black;
-}
-
-.car2{
-    width:20vw;
-    height:70px;
-    min-width:300px;
-    overflow: hidden;
-    cursor:pointer;
-}
-
-.title3{
-    height:70px;
-    width:100%;
-    font-size:20px;
-    justify-content:center;
-    font-size:15px;
-    text-transform: uppercase;
-    font-weight: 900;
-    display: flex;
-    align-items: center;
-    color:white;
-    flex-direction: column;
-    font-family: "BigNoodleTitling";
-}
-.title4{
-    height:30px;
-    width:100%;
-    font-size:20px;
-    justify-content:center;
-    font-size:15px;
-    text-transform: uppercase;
-    font-weight: 900;
-    display: flex;
-    color:white;
-    align-items: center;
-    flex-direction: column;
-    font-family: "BigNoodleTitling";
 }
 
 .img2{

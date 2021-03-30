@@ -2,7 +2,7 @@ import { Component, OnInit,HostListener ,Renderer2} from '@angular/core';
 import { SocialUser } from "angularx-social-login";
 import {LocalStorageService} from 'ngx-webstorage';
 import {HttpClient} from "@angular/common/http";
-import {DialogService} from './../service/dialog.service';
+import {MatDialog} from '@angular/material/dialog';
 import { LoginComponent } from './../login/login.component';
 import { PayComponent } from './../pay/pay.component';
 declare var Razorpay : any;
@@ -18,7 +18,7 @@ user: SocialUser;
   screenHeight: number = window.innerHeight;
   screenWidth: number  = window.innerWidth;
   screen: string = (this.screenWidth>400)?"90%":"100%";
-  constructor(private http:HttpClient ,private storage:LocalStorageService,public dia: DialogService) { }
+  constructor(private http:HttpClient ,private storage:LocalStorageService,public dia: MatDialog) { }
 
   ngOnInit(): void {
       this.user =this.storage.retrieve('user');
@@ -61,17 +61,17 @@ user: SocialUser;
   }
 
     pop_up_login():void{
-    const dialogRef = this.dia.dialog.open(LoginComponent);
+    const dialogRef = this.dia.open(LoginComponent);
     dialogRef.afterClosed().subscribe(result => {    });
   }
      pop_up(s:number):void{
-    const dialogRef = this.dia.dialog.open(PayComponent, {
+    const dialogRef = this.dia.open(PayComponent, {
       width: this.screen,
       height:this.screen,
       maxWidth:"100vw",
       data: { number:s}
     });
-    dialogRef.backdropClick().subscribe((res)=>{this.dia.dialog.closeAll()})
+    dialogRef.backdropClick().subscribe((res)=>{this.dia.closeAll()})
     dialogRef.afterClosed().subscribe(result => {    });
   }
 

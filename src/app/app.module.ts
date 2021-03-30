@@ -14,7 +14,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
 import { ClubComponent } from './club/club.component';
-import { NgImageSliderModule } from 'ng-image-slider';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
@@ -26,10 +25,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
 import { GoogleLoginProvider } from 'angularx-social-login';
-import { ThemeModule } from './theme/theme.module';
 import {MatMenuModule} from '@angular/material/menu';
 import { PayComponent } from './pay/pay.component';
-import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { LeaderComponent } from './leader/leader.component';
 import { TeamComponent } from './team/team.component';
 import { MemoryComponent } from './memory/memory.component';
@@ -57,7 +54,6 @@ import { CaComponent } from './ca/ca.component';
     MatFormFieldModule,
     MatToolbarModule,
     MatTableModule,
-    NgImageSliderModule,
      SocialLoginModule,
     MatInputModule,
     NgxWebstorageModule.forRoot(),
@@ -66,11 +62,9 @@ import { CaComponent } from './ca/ca.component';
     MatDialogModule,
     MatIconModule,
     MatButtonModule,
-    IvyCarouselModule,
     MatMenuModule,
     MatTabsModule,
     HttpClientModule,
-    ThemeModule,
     MatTreeModule
   ],
   providers: [{
