@@ -32,7 +32,7 @@ export class TeamComponent implements OnInit,OnDestroy,AfterViewInit {
    }
 
   ngOnInit(): void {
-   // this.document.body.className = "bgy";
+    this.document.body.className = "bgy";
   }
   ngAfterViewInit():void{
     this.pub = this.publicity.nativeElement.offsetTop - 100;
@@ -43,7 +43,7 @@ export class TeamComponent implements OnInit,OnDestroy,AfterViewInit {
   }
 
   ngOnDestroy():void{
-    //this.document.body.className = "";
+    this.document.body.className = "";
   }
 
   goto(x:string){

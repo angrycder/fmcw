@@ -2,11 +2,11 @@
    <mat-toolbar color="primary"> Details</mat-toolbar>
    <div class="fields2">
          <div class="forms">
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill" required>
                <mat-label>Name</mat-label>
                <input matInput  >
             </mat-form-field>
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill" required>
                <mat-label>Phone</mat-label>
                <input matInput type="number" >
             </mat-form-field>
@@ -668,6 +668,13 @@
         <option value="3">&#8546;</option>
         <option value="4">&#8547;</option>
         <option value="5">&#8548;</option>
+      </select>
+    </mat-form-field>
+   <mat-form-field  appearance="fill">
+      <mat-label>Role</mat-label>
+      <select matNativeControl required [(ngModel)]="type"  #year>
+        <option value="ca">CAMPUS AMBASSADOR</option>
+        <option value="pa">PARTICIPANT</option>
       </select>
     </mat-form-field>
          </div>

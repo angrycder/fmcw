@@ -1,43 +1,4 @@
-.main {
-  position: fixed;
- top: 55%;
- left: 50%;
- transform: translate(-50%, -50%);
-  height:450px;
-  width:400px;
-  border-radius:25px;
-  box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
-}
 
-.main2 {
-  position: fixed;
- top: 55%;
- left: 50%;
- transform: translate(-50%, -50%);
-  height:500px;
-  width:400px;
-  border-radius:25px;
-  box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
-}
-mat-toolbar{
-border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-}
-
-
-.fields{
-	height:50%;
-	width:100%;
-	    padding: 0;
-    margin: 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .mat-form-field-appearance-outline .mat-form-field-outline {
   color: black;
@@ -65,11 +26,6 @@ mat-form-field {
   border-radius:25px;
 }
 
-#google{
-    left: 110px;
-    bottom: 30px;
-    position: absolute;
-}
 
 form{	width:100%;
 }
@@ -77,18 +33,6 @@ form{	width:100%;
 .sbtn{
   float:right;
   right:50px;
-}
-.fp{
-  left: 50px;
-  color: royalblue;
-  position: absolute;
-}
-
-.fp2{
-  top: 50px;
-    position: relative;
-    left: 50px;
-    color: royalblue;
 }
 
 .btn{
@@ -194,14 +138,16 @@ width: 150px;
 }
 
 .events{
-  width:calc(100% - 70px);
-  height:auto;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  align-items:center; 
-  padding-top:50px;
-    max-width:800px;
+width: calc(100% - 70px);
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 50px; */
+    max-width: 800px;
+    background: white;
+    border-radius: 25px;
 }
 
 .work{
@@ -220,10 +166,7 @@ width: 150px;
   width:100px;
 }
 
-mat-card{
-  width: -webkit-fill-available;
-  max-width:300px;
-}
+
 
 .pad{
   padding:20px;
@@ -241,4 +184,13 @@ mat-card{
     display: flex;
     align-items: center;
     flex-direction: column;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+mat-card{
+  width: -webkit-fill-available;
+  max-width:300px;
+}
+
 }

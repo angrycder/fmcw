@@ -79,7 +79,19 @@ export class AppComponent implements OnInit,OnDestroy {
        .subscribe((res:any)=>{console.log(res)
          if(res["message"] == "nodetail"){
            this.pop_up_login();
-         }})
+         }
+         if(res["message"] == "insti"){
+           
+         }
+         if(res["message"] == "ca"){
+           
+         }
+         if(res["message"] == "pa"){
+           
+         }
+
+
+       })
 
    });
      

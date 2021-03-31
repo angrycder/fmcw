@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
     hide = true;
     fs = true;
     user: SocialUser;
+      type:string;
     detail:details= {name:"",number:null,organization:null,year:null};
 
   constructor(private router:Router,
@@ -40,8 +41,13 @@ export class LoginComponent implements OnInit {
   }
 
   signUp(): void {
-     console.warn('Your order has been submitted');
-     this.router.navigateByUrl("/dash/cart");
+    console.log(this.type);
+     if(this.type=="ca"){
+       this.ca();
+     }
+     if(this.type=="pa"){
+       this.pa();
+     }
   }
 
 

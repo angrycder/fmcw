@@ -21,6 +21,7 @@ import { CountdownModule } from 'ngx-countdown';
 import {MatButtonModule} from '@angular/material/button'
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
+import { MatCarouselModule } from '@ngbmodule/material-carousel';
 import {HttpClientModule} from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
@@ -63,6 +64,7 @@ import { CaComponent } from './ca/ca.component';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
+    MatCarouselModule.forRoot(),
     MatTabsModule,
     HttpClientModule,
     MatTreeModule
@@ -75,8 +77,8 @@ import { CaComponent } from './ca/ca.component';
         {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              //'214944693451-2sue5kgd5p6b0sufrbfvabkesvc11esc.apps.googleusercontent.com'
-              "214944693451-iqen2gebk39m2v4c7ip7t2nf8c6r6b3a.apps.googleusercontent.com"
+              '214944693451-2sue5kgd5p6b0sufrbfvabkesvc11esc.apps.googleusercontent.com'
+              //"214944693451-iqen2gebk39m2v4c7ip7t2nf8c6r6b3a.apps.googleusercontent.com"
             )
           }
         ]
