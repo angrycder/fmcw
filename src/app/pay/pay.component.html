@@ -1,11 +1,11 @@
-<div class="main" *ngIf="!pdf">
+<div class="main" >
   <div class="title">{{ title }}</div>
 	<div class="pad" *ngFor="let items of cart;">
 			<mat-card class="example-card">
   <mat-card-header>
 
     <mat-card-title [innerHTML]="items.name"></mat-card-title>
-    <mat-card-subtitle>{{ items.name }}</mat-card-subtitle>
+
   </mat-card-header>
   <img mat-card-image src="{{items.img}}">
   <mat-card-content>
@@ -20,17 +20,4 @@
    <button mat-mini-fab class="left" color="primary" (click)="left()"><mat-icon>arrow_left</mat-icon></button>
    <button mat-mini-fab class="right" color="primary" (click)="right()"><mat-icon>arrow_right</mat-icon></button>
    <button mat-mini-fab class="top" color="warn" mat-dialog-close><mat-icon>close</mat-icon></button>
-</div>
-
-<div class="main" *ngIf="pdf">
-  <object
-  data="../../assets/ps/monogram.pdf"
-  type="application/pdf"
-  width="100%"
-  height="100%">
-  <iframe src="../../assets/ps/monogram.pdf">
-    <p>Oops! Your browser doesn't support PDFs!</p>
-    <p><a href="../../assets/ps/monogram.pdf">Download Instead</a></p>
-  </iframe>
-</object>
 </div>

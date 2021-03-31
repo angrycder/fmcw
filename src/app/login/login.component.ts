@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Inject } from '@angular/core';
 import { SocialAuthService } from "angularx-social-login";
 import { GoogleLoginProvider } from "angularx-social-login";
 import { FormGroup, FormControl } from '@angular/forms';
@@ -7,12 +7,15 @@ import { SocialUser } from "angularx-social-login";
 import { Router } from "@angular/router";
 import { CartComponent } from './../cart/cart.component';
 import { HttpClient } from '@angular/common/http';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 interface details{
   name: string;
   number : number;
   organization: string;
   year:number;
+  token:string;
+  redeem:string;
 }
 
 @Component({
@@ -25,12 +28,15 @@ export class LoginComponent implements OnInit {
     fs = true;
     user: SocialUser;
       type:string;
-    detail:details= {name:"",number:null,organization:null,year:null};
+    detail:details= {name:"",number:null,organization:null,year:null,token:"",redeem:""};
 
-  constructor(private router:Router,
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any,private router:Router,
     private authService: SocialAuthService,
     private storage:LocalStorageService,
-    private http:HttpClient) { }
+    private http:HttpClient) {
+    this.detail.token = this.data.user.idToken;
+    console.log(this.detail);
+  }
 
   ngOnInit(): void {
   }
@@ -54,12 +60,15 @@ export class LoginComponent implements OnInit {
   ca():void{
     this.http.post("https://fmcweek-liart.vercel.app/registerca",this.detail,{withCredentials:true})
     .subscribe((res:any)=>{console.log(res);
+       this.storage.store('user',this.data.user);
      this.router.navigateByUrl("/dash/cart");
+
     });
   }
   pa():void{
     this.http.post("https://fmcweek-liart.vercel.app/registerpa",this.detail,{withCredentials:true})
-    .subscribe((res:any)=>{console.log(res);     
+    .subscribe((res:any)=>{console.log(res);  
+     this.storage.store('user',this.data.user);   
      this.router.navigateByUrl("/dash/cart");});
   }
 }

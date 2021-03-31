@@ -32,6 +32,7 @@ import { LeaderComponent } from './leader/leader.component';
 import { TeamComponent } from './team/team.component';
 import { MemoryComponent } from './memory/memory.component';
 import { CaComponent } from './ca/ca.component';
+import { SafePipeModule } from 'safe-pipe';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { CaComponent } from './ca/ca.component';
     MatDialogModule,
     MatIconModule,
     MatButtonModule,
+    SafePipeModule,
     MatMenuModule,
     MatCarouselModule.forRoot(),
     MatTabsModule,

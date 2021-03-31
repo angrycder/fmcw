@@ -52,8 +52,8 @@ export class AppComponent implements OnInit,OnDestroy {
   pop_up(s:string):void{
 
   }
-  pop_up_login():void{
-    const dialogRef = this.dia.open(LoginComponent,{width:"100vw",height:"100vh"});
+  pop_up_login(x:any):void{
+    const dialogRef = this.dia.open(LoginComponent,{width:"100vw",height:"100vh",data:{user:x}});
 
     dialogRef.afterClosed().subscribe(result => {    });
 
@@ -73,12 +73,11 @@ export class AppComponent implements OnInit,OnDestroy {
      this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
      this.dia.closeAll()
      this.authService.authState.subscribe((user:SocialUser) => { 
-       this.storage.store('user',user);
        this.http
        .post("https://fmcweek-liart.vercel.app/google/login",{"token":user.idToken},{withCredentials:true,responseType:"json"})
        .subscribe((res:any)=>{console.log(res)
          if(res["message"] == "nodetail"){
-           this.pop_up_login();
+           this.pop_up_login(user);
          }
          if(res["message"] == "insti"){
            
@@ -91,7 +90,8 @@ export class AppComponent implements OnInit,OnDestroy {
          }
 
 
-       })
+       },
+       (error:any)=>{console.log(error)})
 
    });
      
