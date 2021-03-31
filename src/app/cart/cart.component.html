@@ -112,7 +112,7 @@
                                             <li _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" class="elementor-repeater-item-2c6e09d"><i _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" aria-hidden="true" class="fas fa-circle"></i> Fun swag</li>
                                           </ul>
                                         </div>
-                                        <div _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" class="elementskit-pricing-btn-wraper" (click)="allPass()">
+                                        <div _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" class="elementskit-pricing-btn-wraper" (click)="checkOut('aep')">
                                           <a _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113=""  class="elementskit-pricing-btn ekit-pricing-btn-icon-pos-left">
                                             <svg _ngcontent-serverApp-c46="" _ngcontent-serverApp-c113="" xmlns="http://www.w3.org/2000/svg" width="17.778" height="16" viewBox="0 0 17.778 16">
                                               <path _ngcontent-serverApp-c46="" _ngcontent-serverApp-c113="" d="M3.778,16.333V19H6.444V16.333h8.889V19H18V13.667H3.778ZM17.111,9.222h2.667v2.667H17.111ZM2,9.222H4.667v2.667H2Zm13.333,2.667H6.444V4.778A1.783,1.783,0,0,1,8.222,3h5.333a1.783,1.783,0,0,1,1.778,1.778Z" transform="translate(-2 -3)" fill="#fff"></path>
@@ -146,12 +146,33 @@
                                             <li _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" class="elementor-repeater-item-2c6e09d"><i _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" aria-hidden="true" class="fas fa-circle"></i> Entrance Afterparty</li>
                                           </ul>
                                         </div>
-                                        <div _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" class="elementskit-pricing-btn-wraper">
+                                        <div _ngcontent-serverapp-c46="" (click)="checkOut('dep')"_ngcontent-serverapp-c113="" class="elementskit-pricing-btn-wraper">
                                           <a _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" href="#" class="elementskit-pricing-btn ekit-pricing-btn-icon-pos-left">
                                             <svg _ngcontent-serverApp-c46="" _ngcontent-serverApp-c113="" xmlns="http://www.w3.org/2000/svg" width="17.778" height="16" viewBox="0 0 17.778 16">
                                               <path _ngcontent-serverApp-c46="" _ngcontent-serverApp-c113="" d="M3.778,16.333V19H6.444V16.333h8.889V19H18V13.667H3.778ZM17.111,9.222h2.667v2.667H17.111ZM2,9.222H4.667v2.667H2Zm13.333,2.667H6.444V4.778A1.783,1.783,0,0,1,8.222,3h5.333a1.783,1.783,0,0,1,1.778,1.778Z" transform="translate(-2 -3)" fill="#fff"></path>
                                             </svg>Purchase Ticket</a>
                                         </div>
+                  <mat-form-field appearance="fill" >
+               <mat-label>Clubs</mat-label>
+                    <select matNativeControl required  [(ngModel)]="dep">
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+
+                    </select>
+                                          </mat-form-field>
                                       </div>
                                     </div>
                                   </div>
@@ -180,12 +201,33 @@
                                             <li _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" class="elementor-repeater-item-2c6e09d"><i _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" aria-hidden="true" class="fas fa-circle"></i> Entrance Afterparty</li>
                                           </ul>
                                         </div>
-                                        <div _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" class="elementskit-pricing-btn-wraper">
+                                        <div _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" (click)="checkOut('sep')" class="elementskit-pricing-btn-wraper">
                                           <a _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" href="#" class="elementskit-pricing-btn ekit-pricing-btn-icon-pos-left">
                                             <svg _ngcontent-serverApp-c46="" _ngcontent-serverApp-c113="" xmlns="http://www.w3.org/2000/svg" width="17.778" height="16" viewBox="0 0 17.778 16">
                                               <path _ngcontent-serverApp-c46="" _ngcontent-serverApp-c113="" d="M3.778,16.333V19H6.444V16.333h8.889V19H18V13.667H3.778ZM17.111,9.222h2.667v2.667H17.111ZM2,9.222H4.667v2.667H2Zm13.333,2.667H6.444V4.778A1.783,1.783,0,0,1,8.222,3h5.333a1.783,1.783,0,0,1,1.778,1.778Z" transform="translate(-2 -3)" fill="#fff"></path>
                                             </svg>Purchase Ticket</a>
                                         </div>
+                                            <mat-form-field appearance="fill" >
+               <mat-label>Events</mat-label>
+                    <select matNativeControl required  [(ngModel)]="sep">
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+                      <option value="InFocus">InFocus</option>
+
+                    </select>
+                                          </mat-form-field>
                                       </div>
                                     </div>
                                   </div>
@@ -214,7 +256,7 @@
                                             <li _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" class="elementor-repeater-item-2c6e09d"><i _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" aria-hidden="true" class="fas fa-circle"></i> Entrance Afterparty</li>
                                           </ul>
                                         </div>
-                                        <div _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" class="elementskit-pricing-btn-wraper">
+                                        <div _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" (click)="checkOut('awp')" class="elementskit-pricing-btn-wraper">
                                           <a _ngcontent-serverapp-c46="" _ngcontent-serverapp-c113="" href="#" class="elementskit-pricing-btn ekit-pricing-btn-icon-pos-left">
                                             <svg _ngcontent-serverApp-c46="" _ngcontent-serverApp-c113="" xmlns="http://www.w3.org/2000/svg" width="17.778" height="16" viewBox="0 0 17.778 16">
                                               <path _ngcontent-serverApp-c46="" _ngcontent-serverApp-c113="" d="M3.778,16.333V19H6.444V16.333h8.889V19H18V13.667H3.778ZM17.111,9.222h2.667v2.667H17.111ZM2,9.222H4.667v2.667H2Zm13.333,2.667H6.444V4.778A1.783,1.783,0,0,1,8.222,3h5.333a1.783,1.783,0,0,1,1.778,1.778Z" transform="translate(-2 -3)" fill="#fff"></path>

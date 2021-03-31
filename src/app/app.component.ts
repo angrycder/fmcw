@@ -80,13 +80,16 @@ export class AppComponent implements OnInit,OnDestroy {
            this.pop_up_login(user);
          }
          if(res["message"] == "insti"){
-           
+           this.storage.store("user",user);
+           this.storage.store("role",res)
          }
          if(res["message"] == "ca"){
-           
+           this.storage.store("user",user);
+           this.storage.store("role",res);
          }
          if(res["message"] == "pa"){
-           
+           this.storage.store("user",user);
+           this.storage.store("role",res);
          }
 
 

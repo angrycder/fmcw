@@ -5,6 +5,11 @@ import {LocalStorageService} from 'ngx-webstorage';
 import {HttpClient} from "@angular/common/http";
 import { Router } from "@angular/router";
 
+interface pay{
+  token:string;
+  type:string;//aep dep sep awp
+  add:string;
+}
 
 @Component({
   selector: 'app-cart',
@@ -39,10 +44,19 @@ export class CartComponent implements OnInit {
 }
 ];
 
- user: SocialUser;
+  user: SocialUser;
+  sep:string;
+  dep:string;
   @ViewChild('drop1', {static: false}) drop: ElementRef;
   s:boolean =false;
-  constructor(private zone: NgZone,private router:Router,private http:HttpClient,private authService: SocialAuthService,private storage:LocalStorageService,private renderer: Renderer2) {console.log(this.drop) }
+  constructor(private zone: NgZone,
+    private router:Router,
+    private http:HttpClient,
+    private authService: SocialAuthService,
+    private storage:LocalStorageService,
+    private renderer: Renderer2) {
+    this.user=this.storage.retrieve("user");
+     }
 
  ngOnInit(): void {
   	this.user = this.storage.retrieve('user') as SocialUser;
@@ -59,8 +73,37 @@ this.s = !this.s;
   }
 
 
-  allPass(){
+  checkOut(t:string):void{
+     if(t == "aep"){
+       let p :pay = {token:this.user.idToken,type:"aep",add:""};
+       console.log(p);
+      this.http.post("https://fmcweek-liart.vercel.app/pay",p,{withCredentials:true}).subscribe((res:any)=>{
+        console.log(res);
+        window.location.href=res["url"];
 
+      })
+    }
+    if(t == "dep"){
+           let p :pay = {token:this.user.idToken,type:"aep",add:this.dep};
+           this.http.post("https://fmcweek-liart.vercel.app/pay",p,{withCredentials:true}).subscribe((res:any)=>{
+         console.log(res);
+        window.location.href=res["url"];
+      })
+    }
+    if(t == "sep"){
+           let p :pay = {token:this.user.idToken,type:"aep",add:this.sep};
+           this.http.post("https://fmcweek-liart.vercel.app/pay",p,{withCredentials:true}).subscribe((res:any)=>{
+         console.log(res);
+        window.location.href=res["url"];
+      })
+    }
+    if(t == "awp"){
+       let p :pay = {token:this.storage.retrieve("user").tokedId,type:"aep",add:""};
+           p["type"] = "awp";
+           this.http.post("https://fmcweek-liart.vercel.app/pay",p,{withCredentials:true}).subscribe((res:any)=>{
+              console.log(res);
+        window.location.href=res["url"];
+      })
+    }
   }
-
 }
