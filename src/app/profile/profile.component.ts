@@ -85,4 +85,14 @@ export class ProfileComponent implements OnInit,OnDestroy {
     this.i = (this.i+1)%l;
   }
 
+  l(){
+     let l = this.work.length;
+    this.workshop = this.work[(this.j-1+l)%l];
+    this.j = (this.j-1+l)%l;
+  }
+  r(){
+    let l = this.work.length;
+    this.workshop = this.work[(this.j+1)%l];
+    this.j = (this.j+1)%l;
+  }
 }

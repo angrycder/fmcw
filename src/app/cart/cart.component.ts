@@ -75,7 +75,7 @@ this.s = !this.s;
 
   checkOut(t:string):void{
      if(t == "aep"){
-       let p :pay = {token:this.user.idToken,type:"aep",add:""};
+       let p :pay = {token:this.user.idToken, type:"aep",add:""};
        console.log(p);
       this.http.post("https://fmcweek-liart.vercel.app/pay",p,{withCredentials:true}).subscribe((res:any)=>{
         console.log(res);
@@ -84,21 +84,21 @@ this.s = !this.s;
       })
     }
     if(t == "dep"){
-           let p :pay = {token:this.user.idToken,type:"aep",add:this.dep};
-           this.http.post("https://fmcweek-liart.vercel.app/pay",p,{withCredentials:true}).subscribe((res:any)=>{
+           let k :pay = {token:this.user.idToken,type:"dep",add:this.dep};
+           this.http.post("https://fmcweek-liart.vercel.app/pay",k,{withCredentials:true}).subscribe((res:any)=>{
          console.log(res);
         window.location.href=res["url"];
       })
     }
     if(t == "sep"){
-           let p :pay = {token:this.user.idToken,type:"aep",add:this.sep};
-           this.http.post("https://fmcweek-liart.vercel.app/pay",p,{withCredentials:true}).subscribe((res:any)=>{
+           let j :pay = {token:this.user.idToken,type:"sep",add:this.sep};
+           this.http.post("https://fmcweek-liart.vercel.app/pay",j,{withCredentials:true}).subscribe((res:any)=>{
          console.log(res);
         window.location.href=res["url"];
       })
     }
     if(t == "awp"){
-       let p :pay = {token:this.storage.retrieve("user").tokedId,type:"aep",add:""};
+       let p :pay = {token:this.storage.retrieve("user").tokedId,type:"awp",add:""};
            p["type"] = "awp";
            this.http.post("https://fmcweek-liart.vercel.app/pay",p,{withCredentials:true}).subscribe((res:any)=>{
               console.log(res);
