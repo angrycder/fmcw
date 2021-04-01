@@ -5,7 +5,7 @@
   </button>
   <span class="example-spacer"></span>
    <button mat-button *ngIf="!wide && !loggedIn" (click)="signInWithGoogle()">Register</button>
-   <!-- <button mat-button *ngIf="!wide" routerLink="events">Events</button>-->
+   <button mat-button *ngIf="!wide" routerLink="events">Events</button>
 <!--<button mat-button *ngIf="!wide" routerLink="workshops">Workshops</button>-->
 <button mat-button *ngIf="!wide && loggedIn" routerLink="dash/cart">Passes</button>
 <button mat-button *ngIf="!wide"   routerLink="ambassador">Referrals</button>
@@ -17,7 +17,7 @@
 <mat-menu #menu="matMenu">
   <button mat-menu-item *ngIf="!loggedIn"(click)="signInWithGoogle()">Register</button>
   <!--<button mat-menu-item *ngIf="loggedIn" routerLink="dash">Dashboard</button>-->
-  <!--<button mat-menu-item routerLink="events">Events</button>-->
+<button mat-menu-item routerLink="events">Events</button>
   <button mat-menu-item *ngIf="loggedIn" routerLink="dash/cart">Passes</button>
    <button mat-menu-item routerLink="events">FAQ</button>
 <!--<button mat-menu-item routerLink="workshops">Workshops</button>-->

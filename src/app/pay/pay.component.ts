@@ -81,7 +81,7 @@ animation:any[]=[
 {name:"UnReal",
   date:"20 april 2021",
   description:"Put your animation skills to test as participants will be required to recreate, to the best of their abilities, the 3D render of a real image which would be provided to them. The closest resembling entry takes it all!!!<br><br>",
-  img:"./../../assets/events/animation2.jpg",
+  img:"./../../assets/events/animation1.jpg",
   club:"media",
   price:5000,
     pdf:'./../../assets/ps/netflix_and_chill.pdf'
@@ -89,7 +89,7 @@ animation:any[]=[
 {name:"Capture the Imagination",
   date:"20 april 2021",
   description:"Set free the wings of your creativity, as “Capture the imagination” enables you to showcase an imaginative creation of the world in the form of 3D models using your animation skills.<br><br>",
-  img:"./../../assets/events/animation1.jpg",
+  img:"./../../assets/events/animation2.jpg",
   club:"media",
   price:5000,
   pdf:'./../../assets/ps/capture_the_imagination.pdf'
