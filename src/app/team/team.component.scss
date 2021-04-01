@@ -55,6 +55,13 @@
 
 }
 
+button:active,
+button:focus,
+button:hover,
+button:visited {
+  color: #404040 !important;
+  font-size: 25px !important;
+}
 
 
 .sand::-webkit-scrollbar {
@@ -67,7 +74,6 @@
 .title{
 	height:70px;
 	width:100%;
-	font-size:20px;
 	justify-content:center;
     font-size:25px;
     text-transform: uppercase;
@@ -78,6 +84,9 @@
 }
 
 .title2{
+    border: none;
+    outline: none;
+    background-color: transparent;
 	height:50px;
 	width:100%;
     font-size:15px;

@@ -6,6 +6,12 @@
   background:transparent;
 }
 
+h4 {
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 35px;
+  }
+
 .body::-webkit-scrollbar {
   display: none;
 }
@@ -27,6 +33,7 @@
     flex-direction:column;
 }
 .quote3{
+  color: #ffff;
     width: 100%;
     height: 350px;
     position: relative;

@@ -12,7 +12,8 @@
     "dev:ssr": "ng run fmcw:serve-ssr",
     "serve:ssr": "node dist/fmcw/server/main.js",
     "build:ssr": "ng build --prod && ng run fmcw:server:production",
-    "prerender": "ng run fmcw:prerender"
+    "prerender": "ng run fmcw:prerender",
+    "dev": "ng serve --open"
   },
   "private": true,
   "dependencies": {

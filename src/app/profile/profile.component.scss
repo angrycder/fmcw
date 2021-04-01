@@ -141,6 +141,7 @@ width: 150px;
 }
 
 .events{
+  margin-top: 100px;
 width: calc(100% - 70px);
     height: auto;
     display: flex;
@@ -174,6 +175,7 @@ width: calc(100% - 70px);
   padding:20px;
   width:auto;
   height:auto;
+  position: relative;
 }
 .t{
     width: 85%;

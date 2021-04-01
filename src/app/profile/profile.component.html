@@ -1,5 +1,5 @@
 <div class="full">
-	<!-- <div class="profile">
+  <!-- <div class="profile">
 		<img src="{{ user.photoUrl }}" class="pr">
     <div class="t">
       <button mat-mini-fab><mat-icon>person</mat-icon></button>
@@ -9,7 +9,7 @@
     <div class="t">
       <button mat-mini-fab><mat-icon>email</mat-icon></button>
       <div class="title2">{{dets.email}}</div>
-  </div> 
+  </div>
 <div class="t">
       <button mat-mini-fab><mat-icon>phone</mat-icon></button>
       <div class="title2">{{dets.number}}</div>
@@ -24,67 +24,83 @@
   </div>
 	</div> -->
 
-	<div class="events">
-		<div class="pad">
-      <div style="width: 100%;
-    max-width: 332px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 25px 25px 0px 0px;
-    background: rgb(255 255 255 / 70%);
-    opacity: 0.9;">
-   <button mat-mini-fab  color="primary" (click)="left()"><mat-icon>arrow_left</mat-icon></button>
-   <p>events</p>
-   <button mat-mini-fab style="float: right;" color="primary" (click)="right()"><mat-icon>arrow_right</mat-icon></button>
-</div>
-		<mat-card class="example-card">
-  <mat-card-header>
-
-    <mat-card-title [innerHTML]="event.name"></mat-card-title>
-    <mat-card-subtitle>{{ event.name }}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="{{event.img}}">
-  <mat-card-content>
-    <p>
-     {{event.description}}
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>Join whatsApp group</button>
-  </mat-card-actions>
-</mat-card>
-	</div>
-      <div class="pad">
-      <div style="width: 100%;
-    max-width: 332px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 25px 25px 0px 0px;
-    background: rgb(255 255 255 / 70%);
-    opacity: 0.9;">
-   <button mat-mini-fab  color="primary" (click)="l()"><mat-icon>arrow_left</mat-icon></button>
-   <p>workshops</p>
-   <button mat-mini-fab style="float: right;" color="primary" (click)="r()"><mat-icon>arrow_right</mat-icon></button>
-</div>
-    <mat-card class="example-card">
-  <mat-card-header>
-
-    <mat-card-title [innerHTML]="workshop.name"></mat-card-title>
-    <mat-card-subtitle>{{ workshop.name }}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="{{workshop.img}}">
-  <mat-card-content>
-    <p>
-     {{workshop.description}}
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>Join whatsApp group</button>
-  </mat-card-actions>
-</mat-card>
+  <div class="events">
+    <div class="pad">
+      <div
+        style="
+          width: 80%;
+          display: flex;
+          justify-content: space-between;
+          position: absolute;
+          z-index: 100;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        "
+      >
+        <button mat-mini-fab color="primary" (click)="left()">
+          <mat-icon>arrow_left</mat-icon>
+        </button>
+        <button
+          mat-mini-fab
+          style="float: right"
+          color="primary"
+          (click)="right()"
+        >
+          <mat-icon>arrow_right</mat-icon>
+        </button>
+      </div>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title [innerHTML]="event.name"></mat-card-title>
+          <mat-card-subtitle>{{ event.name }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{ event.img }}" />
+        <mat-card-content>
+          <p>
+            {{ event.description }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Join whatsApp group</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="pad">
+      <div
+        style="
+          width: 80%;
+          display: flex;
+          justify-content: space-between;
+          position: absolute;
+          z-index: 100;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        "
+      >
+        <button mat-mini-fab color="primary" (click)="l()">
+          <mat-icon>arrow_left</mat-icon>
+        </button>
+        <button mat-mini-fab style="float: right" color="primary" (click)="r()">
+          <mat-icon>arrow_right</mat-icon>
+        </button>
+      </div>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title [innerHTML]="workshop.name"></mat-card-title>
+          <mat-card-subtitle>{{ workshop.name }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{ workshop.img }}" />
+        <mat-card-content>
+          <p>
+            {{ workshop.description }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Join whatsApp group</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
   </div>
-	</div>
-
 </div>
