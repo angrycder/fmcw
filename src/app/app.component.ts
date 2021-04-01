@@ -106,7 +106,7 @@ export class AppComponent implements OnInit,OnDestroy {
     this.http
     .get("https://fmcweek-liart.vercel.app/google/logout",{withCredentials:true,responseType:"json"})
      .subscribe((res:any)=>{console.log(res)})
-
+     window.location.reload()
   }
   
 

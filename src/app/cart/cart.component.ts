@@ -79,31 +79,57 @@ this.s = !this.s;
        console.log(p);
       this.http.post("https://fmcweek-liart.vercel.app/pay",p,{withCredentials:true}).subscribe((res:any)=>{
         console.log(res);
-        window.location.href=res["url"];
+        if(res["message"] == "notoken"){
+          this.signOut();
+        }
+        else{
+window.location.href=res["url"];
+        }
 
       })
     }
     if(t == "dep"){
            let k :pay = {token:this.user.idToken,type:"dep",add:this.dep};
            this.http.post("https://fmcweek-liart.vercel.app/pay",k,{withCredentials:true}).subscribe((res:any)=>{
-         console.log(res);
-        window.location.href=res["url"];
+  if(res["message"] == "notoken"){
+          this.signOut();
+        }
+        else{
+window.location.href=res["url"];
+        }
       })
     }
     if(t == "sep"){
            let j :pay = {token:this.user.idToken,type:"sep",add:this.sep};
            this.http.post("https://fmcweek-liart.vercel.app/pay",j,{withCredentials:true}).subscribe((res:any)=>{
-         console.log(res);
-        window.location.href=res["url"];
+     if(res["message"] == "notoken"){
+          this.signOut();
+        }
+        else{
+window.location.href=res["url"];
+        }
       })
     }
     if(t == "awp"){
        let p :pay = {token:this.storage.retrieve("user").tokedId,type:"awp",add:""};
            p["type"] = "awp";
            this.http.post("https://fmcweek-liart.vercel.app/pay",p,{withCredentials:true}).subscribe((res:any)=>{
-              console.log(res);
-        window.location.href=res["url"];
+ if(res["message"] == "notoken"){
+          this.signOut();
+        }
+        else{
+window.location.href=res["url"];
+        }
       })
     }
+  }
+
+    signOut():void{
+    this.storage.clear('user');
+    this.authService.signOut();
+    this.http
+    .get("https://fmcweek-liart.vercel.app/google/logout",{withCredentials:true,responseType:"json"})
+     .subscribe((res:any)=>{console.log(res)});
+      window.location.reload()
   }
 }
