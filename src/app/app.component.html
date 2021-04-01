@@ -1,26 +1,27 @@
 
 	<mat-toolbar style="position: fixed;z-index: 150;">
 		<button routerLink="" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" xPosition="before" yPosition="below">
-    <img src="./../assets/logo2.svg"> 
+    <img src="./../assets/l.jpg" style="height: 51px;"> 
   </button>
   <span class="example-spacer"></span>
    <button mat-button *ngIf="!wide && !loggedIn" (click)="signInWithGoogle()">Register</button>
-   <button mat-button *ngIf="!wide && loggedIn " routerLink="dash">Dashboard</button>
-  <button mat-button *ngIf="!wide" routerLink="events">Events</button>
-<button mat-button *ngIf="!wide" routerLink="workshops">Workshops</button>
-<button mat-button *ngIf="!wide"   routerLink="ambassador">Referals</button>
+   <!-- <button mat-button *ngIf="!wide" routerLink="events">Events</button>-->
+<!--<button mat-button *ngIf="!wide" routerLink="workshops">Workshops</button>-->
 <button mat-button *ngIf="!wide && loggedIn" routerLink="dash/cart">Passes</button>
-<button mat-button *ngIf="!wide" routerLink="team">Team</button>
+<button mat-button *ngIf="!wide"   routerLink="ambassador">Referrals</button>
+<button mat-button>FAQ</button>
+<!--<button mat-button *ngIf="!wide" routerLink="team">Team</button>-->
 <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" *ngIf="wide">
   <mat-icon>menu</mat-icon>
 </button>
 <mat-menu #menu="matMenu">
   <button mat-menu-item *ngIf="!loggedIn"(click)="signInWithGoogle()">Register</button>
-  <button mat-menu-item *ngIf="loggedIn" routerLink="dash">Dashboard</button>
-  <button mat-menu-item routerLink="events">Events</button>
-<button mat-menu-item routerLink="workshops">Workshops</button>
-<button mat-menu-item *ngIf="loggedIn" routerLink="dash/cart">Passes</button>
-<button mat-menu-item routerLink="team">Team</button>
+  <!--<button mat-menu-item *ngIf="loggedIn" routerLink="dash">Dashboard</button>-->
+  <!--<button mat-menu-item routerLink="events">Events</button>-->
+  <button mat-menu-item *ngIf="loggedIn" routerLink="dash/cart">Passes</button>
+   <button mat-menu-item routerLink="events">FAQ</button>
+<!--<button mat-menu-item routerLink="workshops">Workshops</button>-->
+<!--<button mat-menu-item routerLink="team">Team</button>-->
 </mat-menu>
    <button mat-button *ngIf="loggedIn" (click)="signOut()"><mat-icon>exit_to_app</mat-icon></button>
 </mat-toolbar> 
@@ -43,11 +44,11 @@
   <div class="car">
     <div class="title">Contacts</div>
     <br>
-    <div class="title4">Shikhar Choudhary</div>
-    <div class="title4">97613 27327</div>
+    <div class="title4">Puneet Rihan</div>
+    <div class="title4">7888440167</div>
     <br><br>
-    <div class="title4">Gaurav Verma</div>
-    <div class="title4">70911 40432</div>
+    <div class="title4">Yash Singh Parihar</div>
+    <div class="title4">6265047585</div>
   </div> 
 </div>
   </div>
@@ -60,9 +61,6 @@
   </div>
    <div class="car2" (click)="pop_up('ref')">
     <div class="title3">Refund Policy</div>
-  </div>
-    <div class="car2" (click)="pop_up('faq')">
-    <div class="title3">FAQ</div>
   </div>
 </div>
  
