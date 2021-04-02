@@ -1,66 +1,103 @@
-
-	<mat-toolbar style="position: fixed;z-index: 150;">
-		<button routerLink="" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" xPosition="before" yPosition="below">
-    <img src="./../assets/l.jpg" style="height: 51px;"> 
+<mat-toolbar style="position: fixed; z-index: 150">
+  <button
+    routerLink=""
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+    xPosition="before"
+    yPosition="below"
+  >
+    <img src="./../assets/l.jpg" style="height: 51px" />
   </button>
   <span class="example-spacer"></span>
-   <button mat-button *ngIf="!wide && !loggedIn" (click)="signInWithGoogle()">Register</button>
-   <button mat-button *ngIf="!wide" routerLink="events">Events</button>
-<!--<button mat-button *ngIf="!wide" routerLink="workshops">Workshops</button>-->
-<button mat-button *ngIf="!wide && loggedIn" routerLink="dash/cart">Passes</button>
-<button mat-button *ngIf="!wide"   routerLink="ambassador">Referrals</button>
-<button mat-button>FAQ</button>
-<!--<button mat-button *ngIf="!wide" routerLink="team">Team</button>-->
-<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" *ngIf="wide">
-  <mat-icon>menu</mat-icon>
-</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item *ngIf="!loggedIn"(click)="signInWithGoogle()">Register</button>
-  <!--<button mat-menu-item *ngIf="loggedIn" routerLink="dash">Dashboard</button>-->
-<button mat-menu-item routerLink="events">Events</button>
-  <button mat-menu-item *ngIf="loggedIn" routerLink="dash/cart">Passes</button>
-   <button mat-menu-item routerLink="events">FAQ</button>
-<!--<button mat-menu-item routerLink="workshops">Workshops</button>-->
-<!--<button mat-menu-item routerLink="team">Team</button>-->
-</mat-menu>
-   <button mat-button *ngIf="loggedIn" (click)="signOut()"><mat-icon>exit_to_app</mat-icon></button>
-</mat-toolbar> 
-
+  <button mat-button *ngIf="!wide && !loggedIn" (click)="signInWithGoogle()">
+    Register
+  </button>
+  <button mat-button *ngIf="!wide" routerLink="events">Events</button>
+  <!--<button mat-button *ngIf="!wide" routerLink="workshops">Workshops</button>-->
+  <button mat-button *ngIf="!wide && loggedIn" routerLink="dash/cart">
+    Passes
+  </button>
+  <button mat-button *ngIf="!wide" routerLink="ambassador">Referrals</button>
+  <button mat-button routerLink="faq">FAQ</button>
+  <!--<button mat-button *ngIf="!wide" routerLink="team">Team</button>-->
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu"
+    *ngIf="wide"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item *ngIf="!loggedIn" (click)="signInWithGoogle()">
+      Register
+    </button>
+    <!--<button mat-menu-item *ngIf="loggedIn" routerLink="dash">Dashboard</button>-->
+    <button mat-menu-item routerLink="events">Events</button>
+    <button mat-menu-item *ngIf="loggedIn" routerLink="dash/cart">
+      Passes
+    </button>
+    <button mat-menu-item routerLink="events">FAQ</button>
+    <!--<button mat-menu-item routerLink="workshops">Workshops</button>-->
+    <!--<button mat-menu-item routerLink="team">Team</button>-->
+  </mat-menu>
+  <button mat-button *ngIf="loggedIn" (click)="signOut()">
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+</mat-toolbar>
 
 <router-outlet></router-outlet>
 
+<div style="width: 100%">
+  <div class="base">
+    <div class="car m">
+      <img
+        src="./../assets/logo.png"
+        style="width: 100%"
+        alt="fmcweekend iitbhu logo"
+      />
 
-  <div style=" width: 100%;">
-      <div class="base">
-       <div class="car m">
-    <img src="./../assets/logo.png" style="width:100%;" alt="fmcweekend iitbhu logo">
-
-    <a class="fa fa-facebook" aria-hidden="true" href="https://www.facebook.com/fmcweekendiitbhu"></a>
-    <a class="fa fa-instagram" aria-hidden="true" href="https://www.instagram.com/fmc_weekend/"></a>
-    <a class="fa fa-linkedin" aria-hidden="true" href="https://www.linkedin.com/company/fmc-weekend-creative/" ></a>
-    <a class="fa fa-youtube-play" aria-hidden="true" href="https://www.youtube.com/channel/UCt4-7kmQaPEZzPLil4RNRCw"></a>
-
+      <a
+        class="fa fa-facebook"
+        aria-hidden="true"
+        href="https://www.facebook.com/fmcweekendiitbhu"
+      ></a>
+      <a
+        class="fa fa-instagram"
+        aria-hidden="true"
+        href="https://www.instagram.com/fmc_weekend/"
+      ></a>
+      <a
+        class="fa fa-linkedin"
+        aria-hidden="true"
+        href="https://www.linkedin.com/company/fmc-weekend-creative/"
+      ></a>
+      <a
+        class="fa fa-youtube-play"
+        aria-hidden="true"
+        href="https://www.youtube.com/channel/UCt4-7kmQaPEZzPLil4RNRCw"
+      ></a>
+    </div>
+    <div class="car">
+      <div class="title">Contacts</div>
+      <br />
+      <div class="title4">Puneet Rihan</div>
+      <div class="title4">7888440167</div>
+      <br /><br />
+      <div class="title4">Yash Singh Parihar</div>
+      <div class="title4">6265047585</div>
+    </div>
   </div>
-  <div class="car">
-    <div class="title">Contacts</div>
-    <br>
-    <div class="title4">Puneet Rihan</div>
-    <div class="title4">7888440167</div>
-    <br><br>
-    <div class="title4">Yash Singh Parihar</div>
-    <div class="title4">6265047585</div>
-  </div> 
 </div>
-  </div>
-    <div class="base2">
+<div class="base2">
   <div class="car2" (click)="pop_up('tac')">
     <div class="title3">Terms and conditions</div>
   </div>
-   <div class="car2" (click)="pop_up('pp')">
+  <div class="car2" (click)="pop_up('pp')">
     <div class="title3">Privacy Policy</div>
   </div>
-   <div class="car2" (click)="pop_up('ref')">
+  <div class="car2" (click)="pop_up('ref')">
     <div class="title3">Refund Policy</div>
   </div>
 </div>
- 

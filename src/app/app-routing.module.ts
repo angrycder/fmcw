@@ -8,7 +8,7 @@ import { LeaderComponent } from './leader/leader.component';
 import { TeamComponent } from './team/team.component';
 import { MemoryComponent } from './memory/memory.component';
 import { CaComponent } from './ca/ca.component';
-
+import {CaComponent as FaqComponent} from "./faq/ca.component";
 
 const routes: Routes = [
 {
@@ -38,15 +38,19 @@ const routes: Routes = [
 }
 ,{
 	path:"leader",
-	component: LeaderComponent 
+	component: LeaderComponent
 },
 {
 	path:"memories",
-	component: MemoryComponent 
+	component: MemoryComponent
 },
 {
 	path:"ambassador",
-	component: CaComponent 
+	component: CaComponent
+},
+{
+	path:"faq",
+	component: FaqComponent
 }
 ];
 
