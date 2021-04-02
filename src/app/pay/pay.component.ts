@@ -26,7 +26,7 @@ export class PayComponent implements OnInit {
   description:"Perfectly set up scenes, camera angles and surreal editing and transitions make a masterpiece that captivates viewers. “That’s how B-roll” requires you to make a B-roll portraying mundane daily activities in an exciting short clip.",
   img:"./../../assets/events/cine2.jpg",
   price:5000,
-  pdf:"/assets/ps/that's_how_b_roll.pdf"
+  pdf:"/assets/ps/that_how_b_roll.pdf"
 }];
    outreach: any[] = [
      {name:" Vlogoholic",
