@@ -111,7 +111,7 @@ window.location.href=res["url"];
       })
     }
     if(t == "awp"){
-       let p :pay = {token:this.storage.retrieve("user").tokedId,type:"awp",add:""};
+       let p :pay = {token:this.user.idToken,type:"awp",add:""};
            p["type"] = "awp";
            this.http.post("https://fmcweek-liart.vercel.app/pay",p,{withCredentials:true}).subscribe((res:any)=>{
  if(res["message"] == "notoken"){
