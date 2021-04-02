@@ -26,7 +26,7 @@ export class PayComponent implements OnInit {
   description:"Perfectly set up scenes, camera angles and surreal editing and transitions make a masterpiece that captivates viewers. “That’s how B-roll” requires you to make a B-roll portraying mundane daily activities in an exciting short clip.",
   img:"./../../assets/events/cine2.jpg",
   price:5000,
-  pdf:'/assets/ps/infocus.pdf'
+  pdf:"/assets/ps/that's_how_b_roll.pdf"
 }];
    outreach: any[] = [
      {name:" Vlogoholic",
@@ -67,7 +67,8 @@ media:any[]=[{name:"Netflix & Chill",
   description:"Consider yourself a web series geek? “Netflix and Chill” is here for you. Use a stipulated budget to assemble a cast consisting of fan-favorite heroes to the most terrifying of villains from shows around the world, and weave a gripping plot of your own.",
   img:"./../../assets/events/media1.jpg",
   club:"media",
-  price:5000
+  price:5000,
+  pdf:'/assets/ps/netflix_and_chill.pdf'
 },
 {name:"Nation wants to know",
   date:"20 april 2021",
@@ -85,7 +86,7 @@ animation:any[]=[
   img:"./../../assets/events/animation1.jpg",
   club:"media",
   price:5000,
-    pdf:'/assets/ps/netflix_and_chill.pdf'
+    pdf:'/assets/ps/unreal.pdf'
 },
 {name:"Capture the Imagination",
   date:"20 april 2021",
