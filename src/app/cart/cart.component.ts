@@ -88,7 +88,7 @@ window.location.href=res["url"];
 
       })
     }
-    if(t == "dep"){
+    if(t == "dep" && (this.sep != "")){
            let k :pay = {token:this.user.idToken,type:"dep",add:this.dep};
            this.http.post("https://fmcweek-liart.vercel.app/pay",k,{withCredentials:true}).subscribe((res:any)=>{
   if(res["message"] == "notoken"){
@@ -99,7 +99,7 @@ window.location.href=res["url"];
         }
       })
     }
-    if(t == "sep"){
+    if(t == "sep" && (this.dep != "")){
            let j :pay = {token:this.user.idToken,type:"sep",add:this.sep};
            this.http.post("https://fmcweek-liart.vercel.app/pay",j,{withCredentials:true}).subscribe((res:any)=>{
      if(res["message"] == "notoken"){
