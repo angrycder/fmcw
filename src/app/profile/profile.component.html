@@ -19,11 +19,15 @@
       <div class="title2">{{dets.organization}}</div>
   </div>
      <div class="t" *ngIf="dets.ref_code != null">
-      <button mat-mini-fab><mat-icon>qr_code</mat-icon></button>
+      <button mat-mini-fab><mat-icon svgIcon="refer"></mat-icon></button>
       <div class="title2">{{dets.ref_code}}</div>
   </div>
-	</div> 
-
+    </div>
+     <div class="t" *ngIf="dets.norefcode != null">
+      <button mat-mini-fab><mat-icon>group_add</mat-icon></button>
+      <div class="title2">number of referrals:{{dets.norefcode}}</div>
+  </div>
+	
   <div class="events" *ngIf="ca">
     <div class="pad">
       <div

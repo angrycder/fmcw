@@ -10,8 +10,10 @@ import { SocialUser } from "angularx-social-login";
 import { SocialAuthService } from "angularx-social-login";
 import { GoogleLoginProvider } from "angularx-social-login";
 import {OverlayContainer} from '@angular/cdk/overlay';
+import { MatIconRegistry } from "@angular/material/icon";
 import { HostListener } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
+import { DomSanitizer } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-root',
@@ -33,7 +35,14 @@ export class AppComponent implements OnInit,OnDestroy {
     private render:Renderer2,
     public dia: MatDialog,
     private storage:LocalStorageService,
-    private http:HttpClient){
+    private http:HttpClient,
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer){
+
+    this.matIconRegistry.addSvgIcon(
+      "refer",
+       this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/refer.svg")
+    );
       this.user = this.storage.retrieve('user');
       this.loggedIn=(this.user != null);
 

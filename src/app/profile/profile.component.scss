@@ -127,6 +127,27 @@ width: 150px;
   align-items:center;
 }
 
+.refcode{
+width:100%;
+    display: grid;
+    place-content: center;
+}
+
+.refno{
+text-align: center;
+}
+
+.ref{
+     width: inherit;
+    height: auto;
+    font-size: 20px;
+    /* justify-content: center; */
+    text-transform: uppercase;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    word-break: break-all;
+}
 .profile{
   width:100%;
   height:auto;
