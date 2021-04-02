@@ -1,6 +1,7 @@
 import { Component, OnInit, Optional, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import {MatDialog} from '@angular/material/dialog';
+import {Router} from '@angular/router';
 import { DomSanitizer ,SafeUrl} from '@angular/platform-browser'
 @Component({
   selector: 'app-pay',
@@ -18,14 +19,14 @@ export class PayComponent implements OnInit {
   description:"Imagine yourself to be in the shoes of a movie director, and create a short film of 3-10 minutes based on a given theme. Feel free to come up with the unique & original ideas and weave an impactful story through seamless cinematography and editing.",
   img:"./../../assets/events/cine1.jpg",
   price:5000,
-  pdf:'./../../assets/ps/short_film_making.pdf'
+  pdf:'/assets/ps/short_film_making.pdf'
 },
   {name:"That's how B-Roll",
   date:"20 april 2021",
   description:"Perfectly set up scenes, camera angles and surreal editing and transitions make a masterpiece that captivates viewers. “That’s how B-roll” requires you to make a B-roll portraying mundane daily activities in an exciting short clip.",
   img:"./../../assets/events/cine2.jpg",
   price:5000,
-  pdf:'./../../assets/ps/infocus.pdf'
+  pdf:'/assets/ps/infocus.pdf'
 }];
    outreach: any[] = [
      {name:" Vlogoholic",
@@ -34,7 +35,7 @@ export class PayComponent implements OnInit {
   img:"./../../assets/events/outreach2.jpg",
   club:"outreach",
   price:5000,
-  pdf:'./../../assets/ps/vlogoholic.pdf'
+  pdf:'/assets/ps/vlogoholic.pdf'
 },
   {name:"Documentary making",
   date:"20 april 2021",
@@ -42,7 +43,7 @@ export class PayComponent implements OnInit {
   img:"./../../assets/events/outreach1.jpg",
   club:"outreach",
   price:5000,
-  pdf:'./../../assets/ps/documentary_making.pdf'
+  pdf:'/assets/ps/documentary_making.pdf'
 }];
     design:any[] = [  {name:"Monogram",
   date:"20 april 2021",
@@ -50,7 +51,7 @@ export class PayComponent implements OnInit {
   img:"./../../assets/events/design2.jpg",
   club:'design',
   price:5000,
-  pdf:'./../../assets/ps/monogram.pdf'
+  pdf:'/assets/ps/monogram.pdf'
 },
   {name:"Comic Strip",
   date:"20 april 2021",
@@ -58,7 +59,7 @@ export class PayComponent implements OnInit {
   img:"./../../assets/events/design1.jpg",
   club:'design',
   price:5000,
-  pdf:'./../../assets/ps/comic_strip.pdf'
+  pdf:'/assets/ps/comic_strip.pdf'
 }];
 
 media:any[]=[{name:"Netflix & Chill",
@@ -74,7 +75,7 @@ media:any[]=[{name:"Netflix & Chill",
   img:"./../../assets/events/media2.jpg",
   club:"media",
   price:5000,
-  pdf:'./../../assets/ps/nation_wants_to_know.pdf'
+  pdf:'/assets/ps/nation_wants_to_know.pdf'
 }
 ];
 animation:any[]=[
@@ -84,7 +85,7 @@ animation:any[]=[
   img:"./../../assets/events/animation1.jpg",
   club:"media",
   price:5000,
-    pdf:'./../../assets/ps/netflix_and_chill.pdf'
+    pdf:'/assets/ps/netflix_and_chill.pdf'
 },
 {name:"Capture the Imagination",
   date:"20 april 2021",
@@ -92,7 +93,7 @@ animation:any[]=[
   img:"./../../assets/events/animation2.jpg",
   club:"media",
   price:5000,
-  pdf:'./../../assets/ps/capture_the_imagination.pdf'
+  pdf:'/assets/ps/capture_the_imagination.pdf'
 }];
 
 photog:any[] = [
@@ -102,7 +103,7 @@ photog:any[] = [
   img:"./../../assets/events/photog1.jpg",
   club:"media",
   price:5000,
-  pdf:'./../../assets/ps/infocus.pdf'
+  pdf:'/assets/ps/infocus.pdf'
 },
 {name:"Photoart",
   date:"20 april 2021",
@@ -110,7 +111,7 @@ photog:any[] = [
   img:"./../../assets/events/photog2.jpg",
   club:"media",
   price:5000,
-  pdf:'./../../assets/ps/photoart.pdf'
+  pdf:'/assets/ps/photoart.pdf'
 }
 ];
 
@@ -123,7 +124,8 @@ pin:any;
 names:string[]=["animation","media","design","outreach","cinema","photography"]
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,
     public dia: MatDialog,
-    private sanitize:DomSanitizer) { 
+    private sanitize:DomSanitizer,
+    private router:Router) { 
     this.pin = this.data.number-1;
     this.title = this.names[this.pin];
     this.cart = this.change[this.pin];
@@ -135,9 +137,7 @@ names:string[]=["animation","media","design","outreach","cinema","photography"]
 
   checkout(l:any):void{
   	console.log(l);
-    this.obj = l;
-    this.pdf = !this.pdf;
- 
+    window.location.href = "https://fmcweekend.in"+l.pdf;  
   }
   left():void{
     this.pin = (this.pin+5)%6
