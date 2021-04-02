@@ -30,14 +30,14 @@ cinema: any[] = [
   description:"Imagine yourself to be in the shoes of a movie director, and create a short film of 3-10 minutes based on a given theme. Feel free to come up with the unique & original ideas and weave an impactful story through seamless cinematography and editing.",
   img:"./../../assets/events/cine1.jpg",
   price:5000,
-  pdf:'/assets/ps/short_film_making.pdf'
+  pdf:"https://chat.whatsapp.com/CkXxAhuxbAY2mJz6Fvnbkx"
 },
   {name:"That's how B-Roll",
   date:"20 april 2021",
   description:"Perfectly set up scenes, camera angles and surreal editing and transitions make a masterpiece that captivates viewers. “That’s how B-roll” requires you to make a B-roll portraying mundane daily activities in an exciting short clip.",
   img:"./../../assets/events/cine2.jpg",
   price:5000,
-  pdf:"/assets/ps/that_how_b_roll.pdf"
+  pdf:"https://chat.whatsapp.com/FBkmdDsWKTy5jaeVwUagir"
 }];
    
 
@@ -48,7 +48,7 @@ outreach: any[] = [
   img:"./../../assets/events/outreach2.jpg",
   club:"outreach",
   price:5000,
-  pdf:'/assets/ps/vlogoholic.pdf'
+  pdf:'https://chat.whatsapp.com/B6H9znLSbcm8DqrUxXOQwg'
 },
   {name:"Documentary making",
   date:"20 april 2021",
@@ -56,7 +56,7 @@ outreach: any[] = [
   img:"./../../assets/events/outreach1.jpg",
   club:"outreach",
   price:5000,
-  pdf:'/assets/ps/documentary_making.pdf'
+  pdf:'https://chat.whatsapp.com/Lm3bZg2H51FJf8QtpmyZUT'
 }];
 
 
@@ -66,7 +66,7 @@ design:any[] = [  {name:"Monogram",
   img:"./../../assets/events/design2.jpg",
   club:'design',
   price:5000,
-  pdf:'/assets/ps/monogram.pdf'
+  pdf:"https://chat.whatsapp.com/IISQdmBzjms4v4ovVPoAUM"
 },
   {name:"Comic Strip",
   date:"20 april 2021",
@@ -74,7 +74,7 @@ design:any[] = [  {name:"Monogram",
   img:"./../../assets/events/design1.jpg",
   club:'design',
   price:5000,
-  pdf:'/assets/ps/comic_strip.pdf'
+  pdf:"https://chat.whatsapp.com/KyXLOLRdfEVAoENa4pUDpW"
 }];
 
 
@@ -84,7 +84,7 @@ media:any[]=[{name:"Netflix & Chill",
   img:"./../../assets/events/media1.jpg",
   club:"media",
   price:5000,
-  pdf:'/assets/ps/netflix_and_chill.pdf'
+  pdf:"https://chat.whatsapp.com/JRThNiACDwzEaWneiRrqHf"
 },
 {name:"Nation wants to know",
   date:"20 april 2021",
@@ -92,7 +92,7 @@ media:any[]=[{name:"Netflix & Chill",
   img:"./../../assets/events/media2.jpg",
   club:"media",
   price:5000,
-  pdf:'/assets/ps/nation_wants_to_know.pdf'
+  pdf:"https://chat.whatsapp.com/IslRVpriwaHIgGnbJB8W5c"
 }
 ];
 
@@ -103,7 +103,7 @@ animation:any[]=[
   img:"./../../assets/events/animation1.jpg",
   club:"media",
   price:5000,
-    pdf:'/assets/ps/unreal.pdf'
+    pdf:"https://chat.whatsapp.com/KaEIg9DQvXGGyak6vV0bIg"
 },
 {name:"Capture the Imagination",
   date:"20 april 2021",
@@ -111,7 +111,7 @@ animation:any[]=[
   img:"./../../assets/events/animation2.jpg",
   club:"media",
   price:5000,
-  pdf:'/assets/ps/capture_the_imagination.pdf'
+  pdf:"https://chat.whatsapp.com/CviRlijF2H128C2vmOBuw1"
 }];
 
 
@@ -122,7 +122,7 @@ photog:any[] = [
   img:"./../../assets/events/photog1.jpg",
   club:"media",
   price:5000,
-  pdf:'/assets/ps/infocus.pdf'
+  pdf:"https://chat.whatsapp.com/EkLSyvPaVdd3kH8ZhjPIkY"
 },
 {name:"Photoart",
   date:"20 april 2021",
@@ -130,10 +130,105 @@ photog:any[] = [
   img:"./../../assets/events/photog2.jpg",
   club:"media",
   price:5000,
-  pdf:'/assets/ps/photoart.pdf'
+  pdf:'https://chat.whatsapp.com/LQ9PF9V0Fii7N5068HvTQ7'
 }
 ];
 
+etn: any = {
+  "Short-film making Competition" :{name:" Short-film Competition",
+  date:"20 april 2021",
+  description:"Imagine yourself to be in the shoes of a movie director, and create a short film of 3-10 minutes based on a given theme. Feel free to come up with the unique & original ideas and weave an impactful story through seamless cinematography and editing.",
+  img:"./../../assets/events/cine1.jpg",
+  price:5000,
+  pdf:"https://chat.whatsapp.com/CkXxAhuxbAY2mJz6Fvnbkx"
+},
+ "That's how B-Roll": {name:"That's how B-Roll",
+  date:"20 april 2021",
+  description:"Perfectly set up scenes, camera angles and surreal editing and transitions make a masterpiece that captivates viewers. “That’s how B-roll” requires you to make a B-roll portraying mundane daily activities in an exciting short clip.",
+  img:"./../../assets/events/cine2.jpg",
+  price:5000,
+  pdf:"https://chat.whatsapp.com/FBkmdDsWKTy5jaeVwUagir"
+},
+   "Vlogoholic":{name:" Vlogoholic",
+  date:"20 april 2021",
+  description:" It’s time for you to explore the vlogger inside you and create the perfect attention grabbing vlog describing any experience of your own, captivatingly, choosing any genre of your liking - travelog, prank, food review - anything that you find interesting.",
+  img:"./../../assets/events/outreach2.jpg",
+  club:"outreach",
+  price:5000,
+  pdf:"https://chat.whatsapp.com/B6H9znLSbcm8DqrUxXOQwg"
+},
+ "Documentary making": {name:"Documentary making",
+  date:"20 april 2021",
+  description:"Be it our heritage, our culture, or even our flaws, a well-structured documentary can portray it all. That’s what you’ll do in the “Documentary Making” event, where the goal is to make a 1-10 minute documentary pertaining to any particular genre",
+  img:"./../../assets/events/outreach1.jpg",
+  club:"outreach",
+  price:5000,
+  pdf:"https://chat.whatsapp.com/Lm3bZg2H51FJf8QtpmyZUT"
+},
+"Monogram":{name:"Monogram",
+  date:"20 april 2021",
+  description:"Sometimes, all it takes is two letters and an artistic mind to tell a story which words can’t. If you agree, “Monogram” is just the right place for you !!! Create a visually impactful and aesthetically pleasing design with none other than the initials of your name",
+  img:"./../../assets/events/design2.jpg",
+  club:'design',
+  price:5000,
+  pdf:"https://chat.whatsapp.com/IISQdmBzjms4v4ovVPoAUM"
+},
+  "Comic Strip":{name:"Comic Strip",
+  date:"20 april 2021",
+  description:"Awaken the artist inside you and let the creativity flow as “Comic Strip” provides you with the opportunity to put together a story through the little panels of comics. Pick one of the provided prompts to base your comic upon, and make it stand out.",
+  img:"./../../assets/events/design1.jpg",
+  club:'design',
+  price:5000,
+  pdf:"https://chat.whatsapp.com/KyXLOLRdfEVAoENa4pUDpW"
+},
+"Netflix & Chill":{name:"Netflix & Chill",
+  date:"20 april 2021",
+  description:"Consider yourself a web series geek? “Netflix and Chill” is here for you. Use a stipulated budget to assemble a cast consisting of fan-favorite heroes to the most terrifying of villains from shows around the world, and weave a gripping plot of your own.",
+  img:"./../../assets/events/media1.jpg",
+  club:"media",
+  price:5000,
+  pdf:"https://chat.whatsapp.com/JRThNiACDwzEaWneiRrqHf"
+},
+"Nation wants to know":{name:"Nation wants to know",
+  date:"20 april 2021",
+  description:"“Nation wants to know” provides you the platform to prove your mettle in the field of journalism. You’ll be provided with 3 images, based on which you’ll have to create the perfect piece of news, with a catchy headline and a well-constructed series of events.",
+  img:"./../../assets/events/media2.jpg",
+  club:"media",
+  price:5000,
+  pdf:"https://chat.whatsapp.com/IslRVpriwaHIgGnbJB8W5c"
+},
+"UnReal":{name:"UnReal",
+  date:"20 april 2021",
+  description:"Put your animation skills to test as participants will be required to recreate, to the best of their abilities, the 3D render of a real image which would be provided to them. The closest resembling entry takes it all!!!<br><br>",
+  img:"./../../assets/events/animation1.jpg",
+  club:"media",
+  price:5000,
+    pdf:"https://chat.whatsapp.com/KaEIg9DQvXGGyak6vV0bIg"
+},
+"Capture the Imagination":{name:"Capture the Imagination",
+  date:"20 april 2021",
+  description:"Set free the wings of your creativity, as “Capture the imagination” enables you to showcase an imaginative creation of the world in the form of 3D models using your animation skills.<br><br><br>",
+  img:"./../../assets/events/animation2.jpg",
+  club:"media",
+  price:5000,
+  pdf:"https://chat.whatsapp.com/CviRlijF2H128C2vmOBuw1"
+},
+"InFocus":{name:"InFocus",
+  date:"20 april 2021",
+  description:"Uphold the saying “A picture is worth a thousand words” by clicking captivating and surreal theme-based images. Of the themes provided, choose one or more themes and click a photograph best representing them.<br><br>",
+  img:"./../../assets/events/photog1.jpg",
+  club:"media",
+  price:5000,
+  pdf:"https://chat.whatsapp.com/EkLSyvPaVdd3kH8ZhjPIkY"
+},
+"Photoart":{name:"Photoart",
+  date:"20 april 2021",
+  description:"“Photoart” provides you with a platform to compete with highly skilled photographers. Given a set of 15 photographs, you will be creating an image using any number of the provided photographs, using manipulation.<br><br>",
+  img:"./../../assets/events/photog2.jpg",
+  club:"media",
+  price:5000,
+  pdf:'https://chat.whatsapp.com/LQ9PF9V0Fii7N5068HvTQ7'
+}};
 
 change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,"Outreach":this.outreach,"Cinema":this.cinema,"Photography":this.photog}
   events: any[] = [
@@ -142,14 +237,14 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
   description:"Imagine yourself to be in the shoes of a movie director, and create a short film of 3-10 minutes based on a given theme. Feel free to come up with the unique & original ideas and weave an impactful story through seamless cinematography and editing.",
   img:"./../../assets/events/cine1.jpg",
   price:5000,
-  pdf:'/assets/ps/short_film_making.pdf'
+  pdf:"https://chat.whatsapp.com/CkXxAhuxbAY2mJz6Fvnbkx"
 },
   {name:"That's how B-Roll",
   date:"20 april 2021",
   description:"Perfectly set up scenes, camera angles and surreal editing and transitions make a masterpiece that captivates viewers. “That’s how B-roll” requires you to make a B-roll portraying mundane daily activities in an exciting short clip.",
   img:"./../../assets/events/cine2.jpg",
   price:5000,
-  pdf:"/assets/ps/that_how_b_roll.pdf"
+  pdf:"https://chat.whatsapp.com/FBkmdDsWKTy5jaeVwUagir"
 },
      {name:" Vlogoholic",
   date:"20 april 2021",
@@ -157,7 +252,7 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
   img:"./../../assets/events/outreach2.jpg",
   club:"outreach",
   price:5000,
-  pdf:'/assets/ps/vlogoholic.pdf'
+  pdf:"https://chat.whatsapp.com/B6H9znLSbcm8DqrUxXOQwg"
 },
   {name:"Documentary making",
   date:"20 april 2021",
@@ -165,7 +260,7 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
   img:"./../../assets/events/outreach1.jpg",
   club:"outreach",
   price:5000,
-  pdf:'/assets/ps/documentary_making.pdf'
+  pdf:"https://chat.whatsapp.com/Lm3bZg2H51FJf8QtpmyZUT"
 },
 {name:"Monogram",
   date:"20 april 2021",
@@ -173,7 +268,7 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
   img:"./../../assets/events/design2.jpg",
   club:'design',
   price:5000,
-  pdf:'/assets/ps/monogram.pdf'
+  pdf:"https://chat.whatsapp.com/IISQdmBzjms4v4ovVPoAUM"
 },
   {name:"Comic Strip",
   date:"20 april 2021",
@@ -181,7 +276,7 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
   img:"./../../assets/events/design1.jpg",
   club:'design',
   price:5000,
-  pdf:'/assets/ps/comic_strip.pdf'
+  pdf:"https://chat.whatsapp.com/KyXLOLRdfEVAoENa4pUDpW"
 },
 {name:"Netflix & Chill",
   date:"20 april 2021",
@@ -189,7 +284,7 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
   img:"./../../assets/events/media1.jpg",
   club:"media",
   price:5000,
-  pdf:'/assets/ps/netflix_and_chill.pdf'
+  pdf:"https://chat.whatsapp.com/JRThNiACDwzEaWneiRrqHf"
 },
 {name:"Nation wants to know",
   date:"20 april 2021",
@@ -197,7 +292,7 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
   img:"./../../assets/events/media2.jpg",
   club:"media",
   price:5000,
-  pdf:'/assets/ps/nation_wants_to_know.pdf'
+  pdf:"https://chat.whatsapp.com/IslRVpriwaHIgGnbJB8W5c"
 },
 {name:"UnReal",
   date:"20 april 2021",
@@ -205,7 +300,7 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
   img:"./../../assets/events/animation1.jpg",
   club:"media",
   price:5000,
-    pdf:'/assets/ps/unreal.pdf'
+    pdf:"https://chat.whatsapp.com/KaEIg9DQvXGGyak6vV0bIg"
 },
 {name:"Capture the Imagination",
   date:"20 april 2021",
@@ -213,7 +308,7 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
   img:"./../../assets/events/animation2.jpg",
   club:"media",
   price:5000,
-  pdf:'/assets/ps/capture_the_imagination.pdf'
+  pdf:"https://chat.whatsapp.com/CviRlijF2H128C2vmOBuw1"
 },
 {name:"InFocus",
   date:"20 april 2021",
@@ -221,7 +316,7 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
   img:"./../../assets/events/photog1.jpg",
   club:"media",
   price:5000,
-  pdf:'/assets/ps/infocus.pdf'
+  pdf:"https://chat.whatsapp.com/EkLSyvPaVdd3kH8ZhjPIkY"
 },
 {name:"Photoart",
   date:"20 april 2021",
@@ -229,24 +324,24 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
   img:"./../../assets/events/photog2.jpg",
   club:"media",
   price:5000,
-  pdf:'/assets/ps/photoart.pdf'
+  pdf:"https://chat.whatsapp.com/LQ9PF9V0Fii7N5068HvTQ7"
 }];
 
   work: any[] = [
-   {name:" Short-film Competition",
+   {name:"Owen Davey",
   date:"20 april 2021",
-  description:"Cassandra is a wildlife photography competition based on dogs especially on the breeds such as hukies and shibas",
-  img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
+  description:"An award-winning illustrator who specializes in creating retro-inspired illustrations and has got his work published worldwide. His clients include Google, Facebook, Sony, Lego and National Geographic. Winner of Best of Show and two Silver Awards in the 3x3 Professional Show 2019.",
+  img:"https://pbs.twimg.com/card_img/1374438988157620227/LyLN7X77?format=jpg",
   price:5000
 },
-  {name:"That's how B-Roll",
+  {name:"Ashraful Arefin",
   date:"20 april 2021",
-  description:"Cassandra is a wildlife photography competition based on dogs especially on the breeds such as hukies and shibas",
-  img:"https://material.angular.io/assets/img/examples/shiba2.jpg",
+  description:"A Fine Art Photographer, with an allure towards photography since 2013, highly inspired by the still life and tries to portray beauty and emotion within his photographic frame by using amazing colours and simple techniques.",
+  img:"https://121clicks.com/wp-content/uploads/2018/02/ashraful_arefin_photographer.jpg",
   price:5000
 }]
 
-
+ca: boolean = false;
 
 
   constructor(private router:Router,private authService: SocialAuthService,
@@ -271,17 +366,27 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
           this.signOut();
         }
         else{
+          if(res["type"]=="PA"){
+            this.ca = true;
           if(res["pass"]=="aep"){
             this.dets = res;
           }
           if(res["pass"]=="dep"){
             this.dets = this.change[res["add"]];
+            this.dets = res;
           }
           if(res["pass"]=="sep"){
-            this.dets = this.change[res["add"]];
+            this.dets = this.etn[res["add"]];
+            this.dets = res;
           }
+        }
+        if(res["type"]=="CA"){
+          this.ca = false;
+          this.dets = res;
+        }
           if(res["type"]=="IN"){
             this.dets = res;
+            this.ca = true;
           }
           console.log(res)
           this.ren = !this.ren;
@@ -324,5 +429,10 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
     .get("https://fmcweek-liart.vercel.app/google/logout",{withCredentials:true,responseType:"json"})
      .subscribe((res:any)=>{console.log(res)});
        window.location.reload();
+  }
+
+  join(l:any):void{
+    console.log(l)
+    window.location.href = l.pdf;
   }
 }

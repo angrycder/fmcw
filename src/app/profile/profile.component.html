@@ -24,7 +24,7 @@
   </div>
 	</div> 
 
-  <div class="events">
+  <div class="events" *ngIf="ca">
     <div class="pad">
       <div
         style="
@@ -54,7 +54,6 @@
       <mat-card class="example-card">
         <mat-card-header>
           <mat-card-title [innerHTML]="event.name"></mat-card-title>
-          <mat-card-subtitle>{{ event.name }}</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image src="{{ event.img }}" />
         <mat-card-content>
@@ -62,7 +61,7 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button>Join whatsApp group</button>
+          <button mat-button (click)="join(event)">Join whatsApp group</button>
         </mat-card-actions>
       </mat-card>
     </div>
@@ -90,7 +89,6 @@
       <mat-card class="example-card">
         <mat-card-header>
           <mat-card-title [innerHTML]="workshop.name"></mat-card-title>
-          <mat-card-subtitle>{{ workshop.name }}</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image src="{{ workshop.img }}" />
         <mat-card-content>
