@@ -33,6 +33,7 @@ import { TeamComponent } from './team/team.component';
 import { MemoryComponent } from './memory/memory.component';
 import { CaComponent } from './ca/ca.component';
 import { SafePipeModule } from 'safe-pipe';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { SafePipeModule } from 'safe-pipe';
     TeamComponent,
     MemoryComponent,
     CaComponent,
+    SponsorsComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

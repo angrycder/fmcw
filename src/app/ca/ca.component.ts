@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-ca',
@@ -7,16 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CaComponent implements OnInit {
 
-	displayedColumns: string[] = ['position', 'name', 'code', 'referals'];
-  dataSource =[
-  {position: 1, name: 'Arya shukla', referals: 1.0079, code: 'H'},
-  {position: 2, name: 'Chinmay', referals: 4.0026, code: 'He'},
-  {position: 3, name: 'Martin', referals: 6.941, code: 'Li'},
-];
+	displayedColumns: string[] = [ 'name', 'code', 'referals'];
+  dataSource:any =[];
 
-  constructor() { }
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.http.get("https://fmcweek-liart.vercel.app/leaderboard").subscribe(data => {
+      this.dataSource = data;
+    })
   }
-
 }

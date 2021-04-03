@@ -86,7 +86,7 @@ this.s = !this.s;
 window.location.href=res["url"];
         }
 
-      })
+      },(error)=>{this.signOut()})
     }
     if(t == "dep" && (this.sep != "")){
            let k :pay = {token:this.user.idToken,type:"dep",add:this.dep};
@@ -97,7 +97,7 @@ window.location.href=res["url"];
         else{
 window.location.href=res["url"];
         }
-      })
+      },(error)=>{this.signOut()})
     }
     if(t == "sep" && (this.dep != "")){
            let j :pay = {token:this.user.idToken,type:"sep",add:this.sep};
@@ -108,7 +108,7 @@ window.location.href=res["url"];
         else{
 window.location.href=res["url"];
         }
-      })
+      },(error)=>{this.signOut()})
     }
     if(t == "awp"){
        let p :pay = {token:this.user.idToken,type:"awp",add:""};
@@ -120,7 +120,7 @@ window.location.href=res["url"];
         else{
 window.location.href=res["url"];
         }
-      })
+      },(error)=>{this.signOut()})
     }
   }
 

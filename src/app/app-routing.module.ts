@@ -8,6 +8,7 @@ import { LeaderComponent } from './leader/leader.component';
 import { TeamComponent } from './team/team.component';
 import { MemoryComponent } from './memory/memory.component';
 import { CaComponent } from './ca/ca.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 import {CaComponent as FaqComponent} from "./faq/ca.component";
 
 const routes: Routes = [
@@ -18,6 +19,10 @@ const routes: Routes = [
 {
 	path:"events",
 	component: EventsComponent
+},
+{
+	path:"sponsors",
+	component: SponsorsComponent
 },
 {
 	path:"workshops",
