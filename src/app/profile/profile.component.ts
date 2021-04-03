@@ -331,37 +331,42 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
    {name:"Owen Davey",
   date:"20 april 2021",
   description:"An award-winning illustrator who specializes in creating retro-inspired illustrations and has got his work published worldwide. His clients include Google, Facebook, Sony, Lego and National Geographic. Winner of Best of Show and two Silver Awards in the 3x3 Professional Show 2019.",
-  img:"https://pbs.twimg.com/card_img/1374438988157620227/LyLN7X77?format=jpg"
+  img:"../../assets/workshop/workshop_owen.jpg"
 },
   {name:"Ashraful Arefin",
   date:"20 april 2021",
   description:"A Fine Art Photographer, with an allure towards photography since 2013, highly inspired by the still life and tries to portray beauty and emotion within his photographic frame by using amazing colours and simple techniques.",
-  img:"https://121clicks.com/wp-content/uploads/2018/02/ashraful_arefin_photographer.jpg"
+ img:"../../assets/workshop/workshop_ashraful.jpg"
 },
 {name:"V. Srinivas Mohan",
   date:"20 april 2021",
   description:"A visual effects artist working in the Indian film indutsry since 1996. He has contributed to the blockbusters like Bahubali: The Beginning; Ra.One; Enthiran and many moreand has received four National Film Awards for Best Special Effects.",
-  img:"https://en.wikipedia.org/wiki/V._Srinivas_Mohan#/media/File:Srinivas_Mohan.jpeg"
+ img:"../../assets/workshop/workshop_sinivas.jpg"
 },
 {name:"Akanksha Damini Joshi",
   date:"20 april 2021",
   description:"An Indian filmmaker known for her works on communal conflict, crisis and spiritual philosophy. Her documentaries, Chilika Bank$, Hindu Nectar, and Earth Witness won her various awards including the Best Film and the Best Director awards at both National, and International level.",
-  img:"https://121clicks.com/wp-content/uploads/2018/02/ashraful_arefin_photographer.jpg"
+  img:"../../assets/workshop/workshop_akanksha.jpg"
 },
 {name:"Aarzoo Khurana",
   date:"20 april 2021",
   description:"A nature and wildlife photographer, currently the ambassador at Sony Alpha. She strives to find beauty in the light and shadows, portraying some of the most engaging moments one might witness in the wild. ",
-  img:"https://121clicks.com/wp-content/uploads/2018/02/ashraful_arefin_photographer.jpg"
+  img:"../../assets/workshop/workshop_aarzoo.jpg"
 },
 {name:"RITAM BHATNAGAR",
   date:"20 april 2021",
   description:"Founder of India Film Project, Asia's largest content festival.He is also a recipient of the title of “Global Shaper” by the World Economic Forum.",
-  img:"https://121clicks.com/wp-content/uploads/2018/02/ashraful_arefin_photographer.jpg"
+  img:"../../assets/workshop/workshop_ritam.jpg"
 },
 {name:"MOHAMMED ZEESHAN ",
   date:"20 april 2021",
   description:"Founder of Rangreza Studios, a premium media services brand. He is a master of a wide array of professional cameras and lenses. As one of the prominent travellers and photographers in the community, he has inspired many to explore the world of photography.",
-  img:"https://121clicks.com/wp-content/uploads/2018/02/ashraful_arefin_photographer.jpg"
+  img:"../../assets/workshop/workshop_zeeshan.jpg"
+},
+{name:"Rohit Dawesar",
+  date:"20 april 2021",
+  description:"An Indore based author whose debut novel 'The Stupid Somebody' proclaimed him the title of best-selling author, even before signing for his very second book in 2020. Best known for his nanotales, he now creates magic with his words as a full-time writer.",
+  img:"../../assets/workshop/workshop_rohit.jpg"
 }]
 
 ca: boolean = false;

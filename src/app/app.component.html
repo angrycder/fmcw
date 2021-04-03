@@ -19,7 +19,7 @@
     Passes
   </button>
   <button mat-button *ngIf="!wide" routerLink="ambassador">Referrals</button>
-  <button mat-button routerLink="faq">FAQ</button>
+  <button mat-button routerLink="faq" *ngIf="!wide" >FAQ</button>
   <button mat-button *ngIf="!wide" routerLink="team">Team</button>
   <button
     mat-icon-button
@@ -38,7 +38,7 @@
     <button mat-menu-item *ngIf="loggedIn" routerLink="dash/cart">
       Passes
     </button>
-    <button mat-menu-item routerLink="events">FAQ</button>
+    <button mat-menu-item routerLink="faq">FAQ</button>
     <!--<button mat-menu-item routerLink="workshops">Workshops</button>-->
     <button mat-menu-item routerLink="team">Team</button>
   </mat-menu>

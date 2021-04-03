@@ -47,6 +47,7 @@ import { ProfileComponent } from '../profile/profile.component';
 import { CartComponent } from '../cart/cart.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from '../guard/auth.guard';
+import { PassGuard } from '../guard/pass.guard';
 import { CoolSocialLoginButtonsModule } from '@angular-cool/social-login-buttons';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -61,7 +62,7 @@ const routes: Routes =  [
 {
 	path:"cart",
 	component:CartComponent,
-	canActivate:[AuthGuard]
+	canActivate:[PassGuard]
 }
 ];
 
