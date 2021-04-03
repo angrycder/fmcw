@@ -370,7 +370,7 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
 }]
 
 ca: boolean = false;
-
+np:boolean = false;
 
   constructor(private router:Router,private authService: SocialAuthService,
     private storage:LocalStorageService,private http:HttpClient,
@@ -411,7 +411,7 @@ ca: boolean = false;
             this.dets = res;
           }
           else{
-          this.ca = false; 
+          this.np = true; 
           }
         }
         if(res["type"]=="CA"){

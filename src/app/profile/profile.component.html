@@ -28,7 +28,7 @@
       <div class="title2">number of referrals : {{dets.norefcode}}</div>
   </div>
 	
-  <div class="events" *ngIf="ca">
+  <div class="events" *ngIf="ca && !np">
     <div class="pad">
       <div
         style="
@@ -105,5 +105,9 @@
         </mat-card-actions>
       </mat-card>
     </div>
+  </div>
+
+  <div class="events title" *ngIf="np">
+    You haven't registered for any event yet. Hurry now, visit the Passes tab and get a chance to compete and win exciting prizes.
   </div>
 </div>
