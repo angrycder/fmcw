@@ -90,15 +90,15 @@ export class AppComponent implements OnInit,OnDestroy {
          }
          if(res["message"] == "insti"){
            this.storage.store("user",user);
-           this.storage.store("role",res)
+           this.storage.store("role",res["message"])
          }
          if(res["message"] == "ca"){
            this.storage.store("user",user);
-           this.storage.store("role",res);
+           this.storage.store("role",res["message"]);
          }
          if(res["message"] == "pa"){
            this.storage.store("user",user);
-           this.storage.store("role",res);
+           this.storage.store("role",res["message"]);
          }
 
 

@@ -405,6 +405,9 @@ ca: boolean = false;
 
             this.dets = res;
           }
+          else{
+          this.ca = false; 
+          }
         }
         if(res["type"]=="CA"){
           this.ca = false;
