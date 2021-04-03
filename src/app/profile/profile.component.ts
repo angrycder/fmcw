@@ -458,6 +458,7 @@ ca: boolean = false;
 
     signOut():void{
     this.storage.clear('user');
+    this.storage.clear("role");
     this.authService.signOut();
     this.http
     .get("https://fmcweek-liart.vercel.app/google/logout",{withCredentials:true,responseType:"json"})
@@ -468,5 +469,9 @@ ca: boolean = false;
   join(l:any):void{
     console.log(l)
     window.location.href = l.pdf;
+  }
+
+  gotowork(){
+   window.location.href= "https://chat.whatsapp.com/FgwktoDsvDz6PNuj2KWY9q"
   }
 }

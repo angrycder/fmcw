@@ -24,6 +24,7 @@ export class AppComponent implements OnInit,OnDestroy {
   title = 'fmc weekend';
   user: SocialUser;
   loggedIn :boolean;
+  rol:boolean = false;
   sub:any;
   screenHeight: number = window.innerHeight;
   screenWidth: number  = window.innerWidth;
@@ -49,6 +50,10 @@ export class AppComponent implements OnInit,OnDestroy {
     this.storage.observe("user").subscribe((user)=>{
       this.user = user;
       this.loggedIn=(user != null);
+    })
+
+    this.storage.observe("role").subscribe((role)=>{
+      this.rol = (role == "pa");
     })
    }
 
@@ -111,6 +116,7 @@ export class AppComponent implements OnInit,OnDestroy {
 
   signOut():void{
     this.storage.clear('user');
+    this.storage.clear("role");
     this.authService.signOut();
     this.http
     .get("https://fmcweek-liart.vercel.app/google/logout",{withCredentials:true,responseType:"json"})

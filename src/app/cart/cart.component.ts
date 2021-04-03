@@ -4,6 +4,7 @@ import { SocialUser } from "angularx-social-login";
 import {LocalStorageService} from 'ngx-webstorage';
 import {HttpClient} from "@angular/common/http";
 import { Router } from "@angular/router";
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 interface pay{
   token:string;
@@ -54,6 +55,7 @@ export class CartComponent implements OnInit {
     private http:HttpClient,
     private authService: SocialAuthService,
     private storage:LocalStorageService,
+    private _snackBar: MatSnackBar,
     private renderer: Renderer2) {
     this.user=this.storage.retrieve("user");
      }
@@ -88,7 +90,11 @@ window.location.href=res["url"];
 
       },(error)=>{this.signOut()})
     }
-    if(t == "dep" && (this.sep != "")){
+
+
+
+    if(t == "dep"){
+            if(this.sep != ""){
            let k :pay = {token:this.user.idToken,type:"dep",add:this.dep};
            this.http.post("https://fmcweek-liart.vercel.app/pay",k,{withCredentials:true}).subscribe((res:any)=>{
   if(res["message"] == "notoken"){
@@ -99,8 +105,17 @@ window.location.href=res["url"];
         }
       },(error)=>{this.signOut()})
     }
-    if(t == "sep" && (this.dep != "")){
-           let j :pay = {token:this.user.idToken,type:"sep",add:this.sep};
+    else{
+      this.openSnackBar("Please select something","hide");
+    }
+  }
+
+
+
+
+    if(t == "sep"){
+      if(this.dep != ""){
+                   let j :pay = {token:this.user.idToken,type:"sep",add:this.sep};
            this.http.post("https://fmcweek-liart.vercel.app/pay",j,{withCredentials:true}).subscribe((res:any)=>{
      if(res["message"] == "notoken"){
           this.signOut();
@@ -109,7 +124,15 @@ window.location.href=res["url"];
 window.location.href=res["url"];
         }
       },(error)=>{this.signOut()})
+      }
+      else{
+         this.openSnackBar("Please select something","hide");
+      }
     }
+
+
+
+
     if(t == "awp"){
        let p :pay = {token:this.user.idToken,type:"awp",add:""};
            p["type"] = "awp";
@@ -124,7 +147,15 @@ window.location.href=res["url"];
     }
   }
 
+
+    openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 2000,
+    });
+  }
+
     signOut():void{
+      this.storage.clear("role");
     this.storage.clear('user');
     this.authService.signOut();
     this.http

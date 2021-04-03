@@ -15,7 +15,7 @@
   </button>
   <button mat-button *ngIf="!wide" routerLink="events">Events</button>
   <button mat-button *ngIf="!wide && loggedIn" routerLink="dash">Dashboard</button>
-  <button mat-button *ngIf="!wide && loggedIn" routerLink="dash/cart">
+  <button mat-button *ngIf="!wide && loggedIn && rol" routerLink="dash/cart">
     Passes
   </button>
   <button mat-button *ngIf="!wide" routerLink="ambassador">Referrals</button>
@@ -35,7 +35,7 @@
     </button>
     <button mat-menu-item *ngIf="loggedIn" routerLink="dash">Dashboard</button>
     <button mat-menu-item routerLink="events">Events</button>
-    <button mat-menu-item *ngIf="loggedIn" routerLink="dash/cart">
+    <button mat-menu-item *ngIf="loggedIn && rol" routerLink="dash/cart">
       Passes
     </button>
     <button mat-menu-item routerLink="faq">FAQ</button>
