@@ -401,14 +401,18 @@ np:boolean = false;
             this.workshop = this.work;
           }
           else if(res["pass"]=="dep"){
-            this.event = this.change[res["add"]];
-            this.workshop = [this.work[0]];
+            this.workshop = this.work[0];
+            this.events = this.change[res["add"]]
+            this.work   = [this.workshop]
+            this.event = this.event[0];
             this.dets = res;
           }
           else if(res["pass"]=="sep"){
-            
-            this.event = [this.etn[res["add"]]];
-            this.workshop = [this.work[0]];
+            this.event = this.etn[res["add"]];
+            this.workshop = this.work[0];
+
+            this.events = [this.event]
+            this.work   = [this.workshop]
 
             this.dets = res;
           }
