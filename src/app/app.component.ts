@@ -52,6 +52,8 @@ export class AppComponent implements OnInit,OnDestroy {
       this.loggedIn=(user != null);
     })
 
+    this.rol = (this.storage.retrieve('rol')=="pa");
+
     this.storage.observe("role").subscribe((role)=>{
       this.rol = (role == "pa");
     })
