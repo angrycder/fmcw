@@ -404,7 +404,7 @@ np:boolean = false;
             this.workshop = this.work[0];
             this.events = this.change[res["add"]]
             this.work   = [this.workshop]
-            this.event = this.event[0];
+            this.event = this.events[0];
             this.dets = res;
           }
           else if(res["pass"]=="sep"){
