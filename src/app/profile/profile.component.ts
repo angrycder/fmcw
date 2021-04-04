@@ -22,6 +22,7 @@ export class ProfileComponent implements OnInit,OnDestroy {
   i:number=0;
   j:number=0;
   event:any;
+  awppass:boolean=true;
   workshop:any;
   ren:boolean=false;
 cinema: any[] = [
@@ -406,7 +407,15 @@ np:boolean = false;
           }
           if(res["pass"]=="sep"){
             this.event = this.etn[res["add"]];
-            this.work = this.work[0];
+            this.workshop = this.work[0];
+
+            this.dets = res;
+          }
+          if(res["pass"]=="awp"){
+            
+            this.workshop = this.work[0];
+
+            this.awppass =false;
 
             this.dets = res;
           }
