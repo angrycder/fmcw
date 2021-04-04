@@ -28,7 +28,7 @@
       <div class="title2">number of referrals : {{dets.norefcode}}</div>
   </div>
 	  <div class="events title" *ngIf="!np">
-    Registered for the event? Join this Whatsapp group and keep track of any and all further developments
+    Registered for the event? Join the Whatsapp group and keep track of any and all further developments
   </div>
   <div class="events" *ngIf="ca && !np">
     <div class="pad" *ngIf="awppass">
@@ -50,7 +50,7 @@
         <button
           mat-mini-fab
           style="float: right"
-          color="primary"
+          color="primary" 
           (click)="right()"
         >
           <mat-icon>arrow_right</mat-icon>
@@ -67,7 +67,7 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button (click)="join(event)">Join whatsApp group</button>
+          <button mat-button (click)="join(event)">Join WhatsApp group</button>
         </mat-card-actions>
       </mat-card>
     </div>
@@ -103,7 +103,7 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button *ngIf="np2" (click)="gotowork()">Join whatsApp group</button>
+          <button mat-button *ngIf="np2" (click)="gotowork()">Join WhatsApp group</button>
         </mat-card-actions>
       </mat-card>
     </div>
