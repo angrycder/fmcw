@@ -93,8 +93,9 @@ window.location.href=res["url"];
 
 
 
-    if(t == "dep"){
-            if(this.sep != ""){
+    if(t == "dep"){ 
+      console.log(this.dep)
+            if(this.dep != null){
            let k :pay = {token:this.user.idToken,type:"dep",add:this.dep};
            this.http.post("https://fmcweek-liart.vercel.app/pay",k,{withCredentials:true}).subscribe((res:any)=>{
   if(res["message"] == "notoken"){
@@ -106,7 +107,7 @@ window.location.href=res["url"];
       },(error)=>{this.signOut()})
     }
     else{
-      this.openSnackBar("Please select something","hide");
+      this.openSnackBar("Please select a club","hide");
     }
   }
 
@@ -114,7 +115,7 @@ window.location.href=res["url"];
 
 
     if(t == "sep"){
-      if(this.dep != ""){
+      if(this.sep != null){
                    let j :pay = {token:this.user.idToken,type:"sep",add:this.sep};
            this.http.post("https://fmcweek-liart.vercel.app/pay",j,{withCredentials:true}).subscribe((res:any)=>{
      if(res["message"] == "notoken"){
@@ -126,7 +127,7 @@ window.location.href=res["url"];
       },(error)=>{this.signOut()})
       }
       else{
-         this.openSnackBar("Please select something","hide");
+         this.openSnackBar("Please select an event","hide");
       }
     }
 

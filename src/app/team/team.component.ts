@@ -238,7 +238,39 @@ export class TeamComponent implements OnInit,OnDestroy,AfterViewInit {
             "phone_number": "8828117002",
             "email": "amadhurendras.che18@itbhu.ac.in",
             "image":"./../../assets/team/cot/avishkar.jpg"
+        },
+        {
+            "name": "Arya Raman",
+            "team": "cot",
+            "phone_number": "8005670143",
+            "email": "aryaraman.bme18@itbhu.ac.in",
+            "image":"./../../assets/team/cot/aryaraman.jpg"
+        },
+{
+            "name": "Sneha Gupta",
+            "team": "cot",
+            "phone_number": "8400817706",
+            "email": "snehagupta.che18@itbhu.ac.in",
+            "image":"./../../assets/team/cot/sneha.jpg"
+        },
+
+{
+            "name": "Shreyansh Soni",
+            "team": "cot",
+            "phone_number": "9413548312",
+            "email": "shreyanshsoni.civ18@itbhu.ac.in",
+            "image":"./../../assets/team/cot/shreyansh.jpg"
+        },
+
+{
+            "name": "Rohit Jangid",
+            "team": "cot",
+            "phone_number": "9935710058",
+            "email": "rohitkrjangid.che18@itbhu.ac.in",
+            "image":"./../../assets/team/cot/rohit.jpg"
         }
+
+
     ]
 };
 

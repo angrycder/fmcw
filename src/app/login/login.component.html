@@ -4,11 +4,11 @@
          <div class="forms">
             <mat-form-field appearance="fill" required>
                <mat-label>Name</mat-label>
-               <input matInput  [(ngModel)]="detail.name">
+               <input matInput  #name [(ngModel)]="detail.name">
             </mat-form-field>
             <mat-form-field appearance="fill" required [(ngModel)]="detail.number" (input)="detail.number = $event.target.value">
                <mat-label>Phone</mat-label>
-               <input matInput type="number" >
+               <input matInput type="number" #number >
             </mat-form-field>
             <mat-form-field appearance="fill">
                <mat-label>College</mat-label>
@@ -672,7 +672,7 @@
     </mat-form-field>
    <mat-form-field  appearance="fill">
       <mat-label>Role</mat-label>
-      <select matNativeControl required [(ngModel)]="type"  #year>
+      <select matNativeControl required [(ngModel)]="type"  #role>
         <option value="ca">CAMPUS AMBASSADOR</option>
         <option value="pa">PARTICIPANT</option>
       </select>
@@ -683,5 +683,7 @@
             </mat-form-field>
          </div>
       </div>
-   <button mat-raised-button color="primary" class="sbtn" mat-dialog-close (click)="signUp()" >Sign up</button>
-</div>
+   <button style="position: relative;
+    bottom: 15px;
+    right: 40px;" mat-raised-button color="primary" class="sbtn" mat-dialog-close (click)="signUp()" [disabled]="(number.value.length != 10) ||(!year.value)||(!role.value) || (!state.value) || (!name.value) " >Sign up</button>
+</div> 
