@@ -402,12 +402,12 @@ np:boolean = false;
           }
           else if(res["pass"]=="dep"){
             this.event = this.change[res["add"]];
-            this.workshop = this.work[0];
+            this.workshop = [this.work[0]];
             this.dets = res;
           }
           else if(res["pass"]=="sep"){
-            this.event = this.etn[res["add"]];
-            this.workshop = this.work[0];
+            this.event = [this.etn[res["add"]]];
+            this.workshop = [this.work[0]];
 
             this.dets = res;
           }
