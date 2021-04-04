@@ -359,13 +359,13 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
   img:"../../assets/workshop/workshop_aarzoo.jpg",
   club:"Photography"
 },
-{name:"RITAM BHATNAGAR",
+{name:"Ritam Bhatnagar",
   date:"20 april 2021",
   description:"Founder of India Film Project, Asia's largest content festival.He is also a recipient of the title of “Global Shaper” by the World Economic Forum.",
   img:"../../assets/workshop/workshop_ritam.jpg",
   club:"Cinema"
 },
-{name:"MOHAMMED ZEESHAN ",
+{name:"Mohammed Zeeshan ",
   date:"20 april 2021",
   description:"Founder of Rangreza Studios, a premium media services brand. He is a master of a wide array of professional cameras and lenses. As one of the prominent travellers and photographers in the community, he has inspired many to explore the world of photography.",
   img:"../../assets/workshop/workshop_zeeshan.jpg",
@@ -377,12 +377,12 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
   img:"../../assets/workshop/workshop_rohit.jpg",
   club:"Media"
 },
-/*{name:"Sahil Dev",
+{name:"Sahil Dev",
   date:"20 april 2021",
   description:"A freelance designer driven by passion and having a knack for creativity, has helped 50+ startups including DOST, Crownstack, Daily Digital, and Josh Community, with their branding & identity in the span of 2 years. He is also leading the creative team of Guerrillas, an advertizing agency.",
-  img:"../../assets/workshop/workshop_rohit.jpg",
+  img:"../../assets/workshop/workshop_sahil.jpg",
   club:"Design"
-}*/]
+}]
 
 stod:any={
   "InFocus":"Photography",
@@ -501,13 +501,13 @@ np2:boolean = true;
   img:"../../assets/workshop/workshop_aarzoo.jpg",
   club:"Photography"
 },
-{name:"RITAM BHATNAGAR",
+{name:"Ritam Bhatnagar",
   date:"20 april 2021",
   description:"Founder of India Film Project, Asia's largest content festival.He is also a recipient of the title of “Global Shaper” by the World Economic Forum.",
   img:"../../assets/workshop/workshop_ritam.jpg",
   club:"Cinema"
 },
-{name:"MOHAMMED ZEESHAN ",
+{name:"Mohammed Zeeshan",
   date:"20 april 2021",
   description:"Founder of Rangreza Studios, a premium media services brand. He is a master of a wide array of professional cameras and lenses. As one of the prominent travellers and photographers in the community, he has inspired many to explore the world of photography.",
   img:"../../assets/workshop/workshop_zeeshan.jpg",
@@ -519,12 +519,12 @@ np2:boolean = true;
   img:"../../assets/workshop/workshop_rohit.jpg",
   club:"Media"
 },
-/*{name:"Sahil Dev",
+{name:"Sahil Dev",
   date:"20 april 2021",
   description:"A freelance designer driven by passion and having a knack for creativity, has helped 50+ startups including DOST, Crownstack, Daily Digital, and Josh Community, with their branding & identity in the span of 2 years. He is also leading the creative team of Guerrillas, an advertizing agency.",
-  img:"../../assets/workshop/workshop_rohit.jpg",
+  img:"../../assets/workshop/workshop_sahil.jpg",
   club:"Design"
-}*/]
+}]
     return l.filter(x => x.club==s)
   }
   left(): void {
