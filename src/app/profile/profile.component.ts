@@ -372,7 +372,7 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
 
 ca: boolean = false;
 np:boolean = false;
-
+np2:boolean = true;
   constructor(private router:Router,private authService: SocialAuthService,
     private storage:LocalStorageService,private http:HttpClient,
     @Inject(DOCUMENT) private document: Document) {
@@ -402,6 +402,8 @@ np:boolean = false;
             this.work   = [this.workshop]
             this.event = this.events[0];
             this.dets = res;
+
+            this.np2 =false;
           }
           else if(res["pass"]=="sep"){
             this.event = this.etn[res["add"]];
@@ -411,6 +413,8 @@ np:boolean = false;
             this.work   = [this.workshop]
 
             this.dets = res;
+
+            this.np2 =false;
           }
           else if(res["pass"]=="awp"){
             
