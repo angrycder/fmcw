@@ -383,8 +383,6 @@ np:boolean = false;
       this.user = user;
       this.loggedIn=(user != null);
     });;
-    this.event = this.events[0];
-    this.workshop = this.work[0]
   }
 
   ngOnInit(): void {
@@ -399,10 +397,12 @@ np:boolean = false;
             this.ca = true;
           if(res["pass"]=="aep"){
             this.dets = res;
+            this.event = this.events;
+            this.workshop = this.work;
           }
           else if(res["pass"]=="dep"){
             this.event = this.change[res["add"]];
-            this.work = this.work[0];
+            this.workshop = this.work[0];
             this.dets = res;
           }
           else if(res["pass"]=="sep"){
