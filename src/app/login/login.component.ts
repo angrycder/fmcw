@@ -70,7 +70,7 @@ export class LoginComponent implements OnInit {
     this.http.post("https://fmcweek-liart.vercel.app/registerpa",this.detail,{withCredentials:true})
     .subscribe((res:any)=>{console.log(res);  
      this.storage.store('user',this.data.user);   
-      this.storage.store('role',"ca");
+      this.storage.store('role',"pa");
      this.router.navigateByUrl("/dash/cart");});
   }
 }
