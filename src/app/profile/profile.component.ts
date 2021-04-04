@@ -422,7 +422,7 @@ np2:boolean = true;
             console.log(this.events,this.work)
           }
           else if(res["pass"]=="dep"){
-            this.events = this.change[res["add"]]
+            this.events = this.change[res["add"]];
             this.work   = this.getwork(res["add"]);
             this.event = this.events[0];
             this.workshop = this.work[0];
@@ -470,7 +470,7 @@ np2:boolean = true;
     this.document.body.className = "";
   }
   getwork(s: string){
-    return this.work.filter((x)=>{x.club==s})
+    return this.work.filter(x => x.club==s)
   }
   left(): void {
     let l = this.events.length;

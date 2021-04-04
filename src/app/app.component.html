@@ -14,6 +14,7 @@
     Register
   </button>
   <button mat-button *ngIf="!wide" routerLink="events">Events</button>
+  <button mat-button *ngIf="!wide" routerLink="sponsors">Sponsors</button>
   <button mat-button *ngIf="!wide && loggedIn" routerLink="dash">Dashboard</button>
   <button mat-button *ngIf="!wide && loggedIn && rol" routerLink="dash/cart">
     Passes
