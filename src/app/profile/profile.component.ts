@@ -389,10 +389,6 @@ np:boolean = false;
     this.document.body.className = "bgp";
     this.http.post("https://fmcweek-liart.vercel.app/dashboard/details",{token: this.user.idToken},{withCredentials:true})
     .subscribe((res:any)=>{
-        if(res["message"] == "notoken"){
-          this.signOut();
-        }
-        else{
           if(res["type"]=="PA"){
             this.ca = true;
           if(res["pass"]=="aep"){
@@ -428,23 +424,18 @@ np:boolean = false;
           this.np = true; 
           }
         }
-        if(res["type"]=="CA"){
+        else if(res["type"]=="CA"){
           this.ca = false;
           this.dets = res;
         }
-          if(res["type"]=="IN"){
+          else if(res["type"]=="IN"){
             this.dets = res;
             this.ca = true;
+            this.event = this.events[0]
+            this.workshop = this.work[0]
           }
-        if(res["type"]=="PA"){
-          this.dets = res;
-
-        }
           console.log(res)
           this.ren = !this.ren;
-        }
-
-       
     },(error)=>{this.signOut()});
   }
 
