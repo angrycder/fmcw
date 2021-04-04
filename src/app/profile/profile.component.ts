@@ -400,18 +400,18 @@ np:boolean = false;
           if(res["pass"]=="aep"){
             this.dets = res;
           }
-          if(res["pass"]=="dep"){
+          else if(res["pass"]=="dep"){
             this.event = this.change[res["add"]];
             this.work = this.work[0];
             this.dets = res;
           }
-          if(res["pass"]=="sep"){
+          else if(res["pass"]=="sep"){
             this.event = this.etn[res["add"]];
             this.workshop = this.work[0];
 
             this.dets = res;
           }
-          if(res["pass"]=="awp"){
+          else if(res["pass"]=="awp"){
             
             this.workshop = this.work[0];
 
@@ -433,7 +433,7 @@ np:boolean = false;
           }
         if(res["type"]=="PA"){
           this.dets = res;
-          
+
         }
           console.log(res)
           this.ren = !this.ren;
