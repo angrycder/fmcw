@@ -26,7 +26,7 @@ export class ProfileComponent implements OnInit,OnDestroy {
   workshop:any;
   ren:boolean=false;
 cinema: any[] = [
-   {name:" Short-film Competition",
+   {name:"Short-film Competition",
   date:"20 april 2021",
   description:"Imagine yourself to be in the shoes of a movie director, and create a short film of 3-10 minutes based on a given theme. Feel free to come up with the unique & original ideas and weave an impactful story through seamless cinematography and editing.",
   img:"./../../assets/events/cine1.jpg",
@@ -332,43 +332,66 @@ change:any= {"Animation":this.animation,"Media":this.media,"Design":this.design,
    {name:"Owen Davey",
   date:"20 april 2021",
   description:"An award-winning illustrator who specializes in creating retro-inspired illustrations and has got his work published worldwide. His clients include Google, Facebook, Sony, Lego and National Geographic. Winner of Best of Show and two Silver Awards in the 3x3 Professional Show 2019.",
-  img:"../../assets/workshop/workshop_owen.jpg"
-},
-  {name:"Ashraful Arefin",
-  date:"20 april 2021",
-  description:"A Fine Art Photographer, with an allure towards photography since 2013, highly inspired by the still life and tries to portray beauty and emotion within his photographic frame by using amazing colours and simple techniques.",
- img:"../../assets/workshop/workshop_ashraful.jpg"
+  img:"../../assets/workshop/workshop_owen.jpg",
+  club:"Photography"
 },
 {name:"V. Srinivas Mohan",
   date:"20 april 2021",
   description:"A visual effects artist working in the Indian film indutsry since 1996. He has contributed to the blockbusters like Bahubali: The Beginning; Ra.One; Enthiran and many moreand has received four National Film Awards for Best Special Effects.",
- img:"../../assets/workshop/workshop_sinivas.jpg"
+ img:"../../assets/workshop/workshop_sinivas.jpg",
+ club:"Animation"
 },
 {name:"Akanksha Damini Joshi",
   date:"20 april 2021",
   description:"An Indian filmmaker known for her works on communal conflict, crisis and spiritual philosophy. Her documentaries, Chilika Bank$, Hindu Nectar, and Earth Witness won her various awards including the Best Film and the Best Director awards at both National, and International level.",
-  img:"../../assets/workshop/workshop_akanksha.jpg"
+  img:"../../assets/workshop/workshop_akanksha.jpg",
+  club:"Outreach"
 },
 {name:"Aarzoo Khurana",
   date:"20 april 2021",
   description:"A nature and wildlife photographer, currently the ambassador at Sony Alpha. She strives to find beauty in the light and shadows, portraying some of the most engaging moments one might witness in the wild. ",
-  img:"../../assets/workshop/workshop_aarzoo.jpg"
+  img:"../../assets/workshop/workshop_aarzoo.jpg",
+  club:"Photography"
 },
 {name:"RITAM BHATNAGAR",
   date:"20 april 2021",
   description:"Founder of India Film Project, Asia's largest content festival.He is also a recipient of the title of “Global Shaper” by the World Economic Forum.",
-  img:"../../assets/workshop/workshop_ritam.jpg"
+  img:"../../assets/workshop/workshop_ritam.jpg",
+  club:"Cinema"
 },
 {name:"MOHAMMED ZEESHAN ",
   date:"20 april 2021",
   description:"Founder of Rangreza Studios, a premium media services brand. He is a master of a wide array of professional cameras and lenses. As one of the prominent travellers and photographers in the community, he has inspired many to explore the world of photography.",
-  img:"../../assets/workshop/workshop_zeeshan.jpg"
+  img:"../../assets/workshop/workshop_zeeshan.jpg",
+  club:"Photography"
 },
 {name:"Rohit Dawesar",
   date:"20 april 2021",
   description:"An Indore based author whose debut novel 'The Stupid Somebody' proclaimed him the title of best-selling author, even before signing for his very second book in 2020. Best known for his nanotales, he now creates magic with his words as a full-time writer.",
-  img:"../../assets/workshop/workshop_rohit.jpg"
-}]
+  img:"../../assets/workshop/workshop_rohit.jpg",
+  club:"Media"
+},
+/*{name:"Sahil Dev",
+  date:"20 april 2021",
+  description:"A freelance designer driven by passion and having a knack for creativity, has helped 50+ startups including DOST, Crownstack, Daily Digital, and Josh Community, with their branding & identity in the span of 2 years. He is also leading the creative team of Guerrillas, an advertizing agency.",
+  img:"../../assets/workshop/workshop_rohit.jpg",
+  club:"Design"
+}*/]
+
+stod:any={
+  "InFocus":"Photography",
+  "Photoart":"Photography",
+  "UnReal":"Animation",
+  "Capture the Imagination":"Animation",
+  "Nation wants to know":"Media",
+  "Netflix & Chill":"Media",
+  "Comic Strip":"Design",
+  "Monogram":"Design",
+  "Documentary making":"Outreach",
+  " Vlogoholic":"Outreach",
+  "That's how B-Roll":"Cinema",
+  "Short-film Competition":"Cinema"
+}
 
 ca: boolean = false;
 np:boolean = false;
@@ -391,17 +414,16 @@ np2:boolean = true;
     .subscribe((res:any)=>{
           if(res["type"]=="PA"){
             this.ca = true;
-          if(res["pass"]=="aep"){
             this.dets = res;
+          if(res["pass"]=="aep"){
             this.event = this.events;
             this.workshop = this.work;
           }
           else if(res["pass"]=="dep"){
             this.workshop = this.work[0];
             this.events = this.change[res["add"]]
-            this.work   = [this.workshop]
+            this.work   = this.getwork(res["add"]);
             this.event = this.events[0];
-            this.dets = res;
 
             this.np2 =false;
           }
@@ -410,9 +432,7 @@ np2:boolean = true;
             this.workshop = this.work[0];
 
             this.events = [this.event]
-            this.work   = [this.workshop]
-
-            this.dets = res;
+            this.work   = this.getwork(this.stod[res["add"]]);
 
             this.np2 =false;
           }
@@ -421,11 +441,9 @@ np2:boolean = true;
             this.workshop = this.work[0];
 
             this.awppass =false;
-
-            this.dets = res;
           }
           else{
-          this.np = true; 
+          this.np = true;
           }
         }
         else if(res["type"]=="CA"){
@@ -446,7 +464,9 @@ np2:boolean = true;
   ngOnDestroy(): void {
     this.document.body.className = "";
   }
-
+  getwork(s: string){
+    return this.work.filter((x)=>{x.club==s})
+  }
   left(): void {
     let l = this.events.length;
     this.event = this.events[(this.i-1+l)%l];
