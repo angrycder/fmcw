@@ -418,23 +418,28 @@ np2:boolean = true;
           if(res["pass"]=="aep"){
             this.event = this.events;
             this.workshop = this.work;
+
+            console.log(this.events,this.work)
           }
           else if(res["pass"]=="dep"){
-            this.workshop = this.work[0];
             this.events = this.change[res["add"]]
             this.work   = this.getwork(res["add"]);
             this.event = this.events[0];
+            this.workshop = this.work[0];
+
+            console.log(this.events,this.work)
 
             this.np2 =false;
           }
           else if(res["pass"]=="sep"){
+            this.work   = this.getwork(this.stod[res["add"]]);
             this.event = this.etn[res["add"]];
             this.workshop = this.work[0];
 
             this.events = [this.event]
-            this.work   = this.getwork(this.stod[res["add"]]);
-
             this.np2 =false;
+
+            console.log(this.events,this.work)
           }
           else if(res["pass"]=="awp"){
             
