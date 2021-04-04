@@ -61,6 +61,7 @@ export class LoginComponent implements OnInit {
     this.http.post("https://fmcweek-liart.vercel.app/registerca",this.detail,{withCredentials:true})
     .subscribe((res:any)=>{console.log(res);
        this.storage.store('user',this.data.user);
+       this.storage.store('role',"ca");
      this.router.navigateByUrl("/dash/cart");
 
     });
@@ -69,6 +70,7 @@ export class LoginComponent implements OnInit {
     this.http.post("https://fmcweek-liart.vercel.app/registerpa",this.detail,{withCredentials:true})
     .subscribe((res:any)=>{console.log(res);  
      this.storage.store('user',this.data.user);   
+      this.storage.store('role',"ca");
      this.router.navigateByUrl("/dash/cart");});
   }
 }
