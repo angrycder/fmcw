@@ -431,6 +431,10 @@ np:boolean = false;
             this.dets = res;
             this.ca = true;
           }
+        if(res["type"]=="PA"){
+          this.dets = res;
+          
+        }
           console.log(res)
           this.ren = !this.ren;
         }
