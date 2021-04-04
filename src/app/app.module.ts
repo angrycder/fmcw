@@ -22,6 +22,7 @@ import {MatButtonModule} from '@angular/material/button'
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import { MatCarouselModule } from '@ngbmodule/material-carousel';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {HttpClientModule} from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
@@ -60,6 +61,7 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
     MatTableModule,
      SocialLoginModule,
     MatInputModule,
+    MatSnackBarModule,
     NgxWebstorageModule.forRoot(),
     MatSidenavModule,
     ReactiveFormsModule,

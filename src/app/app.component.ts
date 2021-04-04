@@ -10,6 +10,7 @@ import { SocialUser } from "angularx-social-login";
 import { SocialAuthService } from "angularx-social-login";
 import { GoogleLoginProvider } from "angularx-social-login";
 import {OverlayContainer} from '@angular/cdk/overlay';
+import {MatSnackBar} from '@angular/material/snack-bar';
 import { MatIconRegistry } from "@angular/material/icon";
 import { HostListener } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
@@ -35,6 +36,7 @@ export class AppComponent implements OnInit,OnDestroy {
     private router : Router,
     private render:Renderer2,
     public dia: MatDialog,
+    private _snackBar: MatSnackBar,
     private storage:LocalStorageService,
     private http:HttpClient,
     private matIconRegistry: MatIconRegistry,
@@ -57,6 +59,10 @@ export class AppComponent implements OnInit,OnDestroy {
     this.storage.observe("role").subscribe((role)=>{
       this.rol = (role == "pa");
     })
+
+    if(this.getDeviceType() == "mobile"){
+      this.openSnackBar("Supported browsers include Chrome, Firefox and Edge. In case you experience any inconvenience on the mobile site, switch to the desktop version of the site","Hide")
+    }
    }
 
 
@@ -123,9 +129,18 @@ export class AppComponent implements OnInit,OnDestroy {
     this.http
     .get("https://fmcweek-liart.vercel.app/google/logout",{withCredentials:true,responseType:"json"})
      .subscribe((res:any)=>{console.log(res)})
-     window.location.reload()
+     let currentUrl = this.router.url;
+   this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+        this.router.navigate(['/']);
+    });
+
   }
   
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 4000,
+    });
+  }
 
   @HostListener('window:resize', ['$event'])
   getScreenSize(event?) {
@@ -133,4 +148,20 @@ export class AppComponent implements OnInit,OnDestroy {
           this.screenWidth = window.innerWidth;
           this.wide = this.screenWidth < 500;
     }
+
+
+  getDeviceType = () => {
+  const ua = navigator.userAgent;
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+    return "tablet";
+  }
+  if (
+    /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+      ua
+    )
+  ) {
+    return "mobile";
+  }
+  return "desktop";
+};
 }
