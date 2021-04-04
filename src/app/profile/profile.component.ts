@@ -406,6 +406,7 @@ np:boolean = false;
             this.dets = res;
           }
           else if(res["pass"]=="sep"){
+            
             this.event = [this.etn[res["add"]]];
             this.workshop = [this.work[0]];
 
