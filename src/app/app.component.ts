@@ -15,6 +15,7 @@ import { MatIconRegistry } from "@angular/material/icon";
 import { HostListener } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from "@angular/platform-browser";
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -40,7 +41,9 @@ export class AppComponent implements OnInit,OnDestroy {
     private storage:LocalStorageService,
     private http:HttpClient,
     private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer){
+    private domSanitizer: DomSanitizer,
+    private titleService: Title, 
+    private metaService: Meta){
 
     this.matIconRegistry.addSvgIcon(
       "refer",
@@ -63,10 +66,17 @@ export class AppComponent implements OnInit,OnDestroy {
     if(this.getDeviceType() == "mobile"){
       this.openSnackBar("Supported browsers include Chrome, Firefox and Edge. In case you experience any inconvenience on the mobile site, switch to the desktop version of the site","Hide")
     }
+        this.titleService.setTitle("FMC Weekend");
+    this.metaService.addTags([
+      {name: 'keywords', content: 'FMC, Weekend,Digtial arts festival,IIT(BHU)'},
+      {name: 'description', content: 'FMC Weekend website'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'}
+    ]);
    }
 
 
   ngOnInit() {
+
       }
   ngOnDestroy(){
       }
@@ -129,16 +139,13 @@ export class AppComponent implements OnInit,OnDestroy {
     this.http
     .get("https://fmcweek-liart.vercel.app/google/logout",{withCredentials:true,responseType:"json"})
      .subscribe((res:any)=>{console.log(res)})
-     let currentUrl = this.router.url;
-   this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
-        this.router.navigate(['/']);
-    });
+     window.location.reload()
 
   }
   
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action, {
-      duration: 4000,
+      duration:100000,
     });
   }
 

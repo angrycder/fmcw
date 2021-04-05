@@ -60,6 +60,7 @@
       <mat-card class="example-card">
         <mat-card-header>
           <mat-card-title [innerHTML]="event.name"></mat-card-title>
+         <!-- <mat-card-subtitle>{{event.date}}</mat-card-subtitle> -->
         </mat-card-header>
         <img mat-card-image src="{{ event.img }}" />
         <mat-card-content>
@@ -95,6 +96,7 @@
       <mat-card class="example-card">
         <mat-card-header>
           <mat-card-title [innerHTML]="workshop.name"></mat-card-title>
+          <mat-card-subtitle>{{workshop.date}}</mat-card-subtitle>
         </mat-card-header>
         <img mat-card-image src="{{ workshop.img }}" />
         <mat-card-content>
@@ -110,6 +112,6 @@
   </div>
 
   <div class="events title" *ngIf="np">
-    You haven't registered for any event yet. Hurry now, visit the Passes tab and get a chance to compete and win exciting prizes.
+    Registered for the event? Join the Whatsapp group link provided below the events and keep track of any and all further developments.
   </div>
 </div>
