@@ -14,6 +14,7 @@
     Register
   </button>
   <button mat-button *ngIf="!wide" routerLink="events">Events</button>
+  <button mat-button *ngIf="!wide" routerLink="workshops">Workshops</button>
   <button mat-button *ngIf="!wide" routerLink="sponsors">Sponsors</button>
   <button mat-button *ngIf="!wide && loggedIn" routerLink="dash">Dashboard</button>
   <button mat-button *ngIf="!wide && loggedIn && rol" routerLink="dash/cart">
@@ -34,11 +35,14 @@
     <button mat-menu-item *ngIf="!loggedIn" (click)="signInWithGoogle()">
       Register
     </button>
-    <button mat-menu-item *ngIf="loggedIn" routerLink="dash">Dashboard</button>
     <button mat-menu-item routerLink="events">Events</button>
+    <button mat-menu-item routerLink="workshops">Workshops</button>
+    <button mat-menu-item routerLink="sponsors">Sponsors</button>
+    <button mat-menu-item *ngIf="loggedIn" routerLink="dash">Dashboard</button>
     <button mat-menu-item *ngIf="loggedIn && rol" routerLink="dash/cart">
       Passes
     </button>
+    <button mat-menu-item routerLink="ambassador">Referrals</button>
     <button mat-menu-item routerLink="faq">FAQ</button>
     <!--<button mat-menu-item routerLink="workshops">Workshops</button>-->
     <button mat-menu-item routerLink="team">Team</button>

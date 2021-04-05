@@ -27,9 +27,11 @@
       <button mat-mini-fab><mat-icon>group_add</mat-icon></button>
       <div class="title2">number of referrals : {{dets.norefcode}}</div>
   </div>
-	  <div class="events title" *ngIf="!np">
-    Registered for the event? Join the Whatsapp group and keep track of any and all further developments
+        <div class="events title" *ngIf="!np" style="padding-bottom:20px;    padding-top: 20px;">
+Congratulations! You have successfully registered! 
+ Join the WhatsApp group links provided below the event to keep track of any and all further updates.
   </div>
+
   <div class="events" *ngIf="ca && !np">
     <div class="pad" *ngIf="awppass">
       <div
@@ -111,7 +113,7 @@
     </div>
   </div>
 
-  <div class="events title" *ngIf="np">
+  <div class="events title" *ngIf="np" style="padding-bottom:20px">
     Registered for the event? Join the Whatsapp group link provided below the events and keep track of any and all further developments.
   </div>
 </div>

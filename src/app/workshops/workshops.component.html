@@ -1,9 +1,21 @@
-<div class="menu" *ngIf="wide" ngFor="let item of work; let i = index">
-	<div class="title" *ngIf="p" >{{item.name}}</div>
-	<div class="title2" *ngIf="!p" (click)="goto('pub')">{{item.name}}</div>
-</div>
-<div class="team">
-	<div class="wing" *ngFor="let iter of rok; let i = index">
-		<div class="title">{{iter.name}}</div>
+<div class="main">
+	 <div class="title">workshops</div>
+	<div *ngFor="let item of work;let i=index" class="t">
+		<div class="cont1" *ngIf="i%2==1">
+		<img src="{{item.img}}" class="img1">
+		<div class="txt">
+			{{item.description}}
+			<br><br>
+			<b>{{item.date}}</b>
+		</div>
+		</div>
+		<div class="cont2" *ngIf="i%2==0">
+		<div class="txt">
+			{{item.description}}
+			<br><br>
+			<b>{{item.date}}</b>
+		</div>
+		<img src="{{item.img}}" class="img2">
+		</div>
 	</div>
 </div>
