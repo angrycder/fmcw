@@ -143,6 +143,7 @@ window.location.href=res["url"];
 
     signOut():void{
       this.storage.clear("role");
+      this.storage.clear("paid");
     this.storage.clear('user');
     this.authService.signOut();
     this.http

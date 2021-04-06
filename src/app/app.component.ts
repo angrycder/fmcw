@@ -24,6 +24,7 @@ export class AppComponent implements OnInit,OnDestroy {
   user: SocialUser;
   loggedIn :boolean;
   rol:boolean = false;
+  pas:boolean=false;
   sub:any;
   screenHeight: number = window.innerHeight;
   screenWidth: number  = window.innerWidth;
@@ -58,6 +59,10 @@ export class AppComponent implements OnInit,OnDestroy {
 
     this.storage.observe("role").subscribe((role)=>{
       this.rol = (role == "pa");
+    })
+
+     this.storage.observe("paid").subscribe((paid)=>{
+      this.pas = (paid != "Credit");
     })
 
     if(this.getDeviceType() == "mobile"){
@@ -119,6 +124,7 @@ export class AppComponent implements OnInit,OnDestroy {
          if(res["message"] == "pa"){
            this.storage.store("user",user);
            this.storage.store("role",res["message"]);
+           this.storage.store("paid",res["paid"]);
          }
 
 
@@ -132,6 +138,7 @@ export class AppComponent implements OnInit,OnDestroy {
   signOut():void{
     this.storage.clear('user');
     this.storage.clear("role");
+    this.storage.clear("paid");
     this.authService.signOut();
     this.http
     .get("https://fmcweek-liart.vercel.app/google/logout",{withCredentials:true,responseType:"json"})
