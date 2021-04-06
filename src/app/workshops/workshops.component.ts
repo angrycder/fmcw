@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-workshops',
   templateUrl: './workshops.component.html',
   styleUrls: ['./workshops.component.scss']
 })
-export class WorkshopsComponent implements OnInit {
+export class WorkshopsComponent{
 
   constructor() { }
    showFiller = false;
@@ -68,8 +68,4 @@ export class WorkshopsComponent implements OnInit {
   img:"../../assets/workshop/workshop_sahil.jpg",
   club:"Design"
 }]
-
-  ngOnInit(): void {
-  }
-
 }

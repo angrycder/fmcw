@@ -1,4 +1,4 @@
-import { Component,ElementRef,OnDestroy, OnInit, ViewChild,Renderer2,AfterViewInit,HostListener,Inject } from '@angular/core';
+import { Component,OnDestroy, OnInit,HostListener,Inject } from '@angular/core';
 import {Router} from '@angular/router';
 import {DOCUMENT} from '@angular/common';
 
@@ -7,22 +7,7 @@ import {DOCUMENT} from '@angular/common';
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.scss']
 })
-export class TeamComponent implements OnInit,OnDestroy,AfterViewInit {
-
-  @ViewChild('pub', {static: false}) publicity: ElementRef;
-  @ViewChild('marketing', {static: false}) marketing: ElementRef;
-  @ViewChild('relations', {static: false}) relations: ElementRef;
-  @ViewChild('design', {static: false}) design: ElementRef;
-
-  pub:number;
-  mar:number;
-  rel:number;
-  des:number;
-
-  p:boolean = true;
-  m:boolean = false;
-  r:boolean = false;
-  d:boolean = false;
+export class TeamComponent implements OnInit,OnDestroy {
 
   screenHeight: number = window.innerHeight;
   screenWidth: number  = window.innerWidth;
@@ -280,13 +265,6 @@ export class TeamComponent implements OnInit,OnDestroy,AfterViewInit {
   ngOnInit(): void {
     this.document.body.className = "bgy";
   }
-  ngAfterViewInit():void{
-    this.pub = this.publicity.nativeElement.offsetTop - 100;
-    this.mar = this.marketing.nativeElement.offsetTop - 100;
-    this.rel = this.relations.nativeElement.offsetTop - 100;
-    this.des = this.design.nativeElement.offsetTop - 100;
-
-  }
 
 
 
@@ -296,32 +274,6 @@ export class TeamComponent implements OnInit,OnDestroy,AfterViewInit {
 
   goto(x:string){
      this.router.navigateByUrl("/team#"+x);
-  }
-
-  @HostListener('window:scroll', ['$event'])
-  checkOffsetTop() {
-    if (window.pageYOffset >= this.pub && window.pageYOffset < this.des) {
-      this.p = true
-      this.d = false
-       this.r = false
-      this.m = false
-    } else if (window.pageYOffset >= this.des && window.pageYOffset < this.rel) {
-      this.p = false
-      this.d = true
-      this.r = false
-      this.m = false
-    } else if (window.pageYOffset >= this.rel && window.pageYOffset < this.mar) {
-      this.d = false
-      this.r = true
-      this.p = false
-      this.m = false
-    } else if (window.pageYOffset >= this.mar) {
-      this.d = false
-      this.p = false
-      this.r = false
-      this.m = true
-    } else {
-    }
   }
 
   filterItems(name:any){

@@ -18,10 +18,6 @@ p{    font-size: 12px;}
 	width: 80%;
 	height:100%;
 }
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-}
 
 .pad{
   padding:10px;
@@ -42,11 +38,6 @@ mat-card{
 
 .main::-webkit-scrollbar{
 	display:none !important;
-}
-
-carousel{
-    width: 100%;
-	height:100% !important; 
 }
 
 .left{
@@ -80,9 +71,4 @@ carousel{
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-
-iframe{
-	width:100%;
-	height: 100%;
 }

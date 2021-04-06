@@ -1,9 +1,8 @@
-import { Component,ElementRef, OnInit, ViewChild,Renderer2, NgZone } from '@angular/core';
+import { Component,ElementRef, OnInit, ViewChild} from '@angular/core';
 import { SocialAuthService } from "angularx-social-login";
 import { SocialUser } from "angularx-social-login";
 import {LocalStorageService} from 'ngx-webstorage';
 import {HttpClient} from "@angular/common/http";
-import { Router } from "@angular/router";
 import {MatSnackBar} from '@angular/material/snack-bar';
 
 interface pay{
@@ -50,30 +49,17 @@ export class CartComponent implements OnInit {
   dep:string;
   @ViewChild('drop1', {static: false}) drop: ElementRef;
   s:boolean =false;
-  constructor(private zone: NgZone,
-    private router:Router,
+  constructor(
     private http:HttpClient,
     private authService: SocialAuthService,
     private storage:LocalStorageService,
-    private _snackBar: MatSnackBar,
-    private renderer: Renderer2) {
+    private _snackBar: MatSnackBar) {
     this.user=this.storage.retrieve("user");
      }
 
  ngOnInit(): void {
   	this.user = this.storage.retrieve('user') as SocialUser;
   }
-  k(){
-  	if(this.s){
-this.renderer.setStyle(this.drop.nativeElement,'display','none');
-this.s = !this.s;
-  	}
-  	else{
-  		this.renderer.setStyle(this.drop.nativeElement,'display','flex');
-this.s = !this.s;
-  	}
-  }
-
 
   checkOut(t:string):void{
      if(t == "aep"){

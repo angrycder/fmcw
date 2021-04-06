@@ -1,8 +1,8 @@
-import { Component, OnInit, Optional, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import {MatDialog} from '@angular/material/dialog';
 import {Router} from '@angular/router';
-import { DomSanitizer ,SafeUrl} from '@angular/platform-browser'
+import { DomSanitizer} from '@angular/platform-browser'
 @Component({
   selector: 'app-pay',
   templateUrl: './pay.component.html',

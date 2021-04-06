@@ -1,9 +1,6 @@
-import { Component,ElementRef, OnInit, OnDestroy ,ViewChild,Renderer2 } from '@angular/core';
-import {MatSidenav} from '@angular/material/sidenav';
-import { MatButton } from '@angular/material/button';
+import { Component, OnInit, OnDestroy ,Renderer2 } from '@angular/core';
 import { Router} from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { CartComponent } from './cart/cart.component';
 import {MatDialog} from '@angular/material/dialog';
 import {LocalStorageService} from 'ngx-webstorage';
 import { SocialUser } from "angularx-social-login";

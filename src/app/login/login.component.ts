@@ -5,7 +5,6 @@ import { FormGroup, FormControl } from '@angular/forms';
 import {LocalStorageService} from 'ngx-webstorage';
 import { SocialUser } from "angularx-social-login";
 import { Router } from "@angular/router";
-import { CartComponent } from './../cart/cart.component';
 import { HttpClient } from '@angular/common/http';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
@@ -30,21 +29,17 @@ export class LoginComponent implements OnInit {
       type:string;
     detail:details= {name:"",number:null,organization:null,year:null,token:"",redeem:""};
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any,private router:Router,
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any,
+    private router:Router,
     private authService: SocialAuthService,
     private storage:LocalStorageService,
     private http:HttpClient) {
     this.detail.token = this.data.user.idToken;
-    console.log(this.detail);
   }
 
   ngOnInit(): void {
   }
 
-
-  login(): void {
-     console.warn('Your order has been submitted');
-  }
 
   signUp(): void {
     console.log(this.type);

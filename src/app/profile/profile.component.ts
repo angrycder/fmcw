@@ -1,12 +1,9 @@
-import { Component,ElementRef, OnInit,OnDestroy, ViewChild,Renderer2,Inject } from '@angular/core';
+import { Component,ElementRef, OnInit,OnDestroy,Inject } from '@angular/core';
 import {DOCUMENT} from '@angular/common';
 import { Router} from '@angular/router';
 import {LocalStorageService} from 'ngx-webstorage';
 import { SocialUser } from "angularx-social-login";
 import { SocialAuthService } from "angularx-social-login";
-import { GoogleLoginProvider } from "angularx-social-login";
-import {OverlayContainer} from '@angular/cdk/overlay';
-import { HostListener } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 
 
@@ -402,8 +399,10 @@ stod:any={
 ca: boolean = false;
 np:boolean = false;
 np2:boolean = true;
-  constructor(private router:Router,private authService: SocialAuthService,
-    private storage:LocalStorageService,private http:HttpClient,
+  constructor(private router:Router,
+    private authService: SocialAuthService,
+    private storage:LocalStorageService,
+    private http:HttpClient,
     @Inject(DOCUMENT) private document: Document) {
        this.user = this.storage.retrieve('user');
       this.loggedIn=(this.user != null);

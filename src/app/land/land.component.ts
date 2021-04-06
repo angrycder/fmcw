@@ -1,14 +1,13 @@
-import { Component, OnInit,HostListener ,Renderer2,AfterViewInit} from '@angular/core';
-import {ViewportScroller} from '@angular/common';
+import { Component, OnInit,HostListener} from '@angular/core';
 import {Router} from '@angular/router';
-import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-land',
   templateUrl: './land.component.html',
   styleUrls: ['./land.component.scss']
 })
-export class LandComponent implements OnInit,AfterViewInit {
+export class LandComponent implements OnInit {
 
 	config : any;
   anchors:string[]= ["1","2","3"];
@@ -17,10 +16,7 @@ export class LandComponent implements OnInit,AfterViewInit {
   screenHeight: number = window.innerHeight;
   screenWidth: number  = window.innerWidth;
   wide:boolean = this.screenWidth < 500;
-  constructor(private renderer2: Renderer2,
-    private router : Router,
-    private scroller:ViewportScroller,
-    private location: Location) { }
+  constructor( private router : Router) { }
 
   ngOnInit(): void {
   	this.config = { 
@@ -42,9 +38,5 @@ export class LandComponent implements OnInit,AfterViewInit {
           this.screenWidth = window.innerWidth;
           this.wide = this.screenWidth < 500;
     }
-
-  ngAfterViewInit():void{
-
-  }
 
  }
