@@ -48,10 +48,8 @@ import { CartComponent } from '../cart/cart.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from '../guard/auth.guard';
 import { PassGuard } from '../guard/pass.guard';
-import { CoolSocialLoginButtonsModule } from '@angular-cool/social-login-buttons';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatCarouselModule } from '@ngbmodule/material-carousel';
 
 const routes: Routes =  [
 {
@@ -72,7 +70,6 @@ const routes: Routes =  [
   declarations: [LoginComponent, ProfileComponent, CartComponent],
   imports: [
     RouterModule.forChild(routes),
-  CoolSocialLoginButtonsModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
@@ -83,7 +80,6 @@ const routes: Routes =  [
     MatInputModule,
     MatRadioModule,
     MatSelectModule,
-    MatCarouselModule,
     MatSliderModule,
     MatSlideToggleModule,
     MatMenuModule,
