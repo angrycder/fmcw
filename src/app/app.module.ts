@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import {MatTreeModule} from '@angular/material/tree';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandComponent } from './land/land.component';
@@ -13,11 +12,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
-import { ClubComponent } from './club/club.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
-import { CountdownModule } from 'ngx-countdown';
 import {MatButtonModule} from '@angular/material/button'
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
@@ -29,11 +26,8 @@ import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-logi
 import { GoogleLoginProvider } from 'angularx-social-login';
 import {MatMenuModule} from '@angular/material/menu';
 import { PayComponent } from './pay/pay.component';
-import { LeaderComponent } from './leader/leader.component';
 import { TeamComponent } from './team/team.component';
-import { MemoryComponent } from './memory/memory.component';
 import { CaComponent } from './ca/ca.component';
-import { SafePipeModule } from 'safe-pipe';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 
 @NgModule({
@@ -42,11 +36,8 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
     LandComponent,
     WorkshopsComponent,
     EventsComponent,
-    ClubComponent,
     PayComponent,
-    LeaderComponent,
     TeamComponent,
-    MemoryComponent,
     CaComponent,
     SponsorsComponent,
   ],
@@ -55,7 +46,6 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
     AppRoutingModule,
         MatCardModule,
     BrowserAnimationsModule,
-    CountdownModule,
     MatFormFieldModule,
     MatToolbarModule,
     MatTableModule,
@@ -68,12 +58,10 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
     MatDialogModule,
     MatIconModule,
     MatButtonModule,
-    SafePipeModule,
     MatMenuModule,
     MatCarouselModule.forRoot(),
     MatTabsModule,
     HttpClientModule,
-    MatTreeModule
   ],
   providers: [{
       provide: 'SocialAuthServiceConfig',
