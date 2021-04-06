@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy ,Renderer2 } from '@angular/core';
+import { Component, OnInit, OnDestroy  } from '@angular/core';
 import { Router} from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import {MatDialog} from '@angular/material/dialog';
@@ -33,7 +33,6 @@ export class AppComponent implements OnInit,OnDestroy {
   constructor(private overlayContainer: OverlayContainer,
     private authService: SocialAuthService,
     private router : Router,
-    private render:Renderer2,
     public dia: MatDialog,
     private _snackBar: MatSnackBar,
     private storage:LocalStorageService,
