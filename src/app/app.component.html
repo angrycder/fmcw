@@ -10,9 +10,6 @@
     <img src="./../assets/l.jpg" style="height: 51px;width: auto;" alt="fmc weekend logo" />
   </button>
   <span class="example-spacer"></span>
-  <button mat-button *ngIf="!wide && !loggedIn" (click)="signInWithGoogle()">
-    Register
-  </button>
   <button mat-button *ngIf="!wide" routerLink="events">Events</button>
   <button mat-button *ngIf="!wide" routerLink="workshops">Workshops</button>
   <button mat-button *ngIf="!wide" routerLink="sponsors">Sponsors</button>
@@ -32,9 +29,6 @@
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item *ngIf="!loggedIn" (click)="signInWithGoogle()">
-      Register
-    </button>
     <button mat-menu-item routerLink="events">Events</button>
     <button mat-menu-item routerLink="workshops">Workshops</button>
     <button mat-menu-item routerLink="sponsors">Sponsors</button>
